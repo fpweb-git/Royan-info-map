@@ -28,7 +28,8 @@
             position: relative;
         }
         .Lsidepanel{
-            width: 30%;
+            width: 45%;
+            max-width: 550px;
             height: 100%;
             background: white;
             position: absolute;
@@ -40,9 +41,13 @@
             transform: translateX(200%);
             display: flex;
             flex-direction: column;
-            padding: 1rem;
             overflow: hidden;
             border-left: 1px solid rgb(167, 167, 167);
+        }
+        .LsidepanelInner{
+            width: 100%;
+            padding: 6%;
+            overflow: auto
         }
         .Lsidepanel.active{
             opacity: 1;
@@ -55,19 +60,49 @@
         .leaflet-popup-tip{
             display: none;
         }
-        .Lclose-menu{
-            cursor: pointer;
-            position: absolute;
-            right: 1rem;
+        .Lheader{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
         }
         .Ltitle{
-            margin: 15% 0 10% 0;
+            margin: 4rem 0 2rem 0;
             font-weight: 800;
+            font-size: 1.8rem;
+            color: #2d353f;
         }
-        .Ldescription{
-            width: 100%;
-            margin: 3rem 0;
-            padding: 0 1rem;
+        .Linformation{
+            padding: 1rem 0;
+        }
+        .Ladress, .Lphone, .Lwebsite{
+            display: flex;
+            align-items: center;
+            margin: 2rem 0 1rem 0;
+        }
+        .LsubTxt{
+            margin-left: 0.5rem;
+        }
+        .Ladress svg, .Lwebsite svg, .Lphone svg{
+            flex-shrink: 0;
+        }
+        .Lwebsite a{
+            color: #16AFD1;
+        }
+        @media only screen and (max-width: 1024px) {
+            .LsubTxt{
+                font-size: 14px;
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            .Ladress svg{
+                display: none;
+            }
+            .Ladress .LsubTxt{
+                margin-left: 0;
+            }
+            .Ltitle{
+            font-size: 1.4rem;
+            }
         }
     </style>
 </head>
@@ -201,15 +236,39 @@
                         mymap.setView(e.latlng, 19, {animation : true});
                         sidepanel.classList.add('active');
                         sidepanel.innerHTML = `
-                            <svg class="Lclose-menu" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="19.7809" y="0.688812" width="145" height="27" rx="13.5" transform="rotate(45 19.7809 0.688812)" fill="#4D4949"/>
-                            <rect x="1.00012" y="102.53" width="145" height="27" rx="13.5" transform="rotate(-45 1.00012 102.53)" fill="#4D4949"/>
-                            </svg>
-                            <h2 class="Ltitle">${feature.properties.name}</h2>
-                            <img src="${feature.properties.image}" width="100%" height="auto">
-                            <p class="Ladress">${feature.properties.adress}</p>
-                            <p class="Lphone">${feature.properties.phone}</p>
-                            <a href="${feature.properties.website}">Site web</a>
+                            <div class="LsidepanelInner">
+                                <div class="Lheader">
+                                    <svg class="Lclose-menu" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="19.7809" y="0.688812" width="145" height="27" rx="13.5" transform="rotate(45 19.7809 0.688812)" fill="#4D4949"/>
+                                    <rect x="1.00012" y="102.53" width="145" height="27" rx="13.5" transform="rotate(-45 1.00012 102.53)" fill="#4D4949"/>
+                                    </svg>
+                                </div>
+                                <h2 class="Ltitle">${feature.properties.name}</h2>
+                                <img src="${feature.properties.image}" width="100%" height="auto">
+                                <div class="Linformation">
+                                    <div class="Ladress">
+                                        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.625 11.25C23.625 19.125 13.5 25.875 13.5 25.875C13.5 25.875 3.375 19.125 3.375 11.25C3.375 8.56468 4.44174 5.98935 6.34054 4.09054C8.23935 2.19174 10.8147 1.125 13.5 1.125C16.1853 1.125 18.7606 2.19174 20.6595 4.09054C22.5583 5.98935 23.625 8.56468 23.625 11.25Z" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13.5 14.625C15.364 14.625 16.875 13.114 16.875 11.25C16.875 9.38604 15.364 7.875 13.5 7.875C11.636 7.875 10.125 9.38604 10.125 11.25C10.125 13.114 11.636 14.625 13.5 14.625Z" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span class="LsubTxt">${feature.properties.adress}</span>
+                                    </div>
+                                    <div class="Lphone">
+                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M24.8749 19.4154V22.7904C24.8761 23.1037 24.812 23.4138 24.6864 23.7009C24.5609 23.988 24.3768 24.2457 24.146 24.4575C23.9151 24.6693 23.6425 24.8306 23.3457 24.9309C23.0489 25.0313 22.7344 25.0686 22.4224 25.0404C18.9606 24.6642 15.6352 23.4813 12.7136 21.5866C9.99542 19.8594 7.69087 17.5548 5.96361 14.8366C4.06234 11.9017 2.87914 8.56026 2.50986 5.08289C2.48175 4.77179 2.51872 4.45824 2.61843 4.16222C2.71813 3.86619 2.87838 3.59416 3.08898 3.36346C3.29957 3.13276 3.55589 2.94844 3.84163 2.82223C4.12736 2.69602 4.43625 2.63068 4.74861 2.63039H8.12361C8.66958 2.62502 9.19888 2.81835 9.61285 3.17436C10.0268 3.53037 10.2972 4.02477 10.3736 4.56539C10.5161 5.64546 10.7802 6.70596 11.1611 7.72664C11.3125 8.1293 11.3452 8.56692 11.2555 8.98763C11.1658 9.40834 10.9573 9.79451 10.6549 10.1004L9.22611 11.5291C10.8276 14.3456 13.1596 16.6776 15.9761 18.2791L17.4049 16.8504C17.7107 16.5479 18.0969 16.3395 18.5176 16.2497C18.9383 16.16 19.3759 16.1928 19.7786 16.3441C20.7993 16.725 21.8598 16.9892 22.9399 17.1316C23.4864 17.2087 23.9854 17.484 24.3422 17.9051C24.699 18.3261 24.8886 18.8637 24.8749 19.4154Z" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span class="LsubTxt">${feature.properties.phone}</span>
+                                    </div>
+                                    <div class="Lwebsite">
+                                        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.5 24.75C19.7132 24.75 24.75 19.7132 24.75 13.5C24.75 7.2868 19.7132 2.25 13.5 2.25C7.2868 2.25 2.25 7.2868 2.25 13.5C2.25 19.7132 7.2868 24.75 13.5 24.75Z" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M2.25 13.5H24.75" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13.5 2.25C16.3139 5.33065 17.9131 9.32854 18 13.5C17.9131 17.6715 16.3139 21.6694 13.5 24.75C10.6861 21.6694 9.0869 17.6715 9 13.5C9.0869 9.32854 10.6861 5.33065 13.5 2.25V2.25Z" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <a class="LsubTxt" href="${feature.properties.website}">Site web</a>
+                                    </div>
+                                </div>
+                            </div>
                         `
                         const closeMenu = document.querySelector('.Lclose-menu')
                         closeMenu.addEventListener("click", function(e){
@@ -224,60 +283,6 @@
         }).addTo(mymap)
     })
     .catch(err => console.log(err))
-        
-    // fetch('./pays_royannais.json')
-    // .then(response => response.json())
-    // .then(obj => {
-    //     console.log(obj)
-    //     L.geoJson(obj,{
-    //     style : function(features){
-    //         return {
-    //             color : '#4B65F7',
-    //             weight : 0.5,
-    //         }
-    //     },
-    //     // pointToLayer : function(geoJsonPoint, latlng){
-    //     //     return L.marker(latlng,{
-    //     //         icon : myIcon
-    //     //     });
-    //     // },
-    //     onEachFeature : function(feature, layer){
-    //         // const customPopup = `
-    //         // <h2>${feature.properties.name}</h2>
-    //         // <p>${feature.properties.description}</p>
-    //         // `;
-
-    //         if(feature.geometry.type === 'Point'){
-    //             // layer.bindPopup(customPopup, customOptions);
-    //         layer.on('click', function(e){
-    //             const img = feature.properties.description.split('https')
-    //             const link = img[1].split('300')
-    //             const desc = feature.properties.description.split('📍')
-    //             console.log(desc)
-    //             mymap.setView(e.latlng, 19, {animation : true});
-    //             sidepanel.classList.add('active');
-    //             sidepanel.innerHTML = `
-    //                 <svg class="close-menu" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
-    //                 <rect x="19.7809" y="0.688812" width="145" height="27" rx="13.5" transform="rotate(45 19.7809 0.688812)" fill="#4D4949"/>
-    //                 <rect x="1.00012" y="102.53" width="145" height="27" rx="13.5" transform="rotate(-45 1.00012 102.53)" fill="#4D4949"/>
-    //                 </svg>
-    //                 <h2 class="title">${feature.properties.name}</h2>
-    //                 <img src="https${link}300" width="100%" height="auto">
-    //                 <p class="description">📍 ${desc[1]}</p>
-    //             `
-    //             const closeMenu = document.querySelector('.close-menu')
-    //             closeMenu.addEventListener("click", function(e){
-    //                 sidepanel.classList.remove('active');
-    //                 mymap.setView([45.6284600, -1.0281000], 11, {animation : true});
-    //             })
-    //         });
-    //         }
-    //     }
-    //     }).addTo(mymap)
-    // })
-    // .catch(err => console.log(err))
-
-
 </script>
 
 </html>
