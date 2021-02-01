@@ -65,6 +65,9 @@
             display: flex;
             justify-content: flex-end;
         }
+        .LcloseMenu{
+            cursor: pointer;
+        }
         .Ltitle{
             margin: 4rem 0 2rem 0;
             font-weight: 800;
@@ -248,12 +251,11 @@
 
                         mymap.setViewOffset(e.target.getLatLng(),[-100, 0],17)
 
-
                         sidepanel.classList.add('active');
                         sidepanel.innerHTML = `
                             <div class="LsidepanelInner">
                                 <div class="Lheader">
-                                    <svg class="Lclose-menu" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="LcloseMenu" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="19.7809" y="0.688812" width="145" height="27" rx="13.5" transform="rotate(45 19.7809 0.688812)" fill="#4D4949"/>
                                     <rect x="1.00012" y="102.53" width="145" height="27" rx="13.5" transform="rotate(-45 1.00012 102.53)" fill="#4D4949"/>
                                     </svg>
@@ -285,11 +287,10 @@
                                 </div>
                             </div>
                         `
-                        const closeMenu = document.querySelector('.Lclose-menu')
+                        const closeMenu = document.querySelector('.LcloseMenu')
                         closeMenu.addEventListener("click", function(e){
                             sidepanel.classList.remove('active');
                             mymap.setView([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], 16, {animation : true});
-                            // here reboot icon
                             layer.setIcon(baseIcon)
                         })
                     });
