@@ -28,7 +28,7 @@
             position: relative;
         }
         .Lsidepanel{
-            width: 45%;
+            width: 40%;
             max-width: 550px;
             height: 100%;
             background: white;
@@ -99,9 +99,13 @@
             }
             .Ladress .LsubTxt{
                 margin-left: 0;
+                text-align: center;
             }
             .Ltitle{
             font-size: 1.4rem;
+            }
+            .Lsidepanel{
+                width: 50%;
             }
         }
     </style>
@@ -232,8 +236,19 @@
                         }
                         e.target.setIcon(activeIcon);
                         clickedMarker = e.target;
+                        
+                        // mymap.setView(e.latlng, 17, {animation : true});
+                        // var offset = mymap.getSize().x*0.20;
+                        // mymap.panBy(new L.Point(+offset, 0), {animate: false});
+                        L.Map.prototype.setViewOffset = function (latlng, offset, targetZoom) {
+                            var targetPoint = this.project(latlng, targetZoom).subtract(offset),
+                            targetLatLng = this.unproject(targetPoint, targetZoom);
+                            return this.setView(targetLatLng, targetZoom);
+                        }
 
-                        mymap.setView(e.latlng, 19, {animation : true});
+                        mymap.setViewOffset(e.target.getLatLng(),[-100, 0],17)
+
+
                         sidepanel.classList.add('active');
                         sidepanel.innerHTML = `
                             <div class="LsidepanelInner">
