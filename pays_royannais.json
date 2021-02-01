@@ -1,0 +1,2601 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "iconClass": "Drop",
+          "color": "#0175A0"
+        },
+        "name": "Camping Parc de Bellevue",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3eVJolSkeoDWBzwLhyZL76xpeKSVu4ajaWq9GYkBMAGRI5240meDvRukpGZ0o2y-FxbufBqoLFyyDss27GvTYGh_mBAG2S80KftNRl0fj98aObHb890bGMTv3ONZtRtmsLLENl_5EhjJw8sIFD088wF=w1200-h522-no?authuser=0|300}}\n\n📍 30 Rue des Petits Commerces, 17530 Arvert, France\n\n📞05 46 47 62 38\n\nhttp://www.campingparcdebellevue.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.113138,
+          45.743449
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "color": "#0175A0",
+          "iconClass": "Drop"
+        },
+        "name": "Clotout",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3cWop-07UlBJ1B8alr9e0W-8VU3UtzjtKVKAKoyobvjFxUnMahNCXtpBy4YApz5lWhcp3CjKRtXYtE_fvlvLtC9gsmkLcPYiLkm9C871GBw5oPIin7nbgE-ljT1TI_3QSheDajaSa_td_Q_CjND41Q5=w1154-h424-no?authuser=0|300}}\n\n📍 7a Rue de la Fenêtre, 17600 Médis, France\n\n📞 05 46 39 27 57\n\nhttp://www.clotout.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.948349,
+          45.661728
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Europcar Royan Location de Voitures",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3ddxGeK0cogRwu4He0MJmhNPds3g-si_q9qFGBwlZPez4eFzSbby10ewvDDOqqIU8p7R9Fc3uF_kGdH2ojnHZGMjl6y2OPw-DE8PV01w2j4Mq2CVon8Y1yIyaKc2gI9qOraDt1wJRo7Y3Zv7T7gkR1t=w584-h430-no?authuser=0|300}}\n\n📍 13 Place du Dr Gantier, 17200 Royan, France\n\n📞 05 46 05 20 88\n\n[[https://www.europcar-atlantique.fr/agences/royan?utm_campaign=GoogleMyBusiness&utm_medium=Local&utm_source=Google&utm_content=Europcar-Royan|europcar-atlantique.fr]]"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.017652,
+          45.62465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Intermaché Hyper",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3cQ5q-aFFAIP23DWFZQuZYzH0-tLgz85lIBPbS36CfATLCYPfcZo_tRRFKwjAcX1iyMzg5Vkrl0WSOgS1EvshaZ6xwuZ_LEAc7vNgoHRKwJ7yEqvgDh8bYVYcHEGApyuJHIXZqyu7j_VLPk9SZZaP7W=w1160-h422-no?authuser=0|300}}\n\n📍 Centre commercial Val Lumière, 17640 Vaux-sur-Mer, France\n\n📞 05 46 23 55 55"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.051351,
+          45.647783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "color": "#0175A0",
+          "iconClass": "Drop"
+        },
+        "name": "La cabane",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3cL3bfSSkDKdP1Dypr_F0i1kS8TnWL6DjYcD5pkxOw2So7xEag6P-yYuuhqHegZ42SpM2vfpDsc2eMSB0-BF_WsvtwkcunTjymgpMkj_uKfOiibPBvk81rRCLOr-px4jQU9ckLvWyz083GtgNmtTJNm=w486-h910-no?authuser=0|300}}\n\n📍 Rive Droite du Port, 17600 L'Éguille-sur-seudre, France\n\n📞 05 46 22 83 07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.975916,
+          45.709663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "La presse",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3eFVBVNI_zrHkFTwIwnnlziFFGDwAqr-RORxUk9OM59-ilv-dlBSv6s21WE3HyrV8qFBwsyjhDxJhcroaGe0FHHHvAFsprzL6eUHs26qSJ7WLUnKiLz57bzo-aBuZ9tslG74jGcw2fLsAgUx-6r7wGa=w591-h910-no?authuser=0|300}}\n\n📍 Centre commercial Val Lumière, 17640 Vaux-sur-Mer, France\n\n📞 05 46 23 55 55"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.050702,
+          45.647982
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Le Bistro Du Marché",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3eVafNmUwTVF8zBhR_LyATC-Vct_xH0caj5CMUoHQogntSKq2hNNf_logYa6b75snF8ryCYlBdOD-aWqggAjksKWLhKD4MA2lJup6mfNKfWBUv5Mxu2uxfAMly6Cqgp495cIXoq-IOlnTgumqPO0CSd=w591-h910-no?authuser=0|300}}\n\n📍 Centre commercial Val Lumière, 17640 Vaux-sur-Mer, France\n\n📞 05 46 02 86 19"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.05186,
+          45.647933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "McDonald's Marennes",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fPsVyIgTYdHqSHHqIcYEbIFIb8FPjl4GVGn2ELEqpMou8k1SWLB8fwZvPJ7AgLGD-cxTG92yvOpQfihBjdtcp-q2VmQazncLNCEUMHIH2vH4GYYhugaLMkByGjHt565dM-Q0zPbGMG8wKmxgYi5P99=w500-h438-no?authuser=0|300}}\n\n📍 54 Avenue de Lattre de Tassigny, 17320 MARENNES, France\n\n📞 05 46 47 76 82\n\nhttp://www.restaurants.mcdonalds.fr/mcdonalds-marennes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.118717,
+          45.830007
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "iconClass": "Drop",
+          "color": "#0175A0"
+        },
+        "name": "Mika Automobiles",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3dqu5LVmeLWwow8_ZBEpUG3dJG_EoUaKbqqVwFmx_ZAiWU1-HWCZZjyRcQGoOAk2MS5wedGb6c_zar4tOqdk63u8DwWZy3mWKXdSw1hQHrdpCF6Unu3aXN2JgW8yG26RjJhC0PCJVkEC_FZCt_q8WYQ=w506-h632-no?authuser=0|300}}\n\n📍 2 Rue de la Croix du Bourdon, 17600 Saujon, France\n\n📞 05 46 02 43 43\n\nhttps://pros.lacentrale.fr/C020885/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.915894,
+          45.680276
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "color": "#0175A0",
+          "iconClass": "Drop"
+        },
+        "name": "Musée et Site Gallo-Romains du Fâ",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fcdd0x8Xd4dZorADxUSHvH7hdMDhz7qBdC1WWvDPV1302gBrZtHW7Mh6l7I_B5fUvOOYnd93wM-C4-XXMl1qC5tWU-r4F0nrPqLodZuk-Q8jtDKTzay8qwI0orXOnP38CFErk90qNVPdsNuJ-KlJtI=w525-h910-no?authuser=0|300}}\n\n📍 25 Route du FA, 17120 Barzan, France\n\n📞 05 46 90 43 66\n\nhttps://www.fa-barzan.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.879271,
+          45.535408
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mutuelle de poitiers assurances",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fyLi-j0U7DWlG19vwVaJvTBlNuVozvYcbfCWo8a1gqthjGdpea59Snp40kQ0e0mbgHwXgUnu4k7F6c_jPPaaWnFnZIujVDoYBLIVhj7DigTAnUNP7Szp_7PhUVZMYp4ertt_YM8VgqRSjtRwO4sy3k=w802-h532-no?authuser=0|300}}\n\nAlain Ayrault\n\n📍 22 bis Grande Rue, 17120 Cozes, France \n\n📞 05 46 90 92 38\n\nhttps://www.assurance-mutuelle-poitiers.fr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.832693,
+          45.583366
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Orpi Immo Plus",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3flgYy7mYVwtm3aQhpXNl6jAL418eCviT5kSrdObXFrJZcH5ZFuI3vYThezUcYRQBPmLx2iTvErkuGDPmp3xv1HP43JDu8PJ3Lvo-b1WJgDOqZCeyX7bFFkjfL9uUSYWHUdZDbK3g0HebIPPokDesch=w900-h646-no?authuser=0|300}}\n\n📍 15 Grande Rue, 17120 Cozes, France\n\n📞 05 46 98 74 38\n\nhttp://www.orpi.com/sdcozesimmo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.833231,
+          45.583247
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "color": "#1ab0d1"
+        },
+        "name": "Pays royannais",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3eVJolSkeoDWBzwLhyZL76xpeKSVu4ajaWq9GYkBMAGRI5240meDvRukpGZ0o2y-FxbufBqoLFyyDss27GvTYGh_mBAG2S80KftNRl0fj98aObHb890bGMTv3ONZtRtmsLLENl_5EhjJw8sIFD088wF=w1200-h522-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3c7rdozSVq0o0bHcuph_0RF4MftwTRFPquFWnUrWSQki3nF8Q6Fwe2sTgbpu8a73G0mDSgw1fcc1y9h-BYqHIOvqOZO__SQwmXTRM3IsCV9Efkp1JjAxsxClZIyk_Dr8qcI8HKqLOq1atBgqPk4vLxI=w1254-h424-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3cL3bfSSkDKdP1Dypr_F0i1kS8TnWL6DjYcD5pkxOw2So7xEag6P-yYuuhqHegZ42SpM2vfpDsc2eMSB0-BF_WsvtwkcunTjymgpMkj_uKfOiibPBvk81rRCLOr-px4jQU9ckLvWyz083GtgNmtTJNm=w486-h910-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3cWop-07UlBJ1B8alr9e0W-8VU3UtzjtKVKAKoyobvjFxUnMahNCXtpBy4YApz5lWhcp3CjKRtXYtE_fvlvLtC9gsmkLcPYiLkm9C871GBw5oPIin7nbgE-ljT1TI_3QSheDajaSa_td_Q_CjND41Q5=w1154-h424-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3dqu5LVmeLWwow8_ZBEpUG3dJG_EoUaKbqqVwFmx_ZAiWU1-HWCZZjyRcQGoOAk2MS5wedGb6c_zar4tOqdk63u8DwWZy3mWKXdSw1hQHrdpCF6Unu3aXN2JgW8yG26RjJhC0PCJVkEC_FZCt_q8WYQ=w506-h632-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3flgYy7mYVwtm3aQhpXNl6jAL418eCviT5kSrdObXFrJZcH5ZFuI3vYThezUcYRQBPmLx2iTvErkuGDPmp3xv1HP43JDu8PJ3Lvo-b1WJgDOqZCeyX7bFFkjfL9uUSYWHUdZDbK3g0HebIPPokDesch=w900-h646-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3fyLi-j0U7DWlG19vwVaJvTBlNuVozvYcbfCWo8a1gqthjGdpea59Snp40kQ0e0mbgHwXgUnu4k7F6c_jPPaaWnFnZIujVDoYBLIVhj7DigTAnUNP7Szp_7PhUVZMYp4ertt_YM8VgqRSjtRwO4sy3k=w802-h532-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3fcdd0x8Xd4dZorADxUSHvH7hdMDhz7qBdC1WWvDPV1302gBrZtHW7Mh6l7I_B5fUvOOYnd93wM-C4-XXMl1qC5tWU-r4F0nrPqLodZuk-Q8jtDKTzay8qwI0orXOnP38CFErk90qNVPdsNuJ-KlJtI=w525-h910-no?authuser=0|300}}"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.080351,
+              45.757104
+            ],
+            [
+              -1.11125,
+              45.771474
+            ],
+            [
+              -1.137686,
+              45.791826
+            ],
+            [
+              -1.157598,
+              45.802598
+            ],
+            [
+              -1.174765,
+              45.793502
+            ],
+            [
+              -1.192961,
+              45.789432
+            ],
+            [
+              -1.209784,
+              45.795896
+            ],
+            [
+              -1.239309,
+              45.787038
+            ],
+            [
+              -1.247206,
+              45.778419
+            ],
+            [
+              -1.243086,
+              45.754709
+            ],
+            [
+              -1.237249,
+              45.716608
+            ],
+            [
+              -1.234846,
+              45.695509
+            ],
+            [
+              -1.231756,
+              45.676802
+            ],
+            [
+              -1.22489,
+              45.671524
+            ],
+            [
+              -1.216993,
+              45.668885
+            ],
+            [
+              -1.179571,
+              45.675122
+            ],
+            [
+              -1.200857,
+              45.69395
+            ],
+            [
+              -1.199827,
+              45.695509
+            ],
+            [
+              -1.191845,
+              45.704561
+            ],
+            [
+              -1.182318,
+              45.711334
+            ],
+            [
+              -1.159658,
+              45.714211
+            ],
+            [
+              -1.143179,
+              45.691193
+            ],
+            [
+              -1.163092,
+              45.673443
+            ],
+            [
+              -1.125326,
+              45.652808
+            ],
+            [
+              -1.097946,
+              45.662347
+            ],
+            [
+              -1.075373,
+              45.671524
+            ],
+            [
+              -1.05752,
+              45.663607
+            ],
+            [
+              -1.048594,
+              45.659227
+            ],
+            [
+              -1.043701,
+              45.656888
+            ],
+            [
+              -1.033401,
+              45.656348
+            ],
+            [
+              -1.018209,
+              45.657848
+            ],
+            [
+              -0.991087,
+              45.651368
+            ],
+            [
+              -0.998726,
+              45.641528
+            ],
+            [
+              -0.996838,
+              45.639067
+            ],
+            [
+              -0.993319,
+              45.640388
+            ],
+            [
+              -0.988169,
+              45.639248
+            ],
+            [
+              -0.98362,
+              45.637207
+            ],
+            [
+              -0.981045,
+              45.637027
+            ],
+            [
+              -0.978556,
+              45.635167
+            ],
+            [
+              -0.977354,
+              45.632946
+            ],
+            [
+              -0.982332,
+              45.630365
+            ],
+            [
+              -0.987139,
+              45.627604
+            ],
+            [
+              -0.991774,
+              45.625383
+            ],
+            [
+              -0.997524,
+              45.622502
+            ],
+            [
+              -0.996945,
+              45.620476
+            ],
+            [
+              -0.993984,
+              45.620296
+            ],
+            [
+              -0.993254,
+              45.620101
+            ],
+            [
+              -0.993962,
+              45.619456
+            ],
+            [
+              -0.991237,
+              45.619471
+            ],
+            [
+              -0.986989,
+              45.61857
+            ],
+            [
+              -0.978684,
+              45.614728
+            ],
+            [
+              -0.958643,
+              45.605421
+            ],
+            [
+              -0.953708,
+              45.609504
+            ],
+            [
+              -0.94933,
+              45.613707
+            ],
+            [
+              -0.942035,
+              45.616799
+            ],
+            [
+              -0.9374,
+              45.61866
+            ],
+            [
+              -0.93298,
+              45.620221
+            ],
+            [
+              -0.928645,
+              45.621091
+            ],
+            [
+              -0.924397,
+              45.622262
+            ],
+            [
+              -0.922079,
+              45.625323
+            ],
+            [
+              -0.918903,
+              45.628295
+            ],
+            [
+              -0.913796,
+              45.625323
+            ],
+            [
+              -0.90826,
+              45.622142
+            ],
+            [
+              -0.897017,
+              45.616619
+            ],
+            [
+              -0.894184,
+              45.619861
+            ],
+            [
+              -0.89221,
+              45.622502
+            ],
+            [
+              -0.889292,
+              45.623102
+            ],
+            [
+              -0.887661,
+              45.620821
+            ],
+            [
+              -0.884314,
+              45.614758
+            ],
+            [
+              -0.884142,
+              45.606412
+            ],
+            [
+              -0.874701,
+              45.606592
+            ],
+            [
+              -0.879335,
+              45.598245
+            ],
+            [
+              -0.881824,
+              45.591098
+            ],
+            [
+              -0.873241,
+              45.582269
+            ],
+            [
+              -0.908947,
+              45.570433
+            ],
+            [
+              -0.932894,
+              45.586714
+            ],
+            [
+              -0.935211,
+              45.587675
+            ],
+            [
+              -0.94079,
+              45.586533
+            ],
+            [
+              -0.946755,
+              45.588696
+            ],
+            [
+              -0.952377,
+              45.590618
+            ],
+            [
+              -0.95654,
+              45.592059
+            ],
+            [
+              -0.959501,
+              45.593291
+            ],
+            [
+              -0.960746,
+              45.591609
+            ],
+            [
+              -0.964308,
+              45.590378
+            ],
+            [
+              -0.967655,
+              45.589477
+            ],
+            [
+              -0.971088,
+              45.588456
+            ],
+            [
+              -0.972161,
+              45.58362
+            ],
+            [
+              -0.973105,
+              45.578153
+            ],
+            [
+              -0.980873,
+              45.576561
+            ],
+            [
+              -0.989971,
+              45.57524
+            ],
+            [
+              -0.974693,
+              45.569592
+            ],
+            [
+              -0.958214,
+              45.578664
+            ],
+            [
+              -0.941734,
+              45.572776
+            ],
+            [
+              -0.93976,
+              45.562051
+            ],
+            [
+              -0.937614,
+              45.559467
+            ],
+            [
+              -0.938473,
+              45.557213
+            ],
+            [
+              -0.929031,
+              45.55517
+            ],
+            [
+              -0.923538,
+              45.550241
+            ],
+            [
+              -0.91238,
+              45.547116
+            ],
+            [
+              -0.909977,
+              45.53395
+            ],
+            [
+              -0.896158,
+              45.528238
+            ],
+            [
+              -0.885601,
+              45.52926
+            ],
+            [
+              -0.873241,
+              45.516993
+            ],
+            [
+              -0.851955,
+              45.512422
+            ],
+            [
+              -0.838566,
+              45.49967
+            ],
+            [
+              -0.8214,
+              45.491487
+            ],
+            [
+              -0.827579,
+              45.487636
+            ],
+            [
+              -0.813847,
+              45.474637
+            ],
+            [
+              -0.79977,
+              45.470304
+            ],
+            [
+              -0.790501,
+              45.456579
+            ],
+            [
+              -0.767155,
+              45.438755
+            ],
+            [
+              -0.755653,
+              45.441405
+            ],
+            [
+              -0.751705,
+              45.443332
+            ],
+            [
+              -0.757198,
+              45.448992
+            ],
+            [
+              -0.753765,
+              45.450799
+            ],
+            [
+              -0.749645,
+              45.452364
+            ],
+            [
+              -0.744324,
+              45.457421
+            ],
+            [
+              -0.750332,
+              45.45995
+            ],
+            [
+              -0.745697,
+              45.463923
+            ],
+            [
+              -0.737114,
+              45.46898
+            ],
+            [
+              -0.721149,
+              45.483063
+            ],
+            [
+              -0.708447,
+              45.496782
+            ],
+            [
+              -0.714626,
+              45.516752
+            ],
+            [
+              -0.723553,
+              45.518196
+            ],
+            [
+              -0.732479,
+              45.522285
+            ],
+            [
+              -0.739002,
+              45.526374
+            ],
+            [
+              -0.749989,
+              45.530583
+            ],
+            [
+              -0.749817,
+              45.554749
+            ],
+            [
+              -0.761147,
+              45.557033
+            ],
+            [
+              -0.76252,
+              45.563884
+            ],
+            [
+              -0.776768,
+              45.565085
+            ],
+            [
+              -0.783463,
+              45.572055
+            ],
+            [
+              -0.779686,
+              45.574459
+            ],
+            [
+              -0.786381,
+              45.574939
+            ],
+            [
+              -0.785866,
+              45.585032
+            ],
+            [
+              -0.793591,
+              45.58359
+            ],
+            [
+              -0.792389,
+              45.587434
+            ],
+            [
+              -0.794964,
+              45.598726
+            ],
+            [
+              -0.80389,
+              45.600407
+            ],
+            [
+              -0.805264,
+              45.607493
+            ],
+            [
+              -0.814362,
+              45.61878
+            ],
+            [
+              -0.841827,
+              45.613377
+            ],
+            [
+              -0.853844,
+              45.617099
+            ],
+            [
+              -0.865688,
+              45.615418
+            ],
+            [
+              -0.876675,
+              45.634506
+            ],
+            [
+              -0.886288,
+              45.644108
+            ],
+            [
+              -0.892811,
+              45.656588
+            ],
+            [
+              -0.905857,
+              45.667865
+            ],
+            [
+              -0.906286,
+              45.683758
+            ],
+            [
+              -0.937872,
+              45.69431
+            ],
+            [
+              -0.967054,
+              45.706419
+            ],
+            [
+              -0.983019,
+              45.712772
+            ],
+            [
+              -0.994692,
+              45.712173
+            ],
+            [
+              -1.00688,
+              45.713971
+            ],
+            [
+              -1.026793,
+              45.719964
+            ],
+            [
+              -1.061811,
+              45.745605
+            ],
+            [
+              -1.080351,
+              45.757104
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Quality Spa",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3f4fK6RcFZv2PFvEMlgESv5y0rPegwE5-3OqxJvnL-pCZCRg3a1WsQrIABcEVt-CVgco7kGg4n1zU5lmPB4mHC8kKm4OBuOiOhpWoNUAoppsIp-5uK3sNlsAPvfekAWPUALB48bl4u11Qenoi1AplPn=w904-h452-no?authuser=0|300}}\n\n📍 14 Avenue des Vignes, 17320 Saint-Just-Luzac, France\n\n📞 09 80 80 18 16\n\nhttps://www.qualityspa.fr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.049151,
+          45.800313
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rival PRET A PORTER FEMININ",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3feQj25KZIPYcr5mWUpCTkydqni_7AD2INITroweAH6WP_CKFMs2_xMJCONSt5wYibnw6O4-f9m0lwjXjvLAZMYCP_qlnYVluue_JJEWcF6YaYVjjJAHYTOQP_ZeKuHZpPGx8RncyCyzVm2XOXMN0Vn=w1182-h444-no?authuser=0|300}}\n\n📍 Centre commercial Val Lumière, 17640 Vaux-sur-Mer, France\n\n📞 0546069005"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.051769,
+          45.647626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Soldive",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3c7rdozSVq0o0bHcuph_0RF4MftwTRFPquFWnUrWSQki3nF8Q6Fwe2sTgbpu8a73G0mDSgw1fcc1y9h-BYqHIOvqOZO__SQwmXTRM3IsCV9Efkp1JjAxsxClZIyk_Dr8qcI8HKqLOq1atBgqPk4vLxI=w1254-h424-no?authuser=0|300}}\n\n📍 Z.A avenue du général andrieux 17110 Saint-Georges-De-Didonne, France\n\n📞 05 46 05 18 08\n\nhttps://soldive-producteur.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.972118,
+          45.605271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Soldive Breuillet",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3c7rdozSVq0o0bHcuph_0RF4MftwTRFPquFWnUrWSQki3nF8Q6Fwe2sTgbpu8a73G0mDSgw1fcc1y9h-BYqHIOvqOZO__SQwmXTRM3IsCV9Efkp1JjAxsxClZIyk_Dr8qcI8HKqLOq1atBgqPk4vLxI=w1254-h424-no?authuser=0|300}}\n\n📍 2 route de Saujon 17920 Breuillet, France\n\n📞 05 46 05 18 08\n\nhttps://soldive-producteur.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.028236,
+          45.690971
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vallein Tercinier et Cie",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3djP6Fi9UF7Lypp-za8RyKkBu9ucBUSpuIFC7lnPjvmdgoNxCrlUgHCG8IeTxOj0s-yDXjD1FmK-g-zavK5Fp2BFWZRoUlejmPOb4ZIDoox8ITueynoh7mCqhsIR66XEeHeWgrAI_SXyqKoNWgZkfrt=w722-h472-no?authuser=0|300}}\n\n📍 15 Rue des Forges, 17460 Chermignac, France\n\n📞 05 46 92 64 30\n\nhttp://www.cognac-tercinier.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.67096,
+          45.681232
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "color": "BlueViolet"
+        },
+        "name": "La Palmyre",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fR05143ux_XURDoUDrbWQ1tSo_RjsshIyB2icy6BP7qxA8fjuuo3PVShcasgG_YUBQNU-u9UQVkdnoCP03VwiaQZH0ep9j94W8SA5hcRciNvj1BXkLX_FfI6kHY8kelv6d8z6Nna90G8928M1f74Fo=w1210-h860-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3eEMdiZuBawrSXapg8TkdpcusUgZ0QP3wreE4E9jcZZKMzp3X5ICqXMyau1vNuN8JZ1Sfb4kzd7yQOq0uHMRkpxp1wREPKYgeaMFyOlilpeTk6u9edt2hYpdGpimFZeVuE6YOfRmGrskPtJ2B6sqAFK=w514-h818-no?authuser=0|300}}"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.158714,
+              45.711993
+            ],
+            [
+              -1.156397,
+              45.708457
+            ],
+            [
+              -1.152105,
+              45.702043
+            ],
+            [
+              -1.147556,
+              45.696468
+            ],
+            [
+              -1.144466,
+              45.690953
+            ],
+            [
+              -1.154251,
+              45.682558
+            ],
+            [
+              -1.159573,
+              45.678061
+            ],
+            [
+              -1.161461,
+              45.675722
+            ],
+            [
+              -1.164122,
+              45.674163
+            ],
+            [
+              -1.168499,
+              45.675242
+            ],
+            [
+              -1.173306,
+              45.677401
+            ],
+            [
+              -1.17691,
+              45.67914
+            ],
+            [
+              -1.182575,
+              45.68064
+            ],
+            [
+              -1.192617,
+              45.687655
+            ],
+            [
+              -1.199913,
+              45.693831
+            ],
+            [
+              -1.192188,
+              45.703002
+            ],
+            [
+              -1.183691,
+              45.709716
+            ],
+            [
+              -1.171846,
+              45.711993
+            ],
+            [
+              -1.16086,
+              45.713072
+            ],
+            [
+              -1.158714,
+              45.711993
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "ORPI Agence de la Plage",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fR05143ux_XURDoUDrbWQ1tSo_RjsshIyB2icy6BP7qxA8fjuuo3PVShcasgG_YUBQNU-u9UQVkdnoCP03VwiaQZH0ep9j94W8SA5hcRciNvj1BXkLX_FfI6kHY8kelv6d8z6Nna90G8928M1f74Fo=w1210-h860-no?authuser=0|300}}\n\n📍 8 Avenue de l'Océan, 17570 Les Mathes, France\n\n📞 0546057448\n\nhttps://www.orpi.com/agencedelaplage-lapalmyre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.179094,
+          45.689832
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zoo de La Palmyre",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3eEMdiZuBawrSXapg8TkdpcusUgZ0QP3wreE4E9jcZZKMzp3X5ICqXMyau1vNuN8JZ1Sfb4kzd7yQOq0uHMRkpxp1wREPKYgeaMFyOlilpeTk6u9edt2hYpdGpimFZeVuE6YOfRmGrskPtJ2B6sqAFK=w514-h818-no?authuser=0|300}}\n\n📍 6 Avenue de Royan, 17570 Les Mathes, France\n\n📞 0546224606\n\nhttp://www.zoo-palmyre.fr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.165618,
+          45.686475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Agence Océane",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fokEOb_ScNAVyKV6x1JDxaBc7WU1tMXBF2iworEBEiX5j_TkctY4NPCbuEKNP3nIORf7r1mnW473-_uvruc2t6_59TwZvKqgk-slgbIWoTKizIf5s5zIaIQU-abE61faOdUsVOV7VUw0pQB0s_10I9=w588-h428-no?authuser=0|300}}\n\n📍 82 Avenue Pasteur, 17640 Vaux-sur-Mer, France\n\n📞 05 46 39 85 97\n\nhttp://www.agence-oceane17.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.053309,
+          45.62887
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Camping CHAUCHAMPS",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fJJhVMIQlCvnwC48sYlaCaUts4quV0XobHHR8RaSnNS5e3NjtB_CezZP7WVyK-_6z34CI2BXhfqd9iDjagAGn1hSlYxJI68CS0_7_VNai0OXnKvwLZDYpq2EdMWlVWd6-WXfQ_vtZIWl1V0Ix7ZHvc=w562-h424-no?authuser=0|300}}\n\n📍 13 Chemin de Chauchamp, 17640 Vaux-sur-Mer, France\n\n📞 05 46 38 27 62\n\nhttp://www.camping-chauchamps.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.059333,
+          45.649906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3dH-sJQMgsltPCLmbJbJSfXE5O58IdLkxC3g-khBKhzFdFuC8z_QSvusYgxVcdJ1DRuXtN8lLaQLPLI7PKiWSCZEy3Oq9VlGG0GUwuDEjIv9Ows__ZjMWomdUMM46iMVI-bhzjefHhd1lFHUhB02zvE=w587-h910-no?authuser=0|300}}\n\n📍 Centre commercial Val Lumière, 17640 Vaux-sur-Mer, France\n\n📞 05 46 23 55 55\n\nhttps://drive.intermarche.com/",
+        "name": "Le drive Intermarché"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.05127,
+          45.647371
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Orpi Agence De La Plage",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fR05143ux_XURDoUDrbWQ1tSo_RjsshIyB2icy6BP7qxA8fjuuo3PVShcasgG_YUBQNU-u9UQVkdnoCP03VwiaQZH0ep9j94W8SA5hcRciNvj1BXkLX_FfI6kHY8kelv6d8z6Nna90G8928M1f74Fo=w1210-h860-no?authuser=0|300}}\n\n📍 2 Avenue de Pontaillac, 17420 Saint-Palais-sur-Mer, France\n\n📞 05 46 23 14 77\n\nhttps://www.orpi.com/agencedelaplage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.086651,
+          45.64248
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Orpi Agence De La Plage",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fR05143ux_XURDoUDrbWQ1tSo_RjsshIyB2icy6BP7qxA8fjuuo3PVShcasgG_YUBQNU-u9UQVkdnoCP03VwiaQZH0ep9j94W8SA5hcRciNvj1BXkLX_FfI6kHY8kelv6d8z6Nna90G8928M1f74Fo=w1210-h860-no?authuser=0|300}}\n\n📍 9 Boulevard de la Côte de Beauté, Vaux-sur-Mer, France\n\n📞 05 46 06 87 82\n\nhttps://www.orpi.com/agencedelaplage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.054449,
+          45.629129
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "color": "BlueViolet"
+        },
+        "name": "St-Palais-sur-Mer",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3dH-sJQMgsltPCLmbJbJSfXE5O58IdLkxC3g-khBKhzFdFuC8z_QSvusYgxVcdJ1DRuXtN8lLaQLPLI7PKiWSCZEy3Oq9VlGG0GUwuDEjIv9Ows__ZjMWomdUMM46iMVI-bhzjefHhd1lFHUhB02zvE=w587-h910-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3fJJhVMIQlCvnwC48sYlaCaUts4quV0XobHHR8RaSnNS5e3NjtB_CezZP7WVyK-_6z34CI2BXhfqd9iDjagAGn1hSlYxJI68CS0_7_VNai0OXnKvwLZDYpq2EdMWlVWd6-WXfQ_vtZIWl1V0Ix7ZHvc=w562-h424-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3fR05143ux_XURDoUDrbWQ1tSo_RjsshIyB2icy6BP7qxA8fjuuo3PVShcasgG_YUBQNU-u9UQVkdnoCP03VwiaQZH0ep9j94W8SA5hcRciNvj1BXkLX_FfI6kHY8kelv6d8z6Nna90G8928M1f74Fo=w1210-h860-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3fokEOb_ScNAVyKV6x1JDxaBc7WU1tMXBF2iworEBEiX5j_TkctY4NPCbuEKNP3nIORf7r1mnW473-_uvruc2t6_59TwZvKqgk-slgbIWoTKizIf5s5zIaIQU-abE61faOdUsVOV7VUw0pQB0s_10I9=w588-h428-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3eVafNmUwTVF8zBhR_LyATC-Vct_xH0caj5CMUoHQogntSKq2hNNf_logYa6b75snF8ryCYlBdOD-aWqggAjksKWLhKD4MA2lJup6mfNKfWBUv5Mxu2uxfAMly6Cqgp495cIXoq-IOlnTgumqPO0CSd=w591-h910-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3feQj25KZIPYcr5mWUpCTkydqni_7AD2INITroweAH6WP_CKFMs2_xMJCONSt5wYibnw6O4-f9m0lwjXjvLAZMYCP_qlnYVluue_JJEWcF6YaYVjjJAHYTOQP_ZeKuHZpPGx8RncyCyzVm2XOXMN0Vn=w1182-h444-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3cQ5q-aFFAIP23DWFZQuZYzH0-tLgz85lIBPbS36CfATLCYPfcZo_tRRFKwjAcX1iyMzg5Vkrl0WSOgS1EvshaZ6xwuZ_LEAc7vNgoHRKwJ7yEqvgDh8bYVYcHEGApyuJHIXZqyu7j_VLPk9SZZaP7W=w1160-h422-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3eFVBVNI_zrHkFTwIwnnlziFFGDwAqr-RORxUk9OM59-ilv-dlBSv6s21WE3HyrV8qFBwsyjhDxJhcroaGe0FHHHvAFsprzL6eUHs26qSJ7WLUnKiLz57bzo-aBuZ9tslG74jGcw2fLsAgUx-6r7wGa=w591-h910-no?authuser=0|300}}"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -1.04104,
+              45.647828
+            ],
+            [
+              -1.049023,
+              45.643748
+            ],
+            [
+              -1.054516,
+              45.636727
+            ],
+            [
+              -1.052713,
+              45.634026
+            ],
+            [
+              -1.051083,
+              45.631866
+            ],
+            [
+              -1.052456,
+              45.630185
+            ],
+            [
+              -1.053658,
+              45.627784
+            ],
+            [
+              -1.056576,
+              45.624783
+            ],
+            [
+              -1.124554,
+              45.651968
+            ],
+            [
+              -1.095715,
+              45.661687
+            ],
+            [
+              -1.074686,
+              45.670384
+            ],
+            [
+              -1.044474,
+              45.656228
+            ],
+            [
+              -1.04104,
+              45.647828
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": " LES VOILES BLANCHES",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fPSyMZBGJQfWDPXe7NmztnbmgRpkHQXWaC7P-JCRlkX7JCLaq-6dK-3bb30PdWBmHFzwnMn9udPdKl5Fuw4bUBIkU_xjpicVXHFGdnc7EBZY0KO00yBoTf4QEPLX1MXBR0QUJFYEdQFrrbSY3OtK5u=w1084-h910-no?authuser=0|300}}\n\n📍 Port de Royan - 17 Quai Amiral Meyer - 17200 ROYAN\n\n📞 05 46 38 08 88\n\nhttps://www.lesvoilesblanches.fr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.03,
+          45.61923
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "color": "#0175A0",
+          "iconClass": "Drop"
+        },
+        "name": "Agence Des Tilleuls",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3c01QicIeKRuO3Il_76BxBoDDWlB3Afr6ru8S5WepyKm7YDl-MfDndi0QXFvE2MY2SUcdz6BIH2LuB06q69pG7DG7JVjFoJhE61a0pFAmBK3PA2U5W9EMWnTglpRmM4dISCrjzWlkJHpWCrWnX2GatT=w858-h770-no?authuser=0|300}}\n\n📍 34 Avenue des Tilleuls, 17200 Royan, France\n\n📞 05 46 05 39 97\n\nhttp://www.agencedestilleuls.fr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.025685,
+          45.626929
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Agence Pierre Loti",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3ffmQczIWWnmSCKSRjiqgYGANNhoNltLJTMU9sAIvBNRt9JSDyGt3aZzU3EsaST9fEkE6L74oywoYY27wf87yIJHC1-nV2_D-hqU7p0NBNH78uj0VMcw4i_P-y1e7q4R1OfQ9xZUYQoe3PK1eHaRcIH=w652-h418-no?authuser=0|300}}\n\n📍 4, rue Pierre Loti 17200 Royan\n\n📞 05 46 05 05 03\n\nhttps://www.agence-pierre-loti.com/\n"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.029603,
+          45.624132
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Confiserie Dupuy",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3deb4fK8Vwbc5xHSxbkX5srt0_vSdjyhoXSStded8oGmL4veVU1uWAYmnUvcHt_RTd-pPEkW8vum9oEhY68pejh9qzVcL1YdHbTqgsjng1b6odrBC2sSouYQ3RaO1VaeMwpysG3iujWtj93F-qmLhGp=w1132-h688-no?authuser=0|300}}\n\n📍 32 Quai Amiral Meyer, 17200 Royan, France\n\n📞 06 20 14 57 84\n\nhttps://www.confiseriedupuy-royan.fr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.029759,
+          45.621114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Créa Vert 17",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3epZdRk7JiqCemd2x1hNZWrbubRS3bgrzfz2P8AYJZzSL-eBQ3IYcxJyXPC2WIWWCEKKkuNC_1pRbrmn4k47F_TR6CTXEKpcl280JT5sHuunTDBO12Ph0B_uQM-GfWrzrDfQoyOrYNsZgAO1jayqzgg=w1206-h522-no?authuser=0|300}}\n\n📍 15 rue Denis Papin, 17200 Royan, France \n\n📞 05 46 05 05 30\n\nhttp://www.creavert17.fr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.989936,
+          45.632323
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "color": "#0175A0",
+          "iconClass": "Drop"
+        },
+        "name": "Cytia immobilier",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3eL6Qvy1LbrlWIKfxF7wBIkVJ8Kh4PVXF0vTRDaAOFkWY3Ap2PIv6ulGGIg-0zx_aBQvC8Zx7cE2ptkWXdt00OZvh_Yfb5tnN_dUaHembrcCTL5fYhl4IVH7VwZmAnZjeHllww3-a7Wb89Fi6SxyYLY=w840-h648-no?authuser=0|300}}\n\n📍 56 rue Gambetta 17200 Royan\n\n📞 05 46 05 12 13\n\nhttps://www.citya.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.029848,
+          45.623059
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "iconClass": "Drop",
+          "color": "#0175A0"
+        },
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3euuxg30Vd2M4y5AS2J2s-wIPd69cLXkQF7ypEStJKDLGDBP4xqzF0ExBlzhjoetF4CQaGjTwV19kPKn52q4wUjnsOn60x4fDkwpMED2wYGUlcWKSzTsxaXv-2vX-1rpi-04rBHUhAwLkgLyPFNvEO2=w580-h424-no?authuser=0|300}}\n\n📍 55 Boulevard Georges Clemenceau, 17200 Royan, France\n\n📞 05 46 05 09 17",
+        "name": "Entreprise Roy Claude SARL"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.021798,
+          45.629881
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "color": "#0175A0",
+          "iconClass": "Drop"
+        },
+        "name": "Glacier - Moulerie - Bar à coktail",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3eK-tcwaLXuhZ2LlNajvC9UQcMNYXYMCnIywyX1Ht80O7lpmsj7CKR2AA__108aq-Pj8aY3AugQlAfI18tmiGAdt9bijcogXh2nUUzKM1nK1ZAtXqfLm1UAXvzK_VAymRF8yFJRWQ4UbFegYWoujFJi=w514-h426-no?authuser=0|300}}\n\n📍 Derrière l’Office de tourisme – Royan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.02437,
+          45.624213
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "color": "#0175A0",
+          "iconClass": "Drop"
+        },
+        "name": "JARDI LECLERC & NOS ANIMAUX LECLERC",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3dqlpo0uzFMfH-HSU3yOwfyy52AbrkEvb9r0YN8zheKZZgwIANg-iFV79zxD59V7rm-RH1P7sIOsNs4abI6fBB112GLWGcb2FlrQdRDLHeM-Uj38S9GlrjHrxw1-0I8E39tUHnsN1aN6A8AxVO2NkO1=s584-no?authuser=0|300}}\n\n📍 119 Avenue de Rochefort, 17200 Royan, France\n\n📞 05 46 38 39 08\n"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.023708,
+          45.640294
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Phonelab Réparations Smartphones et Tablettes",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3dhPbwTxWDCWFD-74-FB7_fBwkBJSgwvyR1584UvTuRkQqDlPataEeeW6Dy1y8Ta9sLz68mTNlktyHyO9PlnFzCHGuHVowwz3esayFT50rPp25vW1L-YrLLfoTdBY7fma2b2vhEUK2XntG2VVFsUL5G=w1200-h528-no?authuser=0|300}}\n\n📍 face au marché central, 67 Rue Font de Cherves, 17200 Royan, France\n\n📞 0546381060\n\nhttp://www.phonelab.fr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.031047,
+          45.627375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Royan",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3dqlpo0uzFMfH-HSU3yOwfyy52AbrkEvb9r0YN8zheKZZgwIANg-iFV79zxD59V7rm-RH1P7sIOsNs4abI6fBB112GLWGcb2FlrQdRDLHeM-Uj38S9GlrjHrxw1-0I8E39tUHnsN1aN6A8AxVO2NkO1=s584-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3dhPbwTxWDCWFD-74-FB7_fBwkBJSgwvyR1584UvTuRkQqDlPataEeeW6Dy1y8Ta9sLz68mTNlktyHyO9PlnFzCHGuHVowwz3esayFT50rPp25vW1L-YrLLfoTdBY7fma2b2vhEUK2XntG2VVFsUL5G=w1200-h528-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3eWUFf5ZCPoVR8joUVD7O887UfvB-6ZBOAUexuwcXhwAI6YGQvHc7J7BmHNAuPBvwz3XGpFSLFiBku850KLsFElDJeqirTaHmYtAYHBmRsDVOv0KVSGkrXtxK1sSnP9_rHbBKIoQYks6VEb9F-FQY4f=w580-h426-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3epZdRk7JiqCemd2x1hNZWrbubRS3bgrzfz2P8AYJZzSL-eBQ3IYcxJyXPC2WIWWCEKKkuNC_1pRbrmn4k47F_TR6CTXEKpcl280JT5sHuunTDBO12Ph0B_uQM-GfWrzrDfQoyOrYNsZgAO1jayqzgg=w1206-h522-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3ffmQczIWWnmSCKSRjiqgYGANNhoNltLJTMU9sAIvBNRt9JSDyGt3aZzU3EsaST9fEkE6L74oywoYY27wf87yIJHC1-nV2_D-hqU7p0NBNH78uj0VMcw4i_P-y1e7q4R1OfQ9xZUYQoe3PK1eHaRcIH=w652-h418-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3eL6Qvy1LbrlWIKfxF7wBIkVJ8Kh4PVXF0vTRDaAOFkWY3Ap2PIv6ulGGIg-0zx_aBQvC8Zx7cE2ptkWXdt00OZvh_Yfb5tnN_dUaHembrcCTL5fYhl4IVH7VwZmAnZjeHllww3-a7Wb89Fi6SxyYLY=w840-h648-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3c01QicIeKRuO3Il_76BxBoDDWlB3Afr6ru8S5WepyKm7YDl-MfDndi0QXFvE2MY2SUcdz6BIH2LuB06q69pG7DG7JVjFoJhE61a0pFAmBK3PA2U5W9EMWnTglpRmM4dISCrjzWlkJHpWCrWnX2GatT=w858-h770-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3eK-tcwaLXuhZ2LlNajvC9UQcMNYXYMCnIywyX1Ht80O7lpmsj7CKR2AA__108aq-Pj8aY3AugQlAfI18tmiGAdt9bijcogXh2nUUzKM1nK1ZAtXqfLm1UAXvzK_VAymRF8yFJRWQ4UbFegYWoujFJi=w514-h426-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3euuxg30Vd2M4y5AS2J2s-wIPd69cLXkQF7ypEStJKDLGDBP4xqzF0ExBlzhjoetF4CQaGjTwV19kPKn52q4wUjnsOn60x4fDkwpMED2wYGUlcWKSzTsxaXv-2vX-1rpi-04rBHUhAwLkgLyPFNvEO2=w580-h424-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3ddxGeK0cogRwu4He0MJmhNPds3g-si_q9qFGBwlZPez4eFzSbby10ewvDDOqqIU8p7R9Fc3uF_kGdH2ojnHZGMjl6y2OPw-DE8PV01w2j4Mq2CVon8Y1yIyaKc2gI9qOraDt1wJRo7Y3Zv7T7gkR1t=w584-h430-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3deb4fK8Vwbc5xHSxbkX5srt0_vSdjyhoXSStded8oGmL4veVU1uWAYmnUvcHt_RTd-pPEkW8vum9oEhY68pejh9qzVcL1YdHbTqgsjng1b6odrBC2sSouYQ3RaO1VaeMwpysG3iujWtj93F-qmLhGp=w1132-h688-no?authuser=0|300}}"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -0.997867,
+              45.638407
+            ],
+            [
+              -1.000957,
+              45.636967
+            ],
+            [
+              -1.012115,
+              45.630185
+            ],
+            [
+              -1.009111,
+              45.627004
+            ],
+            [
+              -1.004562,
+              45.624303
+            ],
+            [
+              -1.000099,
+              45.621241
+            ],
+            [
+              -0.998125,
+              45.622262
+            ],
+            [
+              -0.997438,
+              45.620281
+            ],
+            [
+              -0.993404,
+              45.620041
+            ],
+            [
+              -0.994864,
+              45.6192
+            ],
+            [
+              -0.991859,
+              45.61938
+            ],
+            [
+              -0.990744,
+              45.61914
+            ],
+            [
+              -0.988684,
+              45.61872
+            ],
+            [
+              -0.987053,
+              45.61848
+            ],
+            [
+              -0.995206,
+              45.61794
+            ],
+            [
+              -1.000957,
+              45.613677
+            ],
+            [
+              -1.006708,
+              45.614758
+            ],
+            [
+              -1.007995,
+              45.612837
+            ],
+            [
+              -1.010656,
+              45.611816
+            ],
+            [
+              -1.022329,
+              45.620461
+            ],
+            [
+              -1.03074,
+              45.616259
+            ],
+            [
+              -1.043958,
+              45.61794
+            ],
+            [
+              -1.0534,
+              45.622502
+            ],
+            [
+              -1.054473,
+              45.625773
+            ],
+            [
+              -1.050996,
+              45.632076
+            ],
+            [
+              -1.053915,
+              45.636787
+            ],
+            [
+              -1.048851,
+              45.644048
+            ],
+            [
+              -1.040525,
+              45.647948
+            ],
+            [
+              -1.043701,
+              45.655928
+            ],
+            [
+              -1.033573,
+              45.655688
+            ],
+            [
+              -1.018982,
+              45.656528
+            ],
+            [
+              -1.00233,
+              45.652568
+            ],
+            [
+              -0.992889,
+              45.650288
+            ],
+            [
+              -0.997181,
+              45.644408
+            ],
+            [
+              -1.000099,
+              45.640928
+            ],
+            [
+              -0.997867,
+              45.638407
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Univers PC",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3eWUFf5ZCPoVR8joUVD7O887UfvB-6ZBOAUexuwcXhwAI6YGQvHc7J7BmHNAuPBvwz3XGpFSLFiBku850KLsFElDJeqirTaHmYtAYHBmRsDVOv0KVSGkrXtxK1sSnP9_rHbBKIoQYks6VEb9F-FQY4f=w580-h426-no?authuser=0|300}}\n\n📍 55 Boulevard Aristide Briand, 17200 Royan, France\n\n📞 05 46 05 16 02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.030084,
+          45.626521
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Atlantic MOTO",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3cRKD1FVurkt4I1Tu2b2MWbFsZkruqg80Ue-_B_2gFaRxpfHro0YdNFf_YnQDcYmVcxipnHPbkEbPv88JbXAJDgCPRDiz7YAtft4it3LIQq-GBX2Z-V0IvFbeP6pptDZShtQXsIavM8YomWi81HeiN3=w606-h502-no?authuser=0|300}}\n\n📍 44 Rue Antoine-Laurent de Lavoisier, 17200 Royan, France\n\n📞 05 46 05 33 25\n\n"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.980498,
+          45.633685
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "iconClass": "Drop",
+          "color": "#0175A0"
+        },
+        "name": "Biocoop Royan",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3dqbvcaAbqtFV-sYtbQdsj6XI0LCMfGhSMOocLBu9VBVcd9WsTT_IcHb9rbb9FCEWEY363HpQGT3Y7nHd0kNFRCdAJK5yg2e-241IC4MekPf3HyJgJvpR73F1YfDLr1HctqDjpIUKMKCkyjYWZwVmVd=w600-h524-no?authuser=0|300}}\n\n📍 24 Rue Antoine-Laurent de Lavoisier, 17200 Royan, France\n\n📞 05 46 22 11 36\n\nhttps://www.biocoop-royan.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.987493,
+          45.631911
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cheminées Philippe",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3f5AvLBcyr608CUeYzuTcZle29zyf0k_I9_sS9thIC2JuENdiOhaesvGP5RocfaCMYxQWOEvTmuRBE8UJFITytBHKxaVj9ELsrc1DnOjNUdvToT-cqKX2YQE_LIGALlB9I9Ayq4wtL_GBU6hYp38kH1=w606-h502-no?authuser=0|300}}\n\n📍 ZC de Belmont - ROYAN2 - 17600 MEDIS \n\n📞 0546066401\n\nhttp://www.cheminees-philippe-royan.fr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.983148,
+          45.631641
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Domicile Services",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fpYLmvzojpDnny1ZdfRTydNgX7fB00FLqv5Y3D9bunW0it3mCfiGoAbH05Q4ysufdLM-QXgdoRaCGVuEs1-A_EviB2VVzxxJ7DOM92sJwq9Vtm2nHcnQTiLwcKljhCc9fqOQswAox5-0g9VnUM8JjZ=w1196-h528-no?authuser=0|300}}\n\n📍 15 rue Denis Papin, 17200 Royan, France \n\n📞 05 46 05 77 00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.990121,
+          45.632383
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "iconClass": "Drop",
+          "color": "#0175A0"
+        },
+        "name": "E. Leclerc",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3dTbxT5nX9TxYo8M3anl7E9DDmn8MY-TcM5nHNY1tmyIlP547QRFUyqU1PWMZE5CSMnB3U_BnKOPWk68xp99VAg_9v-KfPsZtH4YpHsC-a82Yhj7lT1rdAAXePpPxcI-snJCvHk66SxbWJDq1yeCsyK=w552-h910-no?authuser=0|300}}\n\n📍 2 Lavoisier C.C quai 17 Zone Royan 2 17200, Royan, France\n\n📞 05 46 05 11 89\n\nhttps://www.e-leclerc.com/royan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.993716,
+          45.631055
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "iconClass": "Drop",
+          "color": "#0175A0"
+        },
+        "name": "Eléphant Bleu",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3dQZ2MaspMGETHCiK-F1vGgmpbSg4lu4AECs3fNV9tAXIvjbQ9X4J38WBTG5Weu59pvzLioKY3bVUNOIo1Jm03tZiSeAozJZNS2dIkEOLW9yP-RXYcnHJLgXW8mBa6O8EU5OcbeOTbVeJC5ciA01S31=w1360-h434-no?authuser=0|300}}\n\n📍 Angle rue André Marie Ampère et, Rue Jean Delay, 17200 Royan, France\n\n📞 05 45 82 63 92\n\nhttps://www.elephantbleu.fr/2487-royan.html"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.005496,
+          45.630643
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "color": "#0175A0",
+          "iconClass": "Drop"
+        },
+        "name": "Escale Fermière",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fMZHyD_BQJ8-fzCsmamvHIA6HJqlbLlGdP5ctnq97OVII5QeAWDUmPFtwYd-C0WcW3WxVmvB6vv4v0GI1W1Egyppnn2UrecXDwXo93OniV9EWV_LjXLVHT5JnQFo_ukY1D8-VeH-eAMgvi6GeoexH0=w718-h436-no?authuser=0|300}}\n\n📍 66 Rue François Arago, 17200 Royan, France\n\n📞 05 46 02 82 40\n\nhttp://www.escale-fermiere.com/\n"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.994257,
+          45.632811
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "iconClass": "Drop",
+          "color": "#0175A0"
+        },
+        "name": "Etablissement Jarriault",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3f4jXK3XtwNqeJHx-fOnDKlwTHCImNKQzGBh39Rm2AmvBh9jVK-L6NWkXn5tERo6GJPghqDES-ngBrs5ylAxJhvUfVJa8JdK_Krj9_sG4ASbYfwUFlx7z5nN-VUDhKME-rd2mNS865csX6gJ-OXVflF=w805-h564-no?authuser=0|300}}\n\n📍 26 Rue François Arago, 17200 Royan, France\n\n📞0546055332\n\n[[http://www.jarriault.fr/]]"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.99791,
+          45.634803
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "iconClass": "Drop",
+          "color": "#0175A0"
+        },
+        "name": "établissements drujon s.a",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3c6ku9acsXQld7SfEL7bcS9b_wlFhzFjzzaRYwxJwexDZ752qFkZRUiF9nJ64My9LW8PQ0VPQa4rXMXuaELrMRBSHm0R6PFJK3HJnEtHXwT1wqYYzQzyybGPZJ6cMWuipGpQby2Y30Qq7Zl2636OO4a=w552-h910-no?authuser=0|300}}\n\n📍 8 Rue d'Arsonval, 17200 Royan, France\n\n📞 05 46 02 77 47\n\nhttp://www.drujon.fr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.997825,
+          45.632657
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "iconClass": "Drop",
+          "color": "#0175A0",
+          "showLabel": false,
+          "popupShape": "Panel"
+        },
+        "name": "Ets DELAGE SARL",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3e2QLMV8DJb7c3TTMFslkOcOUhhBgVLrYwvFutpkvvhA9w9ROJV_QhVTEhzZDvqTsZr1UHflNG2uFTIStdxPXdWBZSJO7FGzLcXolp6J9oTc1IO3prPmi3sGJ_MaUn_MaEOtl6CTk2lWqbLO5y6NRto=w598-h520-no?authuser=0|300}}\n\n📍 Z.I Royan2 6 Rue Louis Lépine, 17202 Royan, France\n\n📞 05 46 38 42 93\n\nhttps://www.delage-plomberie.fr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.993458,
+          45.634919
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "iconClass": "Drop",
+          "color": "#0175A0"
+        },
+        "name": "France Pare-brise",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fvnHjRjSPO0tRzUPFMGsXDEAYyw4roqFwyOgQ2VT_ifLhOlcvi6TCqCA-xA9DfvV1t9F2IcQHnzaonrjrmbmhgewa6lErtVmqdPJU0eU2EesXyNXPFXWZ2rRlv2Chtkcy30lPizRJQmoyxQk3AZap2=w582-h686-no?authuser=0|300}}\n\n📍 58 Avenue Louis Bouchet, 17200 Royan, France\n\n📞 05 46 22 08 66 \n\nhttps://www.franceparebrise.fr"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.001344,
+          45.625477
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Garage Baylet",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3cpw41VWOyG7sJGfbgi7g61Zmt71G-50Jh6qzZHpM7g2Cy67XiotsIYc4LclydgapcLd6u2aN2UNx26WLiDd0-Dg9drSducuPeW_dvfgH-8ny8-KqUWHDQflN1iIyGsIDZPJvmk8IkniHCU_rHyBF_N=w604-h498-no?authuser=0|300}}\n\n📍 13 Rue Jacques Cœur, 17600 Médis, France\n\n📞 05 46 05 53 48"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.983185,
+          45.631119
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Generale d'optique",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3e5fB0SF6J_ib0ObofaSrsGXikcktrS3jgLLqj4USl5vRhrhYDyFsuYZxiYtvSjcOGyRaWMIcC4rP8GcGT4avXAif4k9617j_-GZCgrTWv3Hn_CqRH5ekNNh4TYdGB2HQSNOrCc-SCRmP0MnHLoT1ye=w1382-h422-no?authuser=0|300}}\n\n📍 ZA Royan 2 - 24, rue Antoine Lavoisier - 17200 ROYAN \n\n📞 05 46 22 43 09\n\n[[https://www.generale-optique.com/opticien/l/royan/24-rue-antoine-lavoisier/1800010|generale-optique.com]]"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.987949,
+          45.631881
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "IMPRIMERIE CHALLAT - AZ PUBLICITE",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3eD-yg7WT_TrEdfnILTC7j6a8Jx9-YaSmytfDJDrmJGw_1bDoPr35ajTOnfwMvypiLuYjD99dyogST41Ii05et2XyiEkeOLO8NDvQtodBR5XGRYCoV6alUPQagcm9C7etmD2wh1mkpWjfVl-fIisXzU=w624-h524-no?authuser=0|300}}\n\n📍 60 Avenue Louis Bouchet 17200 Royan\n\n📞 Imprimerie : 05 46 05 01 19 \n📞 Publicité : 05 46 22 83 40\n"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.001054,
+          45.625582
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Intersport",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3cEycqlyzISRlTHr6LZfbpoxCP9GxpDT33sSIzshSGVEnQEKk5HTUMc9kuejX49BB3eS_-Pnv7ou8mt9ou_YN5Zf6guUUm4c5Phd36OgC0lw9HAZmETHO0ZarpJsKddVs32Lj2z6BQfO1okZJHhCjy2=w1126-h686-no?authuser=0|300}}\n\n📍 Pôle Commercial ROYAN II, 16 Rue Antoine-Laurent de Lavoisier, 17200 Royan, France\n\n📞 05 46 22 18 40\n\n[[https://www.intersport.fr/-/ROYAN-17200/INTERSPORT-ROYAN/00732_000/|intersport.fr]]"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.99032,
+          45.631492
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "King Buffet Royan",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fhBu3cq_34s5Kmi1hdDXxUIaXa-Sx_MM4zw6McPxN0gEHOqlzu0P_fWk2Ajvs5xWT5ZA2RFSgqHjNq2tdAFCHRwI8WV9koijnIzPoM_VaCL5LOqHO64hSvPeY8YjE_ylf0Sha0UhHwVidGnxvl6Upc=w1128-h684-no?authuser=0|300}}\n\n📍 16 Rue Denis Papin, 17200 Royan, France\n\n📞 05 46 06 98 98"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.988705,
+          45.632241
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "L'auto Leclerc",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3cSGoHJy3H4LNbUPFN0C7HQjaii38SPVgG_VC0Ht9q083pSGNqoiO0WtgHtyooN03eeaNyY0-Yi1dk5v_pTWWuwlq7_EWycAPl-3ictdrcYSfOZe4VLhPz72UZJVfvrkXqoo19AagrJfzIDA1939Vsd=w702-h878-no?authuser=0|300}}\n\n📍 20 rue lavoisier, 17200 ROYAN\n\n📞 05 46 22 40 29\n"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.989231,
+          45.631596
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "La Cave ",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3dsjNLH_aOJzx2okiXeW8zhb4mjk2xXwJH2OpC4aCoftuo24cWWXRF2H9UYFRGfTJEWt5qi9oHYactuYBOTrseHnEaCHlpzd9Rt2kMiI6_iEs0rhBLJ_IVKiAY2W2-3M0tMlfUqOumpYly01fMyhz3g=w702-h878-no?authuser=0|300}}\n\n📍 Rue Edouard Branly 17200 ROYAN\n\n📞 05 16 65 31 08"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.995416,
+          45.630665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Le Marché Bio",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3daAxXWXeJLIJ82jeGc17cP3xqfWIvqaYCPvkie4NqYNYfViBaxCWWy23g5Ua-NHMDeOs_XH7EX1tOPzQQtepVsQvIPjmdeKdJyMlc42Xx4-L45vceorcvm-ZGd2xzSoDcBhu3o1zFSIGoyw3p_SuJ5=w569-h910-no?authuser=0|300}}\n\n📍 Rue denis Papin, Royan 2 DERRIERE LA STATION SERVICE\n\n📞 05 46 05 34 00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.992272,
+          45.632065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "iconClass": "Drop",
+          "color": "#0175A0"
+        },
+        "name": "Litrimarché",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3dVsqqJVSJDpr8PTMTxIQbo3mLSJwFdGEI5m-HRx-N3d8mWSAaBlu3QOO-DQqAtYhpPq8_XENPXQGq0unThFf4O4CvxHkvUf19YnmRLyvcf_U2PK9ue8FZGTF8y7eTw5uPW2e0DsUHvSZWNtBZbmgOo=w544-h910-no?authuser=0|300}}\n\n📍 18 Rue Antoine-Laurent de Lavoisier, 17200 Royan, France\n\n📞 05 46 39 01 62\n\nhttp://www.litrimarche.fr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.989816,
+          45.631434
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "McDonald's Royan",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fPsVyIgTYdHqSHHqIcYEbIFIb8FPjl4GVGn2ELEqpMou8k1SWLB8fwZvPJ7AgLGD-cxTG92yvOpQfihBjdtcp-q2VmQazncLNCEUMHIH2vH4GYYhugaLMkByGjHt565dM-Q0zPbGMG8wKmxgYi5P99=w500-h438-no?authuser=0|300}}\n\n📍 39, Avenue Joliot Curie, 17200 Royan, France\n\n📞 05 46 02 05 55\n\nhttp://www.restaurants.mcdonalds.fr/mcdonalds-royan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.002556,
+          45.623436
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Menuiserie D.Robert",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3cXuORYDjHie71qspbix7Ai-5fETM8lDgRuWpBkwZ07HuJFjKH8qvO3lrEufCT-5psMW30hpqJ9KaGRErrXee0VxQIBQfyjMfpIIabTpZGN84fV6B6WU0vBBH6-opwz4muoOpklTtvDIhlDQ7tJtgRv=w708-h416-no?authuser=0|300}}\n\n📍 23, rue François Arago - 17200 ROYAN \n\n📞 05 46 05 76 46"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.997707,
+          45.63388
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mobléa",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3cvVCLWo5iwvjU_PXFCCOI9i6nSzx8DpSPhL9JSVmegQmmFucLL538SGdbcrEUSYZwOh8iBE5bYoNkksCHUjJwA9Hk1SgMTjd711w2PjdtcKHgKHrWfTITmRh4d9X7qSJujtYTL2DncfmkaIb31jqQc=w1386-h892-no?authuser=0|300}}\n\n📍 Route de Saintes – Zone Commerciale Concorde\n(à côté Halle aux Chaussures) \n\n📞 05 46 06 57 54"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.985047,
+          45.633291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "iconClass": "Drop",
+          "color": "#0175A0"
+        },
+        "name": "Monsieur Bricolage ",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3c-OfwUW7luA-BNJqQEDLDCCaWgX0AyhfnsgkuYz2zAvAGQHZHdRECvllIO8y1oHKLlLa7JYuU2xzuEFT3Fuzylr_Gk9NMiB5F-jDAqjiKKVCuDS2rD8V_3dC05ldqpejfheg42lNvjAtC4M2ej4Xwo=w908-h664-no?authuser=0|300}}\n\n📍 4 Rue Jean Delay 2 Et, 17200 Royan, France\n\n📞 05 46 05 06 28\n\n[[https://magasin.mr-bricolage.fr/195-mr-bricolage-royan?utm_source=gmb|magasin.mr-bricolage.fr]]"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.002492,
+          45.629638
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "iconClass": "Drop",
+          "color": "#0175A0"
+        },
+        "name": "Monsieur Meuble",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3cuxn-Ph8LifHl1PayPnGFNB0szIVW-G9GP5Jwh-GqqO9pqot5pK9Xee-IDUK2X8cNW13U1YvS8yDnKs72WxKQ1nmicQXKibdmV3cCZzd3l1JDEIhmC43OsSqpQvYcMbRteKsYIr_Tuw8ixMgQNUJXo=w904-h580-no?authuser=0|300}}\n\n📍 24 Rue Antoine-Laurent de Lavoisier, 17200 Royan, France\n\n📞 05 46 05 21 51\n\n[[https://www.monsieur-meuble.com/magasins/royan/?modeles-exposition|monsieur-meuble.com]]"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.987402,
+          45.632256
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "color": "Cyan"
+        },
+        "name": "Royan 2",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3cRKD1FVurkt4I1Tu2b2MWbFsZkruqg80Ue-_B_2gFaRxpfHro0YdNFf_YnQDcYmVcxipnHPbkEbPv88JbXAJDgCPRDiz7YAtft4it3LIQq-GBX2Z-V0IvFbeP6pptDZShtQXsIavM8YomWi81HeiN3=w606-h502-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3cFYaAwdKujlRIkoLjAflmPCycDKirXO7UmaEPqwlrpePfRfvF4m5OUWYoeFh118NBmswolALHhxLRdjqWVOvrJeBirn8-Jq49vTrK5YEpQg4WoBbgG_CcKIzkLOF-sY-4A-8-KzUu5bfMtxysb_u2x=w910-h672-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3f5AvLBcyr608CUeYzuTcZle29zyf0k_I9_sS9thIC2JuENdiOhaesvGP5RocfaCMYxQWOEvTmuRBE8UJFITytBHKxaVj9ELsrc1DnOjNUdvToT-cqKX2YQE_LIGALlB9I9Ayq4wtL_GBU6hYp38kH1=w606-h502-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3cpw41VWOyG7sJGfbgi7g61Zmt71G-50Jh6qzZHpM7g2Cy67XiotsIYc4LclydgapcLd6u2aN2UNx26WLiDd0-Dg9drSducuPeW_dvfgH-8ny8-KqUWHDQflN1iIyGsIDZPJvmk8IkniHCU_rHyBF_N=w604-h498-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3cvVCLWo5iwvjU_PXFCCOI9i6nSzx8DpSPhL9JSVmegQmmFucLL538SGdbcrEUSYZwOh8iBE5bYoNkksCHUjJwA9Hk1SgMTjd711w2PjdtcKHgKHrWfTITmRh4d9X7qSJujtYTL2DncfmkaIb31jqQc=w1386-h892-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3cuxn-Ph8LifHl1PayPnGFNB0szIVW-G9GP5Jwh-GqqO9pqot5pK9Xee-IDUK2X8cNW13U1YvS8yDnKs72WxKQ1nmicQXKibdmV3cCZzd3l1JDEIhmC43OsSqpQvYcMbRteKsYIr_Tuw8ixMgQNUJXo=w904-h580-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3dqbvcaAbqtFV-sYtbQdsj6XI0LCMfGhSMOocLBu9VBVcd9WsTT_IcHb9rbb9FCEWEY363HpQGT3Y7nHd0kNFRCdAJK5yg2e-241IC4MekPf3HyJgJvpR73F1YfDLr1HctqDjpIUKMKCkyjYWZwVmVd=w600-h524-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3e5fB0SF6J_ib0ObofaSrsGXikcktrS3jgLLqj4USl5vRhrhYDyFsuYZxiYtvSjcOGyRaWMIcC4rP8GcGT4avXAif4k9617j_-GZCgrTWv3Hn_CqRH5ekNNh4TYdGB2HQSNOrCc-SCRmP0MnHLoT1ye=w1382-h422-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3cSGoHJy3H4LNbUPFN0C7HQjaii38SPVgG_VC0Ht9q083pSGNqoiO0WtgHtyooN03eeaNyY0-Yi1dk5v_pTWWuwlq7_EWycAPl-3ictdrcYSfOZe4VLhPz72UZJVfvrkXqoo19AagrJfzIDA1939Vsd=w702-h878-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3dVsqqJVSJDpr8PTMTxIQbo3mLSJwFdGEI5m-HRx-N3d8mWSAaBlu3QOO-DQqAtYhpPq8_XENPXQGq0unThFf4O4CvxHkvUf19YnmRLyvcf_U2PK9ue8FZGTF8y7eTw5uPW2e0DsUHvSZWNtBZbmgOo=w544-h910-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3e2QLMV8DJb7c3TTMFslkOcOUhhBgVLrYwvFutpkvvhA9w9ROJV_QhVTEhzZDvqTsZr1UHflNG2uFTIStdxPXdWBZSJO7FGzLcXolp6J9oTc1IO3prPmi3sGJ_MaUn_MaEOtl6CTk2lWqbLO5y6NRto=w598-h520-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3es_lMNUAljfNU20_CNwK5rsxQtH_lvAxqZjDZYi1LP2Y2_2ZQhc7XNzsV_3UWWxDwsi_72AVXQJVflJcbk6wGfjnKy_y3cbT_0DC784hiGZFsPWxQiZjLA4i7LC6uzHPpiFf1MziKz4IBf6mQzDVnx=w630-h524-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3fMZHyD_BQJ8-fzCsmamvHIA6HJqlbLlGdP5ctnq97OVII5QeAWDUmPFtwYd-C0WcW3WxVmvB6vv4v0GI1W1Egyppnn2UrecXDwXo93OniV9EWV_LjXLVHT5JnQFo_ukY1D8-VeH-eAMgvi6GeoexH0=w718-h436-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3daAxXWXeJLIJ82jeGc17cP3xqfWIvqaYCPvkie4NqYNYfViBaxCWWy23g5Ua-NHMDeOs_XH7EX1tOPzQQtepVsQvIPjmdeKdJyMlc42Xx4-L45vceorcvm-ZGd2xzSoDcBhu3o1zFSIGoyw3p_SuJ5=w569-h910-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3dTbxT5nX9TxYo8M3anl7E9DDmn8MY-TcM5nHNY1tmyIlP547QRFUyqU1PWMZE5CSMnB3U_BnKOPWk68xp99VAg_9v-KfPsZtH4YpHsC-a82Yhj7lT1rdAAXePpPxcI-snJCvHk66SxbWJDq1yeCsyK=w552-h910-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3dsjNLH_aOJzx2okiXeW8zhb4mjk2xXwJH2OpC4aCoftuo24cWWXRF2H9UYFRGfTJEWt5qi9oHYactuYBOTrseHnEaCHlpzd9Rt2kMiI6_iEs0rhBLJ_IVKiAY2W2-3M0tMlfUqOumpYly01fMyhz3g=w702-h878-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3f4jXK3XtwNqeJHx-fOnDKlwTHCImNKQzGBh39Rm2AmvBh9jVK-L6NWkXn5tERo6GJPghqDES-ngBrs5ylAxJhvUfVJa8JdK_Krj9_sG4ASbYfwUFlx7z5nN-VUDhKME-rd2mNS865csX6gJ-OXVflF=w805-h564-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3cXuORYDjHie71qspbix7Ai-5fETM8lDgRuWpBkwZ07HuJFjKH8qvO3lrEufCT-5psMW30hpqJ9KaGRErrXee0VxQIBQfyjMfpIIabTpZGN84fV6B6WU0vBBH6-opwz4muoOpklTtvDIhlDQ7tJtgRv=w708-h416-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3c6ku9acsXQld7SfEL7bcS9b_wlFhzFjzzaRYwxJwexDZ752qFkZRUiF9nJ64My9LW8PQ0VPQa4rXMXuaELrMRBSHm0R6PFJK3HJnEtHXwT1wqYYzQzyybGPZJ6cMWuipGpQby2Y30Qq7Zl2636OO4a=w552-h910-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3fczyMAJim8ayVQ-F4L1XbOLE0pxJbpTzyx_U9eiWf_fhmDhxkuFLU_2tpY4ZyBCmjQqmFI0ElI-0aDnrD75_NA1crW6R7qU8gAe77XcUVpkHKfOhN-POP_3cCbtsEU6xxs5eQGx-DKEbKD1laSk7Ze=w708-h416-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3fpYLmvzojpDnny1ZdfRTydNgX7fB00FLqv5Y3D9bunW0it3mCfiGoAbH05Q4ysufdLM-QXgdoRaCGVuEs1-A_EviB2VVzxxJ7DOM92sJwq9Vtm2nHcnQTiLwcKljhCc9fqOQswAox5-0g9VnUM8JjZ=w1196-h528-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3dQZ2MaspMGETHCiK-F1vGgmpbSg4lu4AECs3fNV9tAXIvjbQ9X4J38WBTG5Weu59pvzLioKY3bVUNOIo1Jm03tZiSeAozJZNS2dIkEOLW9yP-RXYcnHJLgXW8mBa6O8EU5OcbeOTbVeJC5ciA01S31=w1360-h434-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3c-OfwUW7luA-BNJqQEDLDCCaWgX0AyhfnsgkuYz2zAvAGQHZHdRECvllIO8y1oHKLlLa7JYuU2xzuEFT3Fuzylr_Gk9NMiB5F-jDAqjiKKVCuDS2rD8V_3dC05ldqpejfheg42lNvjAtC4M2ej4Xwo=w908-h664-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3eD-yg7WT_TrEdfnILTC7j6a8Jx9-YaSmytfDJDrmJGw_1bDoPr35ajTOnfwMvypiLuYjD99dyogST41Ii05et2XyiEkeOLO8NDvQtodBR5XGRYCoV6alUPQagcm9C7etmD2wh1mkpWjfVl-fIisXzU=w624-h524-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3fvnHjRjSPO0tRzUPFMGsXDEAYyw4roqFwyOgQ2VT_ifLhOlcvi6TCqCA-xA9DfvV1t9F2IcQHnzaonrjrmbmhgewa6lErtVmqdPJU0eU2EesXyNXPFXWZ2rRlv2Chtkcy30lPizRJQmoyxQk3AZap2=w582-h686-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3fPsVyIgTYdHqSHHqIcYEbIFIb8FPjl4GVGn2ELEqpMou8k1SWLB8fwZvPJ7AgLGD-cxTG92yvOpQfihBjdtcp-q2VmQazncLNCEUMHIH2vH4GYYhugaLMkByGjHt565dM-Q0zPbGMG8wKmxgYi5P99=w500-h438-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3cEycqlyzISRlTHr6LZfbpoxCP9GxpDT33sSIzshSGVEnQEKk5HTUMc9kuejX49BB3eS_-Pnv7ou8mt9ou_YN5Zf6guUUm4c5Phd36OgC0lw9HAZmETHO0ZarpJsKddVs32Lj2z6BQfO1okZJHhCjy2=w1126-h686-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3fhBu3cq_34s5Kmi1hdDXxUIaXa-Sx_MM4zw6McPxN0gEHOqlzu0P_fWk2Ajvs5xWT5ZA2RFSgqHjNq2tdAFCHRwI8WV9koijnIzPoM_VaCL5LOqHO64hSvPeY8YjE_ylf0Sha0UhHwVidGnxvl6Upc=w1128-h684-no?authuser=0|300}}"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -0.981045,
+              45.636487
+            ],
+            [
+              -0.984306,
+              45.636607
+            ],
+            [
+              -0.987396,
+              45.638407
+            ],
+            [
+              -0.99349,
+              45.639608
+            ],
+            [
+              -1.001129,
+              45.635767
+            ],
+            [
+              -1.004648,
+              45.633546
+            ],
+            [
+              -1.011343,
+              45.629765
+            ],
+            [
+              -1.009026,
+              45.627289
+            ],
+            [
+              -1.006,
+              45.625353
+            ],
+            [
+              -1.000099,
+              45.621452
+            ],
+            [
+              -0.977955,
+              45.633306
+            ],
+            [
+              -0.981045,
+              45.636487
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SAS GARAGE DISCOUNT MOTORCRAFT",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3es_lMNUAljfNU20_CNwK5rsxQtH_lvAxqZjDZYi1LP2Y2_2ZQhc7XNzsV_3UWWxDwsi_72AVXQJVflJcbk6wGfjnKy_y3cbT_0DC784hiGZFsPWxQiZjLA4i7LC6uzHPpiFf1MziKz4IBf6mQzDVnx=w630-h524-no?authuser=0|300}}\n\n📍 Zone Commerciale Royan 2 50, rue François Arago - 17200 Royan \n\n📞 05 46 22 71 58\n\nsasgaragediscount@outlook.fr "
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.993855,
+          45.634311
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "STTP Bordet",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fczyMAJim8ayVQ-F4L1XbOLE0pxJbpTzyx_U9eiWf_fhmDhxkuFLU_2tpY4ZyBCmjQqmFI0ElI-0aDnrD75_NA1crW6R7qU8gAe77XcUVpkHKfOhN-POP_3cCbtsEU6xxs5eQGx-DKEbKD1laSk7Ze=w708-h416-no?authuser=0|300}}\n\n📍 8, rue Hôtel-de-Ville - BP 60001 17240 SAINT-FORT-SUR-GIRONDE\n\n📞05 46 49 95 69 \n "
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.001424,
+          45.631749
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "iconClass": "Drop",
+          "color": "#0175A0"
+        },
+        "name": "VM Matériaux",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3cFYaAwdKujlRIkoLjAflmPCycDKirXO7UmaEPqwlrpePfRfvF4m5OUWYoeFh118NBmswolALHhxLRdjqWVOvrJeBirn8-Jq49vTrK5YEpQg4WoBbgG_CcKIzkLOF-sY-4A-8-KzUu5bfMtxysb_u2x=w910-h672-no?authuser=0|300}}\n\n📍 Cité Belmont, N150, 17600 Médis, France\n\n📞 05 46 05 63 55\n\n[[https://www.vm-materiaux.fr/vm-royan-carrelage-17|vm-materiaux.fr]]"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.982574,
+          45.632035
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Duprat charcutier traiteur",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3d65Nupy08SQQAvkN3vGmi0CA8roEJoQF7HxAQ4Q3RzK6j87sfZIPUosje7bB6zIEViQ4MmmrafZTUZ6gFXpMjyoLSrM6AZ1u-x2tzjtxAautvb0X8QkRtHVUlpyoHafWm5pTk_l6PHewuszpDqZEI8=w582-h894-no?authuser=0|300}}\n\nMarché central de Royan Banc N° 79\n\n📍 4, rue Collignon 17110 St-Georges-de-Didonne\n\n📞 05 46 05 09 64"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.998385,
+          45.602306
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "La Cazuela",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3ddeKeUxdazqDVvNlBFluFi14VAx1aNaPbdah225n-sdLYfhXZTzLIlXUa63PCFFeFOU0yDmP0H6ZKxOq4FDC-eHxYp_CzDFNkh7O7ce6wECIkZJiBUAb8ile3uZSgE-Qz4HSC0-HNI0tUgCARTpcbL=w734-h468-no?authuser=0|300}}\n\n📍 97 Boulevard de Lattre de Tassigny, 17110 Saint-Georges-de-Didonne, France\n\n📞 05 46 23 14 86\n\nhttp://www.lacazuela.fr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.009111,
+          45.609816
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Le 32 Boulangerie Pâtisserie",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3ccCM7C9P-aBKfUoaopTntTnG78eEJTbfEFiM9vL1TT7TAJYXEy5DjC69HJPyhBbN6TTieOAy2vsBFzIy77WIAYibqAZwZEdkrASh5m_TR0KjCBz-jXOJALzpjxiZEiodvta422a17_g1tA3kIyWd70=w716-h462-no?authuser=0|300}}\n\n📍 32 Rue de la République, 17110 Saint-Georges-de-Didonne, France\n\n📞 05 46 05 21 29"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.995742,
+          45.602852
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "ORPI Agence Immo Plus",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3flgYy7mYVwtm3aQhpXNl6jAL418eCviT5kSrdObXFrJZcH5ZFuI3vYThezUcYRQBPmLx2iTvErkuGDPmp3xv1HP43JDu8PJ3Lvo-b1WJgDOqZCeyX7bFFkjfL9uUSYWHUdZDbK3g0HebIPPokDesch=w900-h646-no?authuser=0|300}}\n\n📍 186 Boulevard de la Côté de Beauté, 17110 Saint-Georges-de-Didonne, France\n\n📞 05 46 05 75 75\n\nhttps://www.orpi.com/immoplus17"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.997774,
+          45.60118
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "color": "BlueViolet"
+        },
+        "name": "St-Georges-de-Didonne",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3d65Nupy08SQQAvkN3vGmi0CA8roEJoQF7HxAQ4Q3RzK6j87sfZIPUosje7bB6zIEViQ4MmmrafZTUZ6gFXpMjyoLSrM6AZ1u-x2tzjtxAautvb0X8QkRtHVUlpyoHafWm5pTk_l6PHewuszpDqZEI8=w582-h894-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3ccCM7C9P-aBKfUoaopTntTnG78eEJTbfEFiM9vL1TT7TAJYXEy5DjC69HJPyhBbN6TTieOAy2vsBFzIy77WIAYibqAZwZEdkrASh5m_TR0KjCBz-jXOJALzpjxiZEiodvta422a17_g1tA3kIyWd70=w716-h462-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3flgYy7mYVwtm3aQhpXNl6jAL418eCviT5kSrdObXFrJZcH5ZFuI3vYThezUcYRQBPmLx2iTvErkuGDPmp3xv1HP43JDu8PJ3Lvo-b1WJgDOqZCeyX7bFFkjfL9uUSYWHUdZDbK3g0HebIPPokDesch=w900-h646-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3c7rdozSVq0o0bHcuph_0RF4MftwTRFPquFWnUrWSQki3nF8Q6Fwe2sTgbpu8a73G0mDSgw1fcc1y9h-BYqHIOvqOZO__SQwmXTRM3IsCV9Efkp1JjAxsxClZIyk_Dr8qcI8HKqLOq1atBgqPk4vLxI=w1254-h424-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3ddeKeUxdazqDVvNlBFluFi14VAx1aNaPbdah225n-sdLYfhXZTzLIlXUa63PCFFeFOU0yDmP0H6ZKxOq4FDC-eHxYp_CzDFNkh7O7ce6wECIkZJiBUAb8ile3uZSgE-Qz4HSC0-HNI0tUgCARTpcbL=w734-h468-no?authuser=0|300}}"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -0.985508,
+              45.61764
+            ],
+            [
+              -0.995035,
+              45.617339
+            ],
+            [
+              -0.999155,
+              45.614638
+            ],
+            [
+              -1.001387,
+              45.613197
+            ],
+            [
+              -1.004047,
+              45.613737
+            ],
+            [
+              -1.006966,
+              45.613857
+            ],
+            [
+              -1.010399,
+              45.610615
+            ],
+            [
+              -1.014347,
+              45.601969
+            ],
+            [
+              -1.007996,
+              45.598065
+            ],
+            [
+              -0.998726,
+              45.598425
+            ],
+            [
+              -0.993919,
+              45.594101
+            ],
+            [
+              -0.989799,
+              45.585212
+            ],
+            [
+              -0.992546,
+              45.578244
+            ],
+            [
+              -0.991001,
+              45.576141
+            ],
+            [
+              -0.973492,
+              45.578544
+            ],
+            [
+              -0.971603,
+              45.588756
+            ],
+            [
+              -0.96096,
+              45.591879
+            ],
+            [
+              -0.959415,
+              45.605091
+            ],
+            [
+              -0.985508,
+              45.61764
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Camping Le Soleil Levant",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3cwqLgPx0daaUAmnvVZ8L5Bp-Ye3v6L_u8MmOmAh0LroxTOmzdx76mRHL2r_yvzszA9xA6gCIDO16oPfRFNxdodhOvnia9kTV8IAI5agG1RiN2oW45BIh3glLVAWFkOEQd1MtB2lLsYxJqS2HxIIs5i=w584-h428-no?authuser=0|300}}\n\n📍 33 Allée de la Longee, 17132 Meschers-sur-Gironde, France\n\n📞 05 46 02 76 62\n\nhttp://www.camping-soleillevant.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.945967,
+          45.55813
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Le Tuc Meschers",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3d4WhQXCtZPT5Y4kggC7JXhsrPrLpxEXeAog-zu3W-vKnYj3sROWSUcTMbpYT3aEE8v8ayvBJs1IPt-bEP_GlkO3rwfgM_Ao5bPhxy1E9LNK34yz85_KT16cZ5zK4_17NxS9cTXbRxv6TvYKkRlXrkx=s748-no?authuser=0|300}}\n\n📍12 Rue Paul Massy, 17132 Meschers-sur-Gironde, France\n\n📞 05 46 22 48 10\n📞 06 66 94 20 20\n\nhttps://meschers.letuc.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.95234,
+          45.558381
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "color": "Green"
+        },
+        "name": "Meschers-sur-Gironde",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fyLi-j0U7DWlG19vwVaJvTBlNuVozvYcbfCWo8a1gqthjGdpea59Snp40kQ0e0mbgHwXgUnu4k7F6c_jPPaaWnFnZIujVDoYBLIVhj7DigTAnUNP7Szp_7PhUVZMYp4ertt_YM8VgqRSjtRwO4sy3k=w802-h532-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3d4WhQXCtZPT5Y4kggC7JXhsrPrLpxEXeAog-zu3W-vKnYj3sROWSUcTMbpYT3aEE8v8ayvBJs1IPt-bEP_GlkO3rwfgM_Ao5bPhxy1E9LNK34yz85_KT16cZ5zK4_17NxS9cTXbRxv6TvYKkRlXrkx=s748-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3cwqLgPx0daaUAmnvVZ8L5Bp-Ye3v6L_u8MmOmAh0LroxTOmzdx76mRHL2r_yvzszA9xA6gCIDO16oPfRFNxdodhOvnia9kTV8IAI5agG1RiN2oW45BIh3glLVAWFkOEQd1MtB2lLsYxJqS2HxIIs5i=w584-h428-no?authuser=0|300}}"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -0.963213,
+              45.557972
+            ],
+            [
+              -0.963997,
+              45.558498
+            ],
+            [
+              -0.965155,
+              45.558573
+            ],
+            [
+              -0.96596,
+              45.559497
+            ],
+            [
+              -0.967376,
+              45.560759
+            ],
+            [
+              -0.968771,
+              45.56127
+            ],
+            [
+              -0.970144,
+              45.560443
+            ],
+            [
+              -0.971797,
+              45.562096
+            ],
+            [
+              -0.973814,
+              45.563628
+            ],
+            [
+              -0.973277,
+              45.567053
+            ],
+            [
+              -0.975187,
+              45.56788
+            ],
+            [
+              -0.974865,
+              45.569262
+            ],
+            [
+              -0.958257,
+              45.578364
+            ],
+            [
+              -0.941949,
+              45.572596
+            ],
+            [
+              -0.940039,
+              45.562096
+            ],
+            [
+              -0.937786,
+              45.559444
+            ],
+            [
+              -0.938601,
+              45.557183
+            ],
+            [
+              -0.94211,
+              45.556657
+            ],
+            [
+              -0.943623,
+              45.552398
+            ],
+            [
+              -0.944974,
+              45.551639
+            ],
+            [
+              -0.946777,
+              45.551654
+            ],
+            [
+              -0.949395,
+              45.55236
+            ],
+            [
+              -0.95403,
+              45.553893
+            ],
+            [
+              -0.959287,
+              45.555756
+            ],
+            [
+              -0.96096,
+              45.556477
+            ],
+            [
+              -0.963053,
+              45.556732
+            ],
+            [
+              -0.963213,
+              45.557972
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mutuelle de Poitiers Assurances",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fyLi-j0U7DWlG19vwVaJvTBlNuVozvYcbfCWo8a1gqthjGdpea59Snp40kQ0e0mbgHwXgUnu4k7F6c_jPPaaWnFnZIujVDoYBLIVhj7DigTAnUNP7Szp_7PhUVZMYp4ertt_YM8VgqRSjtRwO4sy3k=w802-h532-no?authuser=0|300}}\n\nAlain Ayrault\n\n📍 86 Rue Paul Massy 17132, Meschers-sur-Gironde, France \n\n📞 05 46 02 65 14\n\nhttps://www.assurance-mutuelle-poitiers.fr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.956433,
+          45.560853
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "AGENCE LE TUC IMMO SEMUSSAC",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3d4WhQXCtZPT5Y4kggC7JXhsrPrLpxEXeAog-zu3W-vKnYj3sROWSUcTMbpYT3aEE8v8ayvBJs1IPt-bEP_GlkO3rwfgM_Ao5bPhxy1E9LNK34yz85_KT16cZ5zK4_17NxS9cTXbRxv6TvYKkRlXrkx=s748-no?authuser=0|300}}\n\n📍 ZA le Pré Chardon 17120 Semussac\n\n📞 0546231230\n📞 0698823021\n\nhttps://meschers.letuc.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.91459,
+          45.60255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "iconClass": "Drop",
+          "color": "#0175A0"
+        },
+        "name": "Camping 2b",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3eo08Zn9_tX4U_qc5zKEhkJe2pLS7jX0o9Cqt3YNAaUA9oy5nd0ZCUlPuAN_Wq4K7YA3AnNFd844TPkoCSmH3-Y0WKzfiPmsmnNgMZEYU2vJlz_Dkf4xbzq1m0VM1ZfRRaDNi_6HE1VgLKtfKBQAMpI=w509-h898-no?authuser=0|300}}\n\n\n**-10% pour la période du 1er aout au 22 aout avec le code promo : 10AOUT2020**\n\n📍 9 Chemin des Bardonneries, 17120 Semussac, France\n\n📞 05 46 05 95 16\n\nhttp://www.camping-2b.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.947399,
+          45.604731
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Camping Bois de la Chasse",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3cfVOKG5Kj76Z8jwNEKGpCVYota1DNbrrstkl3YhLq_Prd5LtR0K1YIYfD44fKXrPb3hj3NF_W4qAm68L39rMzdCwsp76gSszToGW2lIAb_epctq3a99mbYpkvJeGxyvDt_HHwP9NEokFROlqQuViq-=w502-h444-no?authuser=0|300}}\n\n📍 17 Chemin de la Motte Ronde, 17120 Semussac, France\n\n📞 05 46 22 37 71\n\nhttps://boisdelachasse.fr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.902408,
+          45.597641
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "CARROSERIE LEBEAU",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3eaCAL69tQlhHcZMsMmBgho2ERu72OVjaJKuSj8RbozqtSfrdQQhQF506nyrV94Qoyv2yn4_Ecq2s5W2_roeY0FU0CKsigZEwrE6BPsYxkd90nPPzjzjuVkrmwv0179oLZH2LsueNqJzClxGbzO4mBy=s584-no?authuser=0|300}}\n\n📍 ZA Route De Bordeaux 17210 Semussac\n\n📞 05 46 05 56 44\n\nhttps://carrosserielebeau.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.906584,
+          45.60264
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Clean'z lux auto",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fl8zcRCI9KN7ea3rRWuAjwz0WOUN8OuuTIfWU1XeB_uJGLuXZApp7xpqXg3L4DEXLfy99nKRAs-vypHhQxswK8VzBRwf8KRyfILI-hLWh2_BAf_13NkLxnEqwB6jGjskYyVaRraM1XjAQrJxszF1ho=w581-h910-no?authuser=0|300}}\n\n📍 13 Z.A. Pré Chardon 17120 SEMUSSAC\n\n📞 07 68 07 10 01\n\nccleansauto@gmail.com\n"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.916688,
+          45.605144
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ferme De Pitory Boucherie Charcuterie",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fx2Qu3JDBLQYpc1H6UJm23BQpaRfltHxpDKGAIbbSmo72ylYukd8PSSujk5hNOEdB8BGAhNAMLziqFpnwL2tf8hbx0AZ11RngwY1ReM5HAgYw-45vDiGN3c5NB28IQSsfyAwZ-E6CGhC_pCWxATKVG=w800-h532-no?authuser=0|300}}\n\n📍 ZA du Pré Chardon (près de la boulangerie) SEMUSSAC, France\n\n📞 05 46 90 77 31"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.912005,
+          45.604104
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "MC CREATION Coiffure Mixte",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3fDBDmlEpmAZwwEDFj5nQfHG53CRwy0Q_yxucBIWAV_oEcfpMh-p8vkPtGMyhjItatN4FGu1RZvPp4ZSTaBK0w8bk2Uo_NvBRc4-BdP-5pGkEL-AsoFnTH-m9AlBQ6--S59GqokKbVkMlXB-QslGtEE=w506-h444-no?authuser=0|300}}\n\n📍 17 Rue de Didonne, 17120 Semussac, France\n\n📞 05 46 05 83 56\n\nhttp://www.marine-mc-creation.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.912166,
+          45.601646
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "color": "Green",
+          "popupTemplate": "Default",
+          "labelDirection": "top",
+          "popupShape": "Panel"
+        },
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3c7rdozSVq0o0bHcuph_0RF4MftwTRFPquFWnUrWSQki3nF8Q6Fwe2sTgbpu8a73G0mDSgw1fcc1y9h-BYqHIOvqOZO__SQwmXTRM3IsCV9Efkp1JjAxsxClZIyk_Dr8qcI8HKqLOq1atBgqPk4vLxI=w1254-h424-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3eMt9_Zx8404a-Lwre3HPJvNphUBLprLBrmhOx8eFhM3hgWuGOZTbDmUgSsqOtMp6fh92y0KCmrDksh7ZEgbrOM6Y1i4gUvirOZD7HJcGuaAaNOV9q07O68LN5HKapTIcaMfkm1IKzSYML6l5Ph9Ko-=w504-h444-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3fl8zcRCI9KN7ea3rRWuAjwz0WOUN8OuuTIfWU1XeB_uJGLuXZApp7xpqXg3L4DEXLfy99nKRAs-vypHhQxswK8VzBRwf8KRyfILI-hLWh2_BAf_13NkLxnEqwB6jGjskYyVaRraM1XjAQrJxszF1ho=w581-h910-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3fx2Qu3JDBLQYpc1H6UJm23BQpaRfltHxpDKGAIbbSmo72ylYukd8PSSujk5hNOEdB8BGAhNAMLziqFpnwL2tf8hbx0AZ11RngwY1ReM5HAgYw-45vDiGN3c5NB28IQSsfyAwZ-E6CGhC_pCWxATKVG=w800-h532-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3d4WhQXCtZPT5Y4kggC7JXhsrPrLpxEXeAog-zu3W-vKnYj3sROWSUcTMbpYT3aEE8v8ayvBJs1IPt-bEP_GlkO3rwfgM_Ao5bPhxy1E9LNK34yz85_KT16cZ5zK4_17NxS9cTXbRxv6TvYKkRlXrkx=s748-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3fDBDmlEpmAZwwEDFj5nQfHG53CRwy0Q_yxucBIWAV_oEcfpMh-p8vkPtGMyhjItatN4FGu1RZvPp4ZSTaBK0w8bk2Uo_NvBRc4-BdP-5pGkEL-AsoFnTH-m9AlBQ6--S59GqokKbVkMlXB-QslGtEE=w506-h444-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3dYNWmfSBMC1oeUAtJlQ2d8cxsdA4dnAi_Ld4QTGmBgVBP1TBk8f-yN3kNv_6oU4m-8oT6PayFzGc4IzdiU_95Yq8tQFTFra2IZIGA6MhzdWU3OJHENLH1bexlSjxyqx2lyxzybJUQ4unG2_RiTaIPX=w506-h444-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3eoYfS2RtKsjZWowdcXnQwWSEgd3Abyz_7a6j6sFc7ecfEhvwdoRlP9dnXX_jc6Ns_F_pTbWjW8ZbIPj9eQUuec4VoMSLu4x5ah2P04GgH44A_MmJ2WxNZt-r3c03gfYfk3hI5Ujd1816GPF3h4Y2nB=w816-h478-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3eaCAL69tQlhHcZMsMmBgho2ERu72OVjaJKuSj8RbozqtSfrdQQhQF506nyrV94Qoyv2yn4_Ecq2s5W2_roeY0FU0CKsigZEwrE6BPsYxkd90nPPzjzjuVkrmwv0179oLZH2LsueNqJzClxGbzO4mBy=s584-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3cfVOKG5Kj76Z8jwNEKGpCVYota1DNbrrstkl3YhLq_Prd5LtR0K1YIYfD44fKXrPb3hj3NF_W4qAm68L39rMzdCwsp76gSszToGW2lIAb_epctq3a99mbYpkvJeGxyvDt_HHwP9NEokFROlqQuViq-=w502-h444-no?authuser=0|300}}\n{{https://lh3.googleusercontent.com/pw/ACtC-3eo08Zn9_tX4U_qc5zKEhkJe2pLS7jX0o9Cqt3YNAaUA9oy5nd0ZCUlPuAN_Wq4K7YA3AnNFd844TPkoCSmH3-Y0WKzfiPmsmnNgMZEYU2vJlz_Dkf4xbzq1m0VM1ZfRRaDNi_6HE1VgLKtfKBQAMpI=w509-h898-no?authuser=0|300}}",
+        "name": "Semussac"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -0.874786,
+              45.581848
+            ],
+            [
+              -0.883026,
+              45.590738
+            ],
+            [
+              -0.880795,
+              45.598786
+            ],
+            [
+              -0.875816,
+              45.605992
+            ],
+            [
+              -0.886116,
+              45.605511
+            ],
+            [
+              -0.885086,
+              45.614278
+            ],
+            [
+              -0.891094,
+              45.622682
+            ],
+            [
+              -0.897274,
+              45.615839
+            ],
+            [
+              -0.909462,
+              45.622442
+            ],
+            [
+              -0.918732,
+              45.627724
+            ],
+            [
+              -0.921135,
+              45.625683
+            ],
+            [
+              -0.923882,
+              45.621962
+            ],
+            [
+              -0.937099,
+              45.61848
+            ],
+            [
+              -0.949287,
+              45.613197
+            ],
+            [
+              -0.959072,
+              45.60395
+            ],
+            [
+              -0.960445,
+              45.594101
+            ],
+            [
+              -0.940876,
+              45.586894
+            ],
+            [
+              -0.935211,
+              45.588215
+            ],
+            [
+              -0.930576,
+              45.586173
+            ],
+            [
+              -0.92268,
+              45.580767
+            ],
+            [
+              -0.910664,
+              45.572236
+            ],
+            [
+              -0.898819,
+              45.574158
+            ],
+            [
+              -0.874786,
+              45.581848
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Semussac Auto",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3dYNWmfSBMC1oeUAtJlQ2d8cxsdA4dnAi_Ld4QTGmBgVBP1TBk8f-yN3kNv_6oU4m-8oT6PayFzGc4IzdiU_95Yq8tQFTFra2IZIGA6MhzdWU3OJHENLH1bexlSjxyqx2lyxzybJUQ4unG2_RiTaIPX=w506-h444-no?authuser=0|300}}\n\n📍 25 Rue de Didonne, 17120 Semussac, France\n\n📞 05 46 05 60 29\n\n"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.911763,
+          45.602411
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_umap_options": {
+          "iconClass": "Drop",
+          "color": "#0175A0"
+        },
+        "name": "Solidves",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3c7rdozSVq0o0bHcuph_0RF4MftwTRFPquFWnUrWSQki3nF8Q6Fwe2sTgbpu8a73G0mDSgw1fcc1y9h-BYqHIOvqOZO__SQwmXTRM3IsCV9Efkp1JjAxsxClZIyk_Dr8qcI8HKqLOq1atBgqPk4vLxI=w1254-h424-no?authuser=0|300}}\n\n📍 Domaine des Brandes, 17120 Semussac, France\n\n📞 05 46 05 18 08\n\nhttp://www.soldive-producteur.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.927749,
+          45.619444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Somadis Bricolage",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3eoYfS2RtKsjZWowdcXnQwWSEgd3Abyz_7a6j6sFc7ecfEhvwdoRlP9dnXX_jc6Ns_F_pTbWjW8ZbIPj9eQUuec4VoMSLu4x5ah2P04GgH44A_MmJ2WxNZt-r3c03gfYfk3hI5Ujd1816GPF3h4Y2nB=w816-h478-no?authuser=0|300}}\n\n📍 10 Route de Bordeaux, 17120 Semussac, France\n\n📞 05 46 22 00 35\n\nhttp://somadis-bricolage.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.908293,
+          45.602806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tech-Innov",
+        "description": "{{https://lh3.googleusercontent.com/pw/ACtC-3eMt9_Zx8404a-Lwre3HPJvNphUBLprLBrmhOx8eFhM3hgWuGOZTbDmUgSsqOtMp6fh92y0KCmrDksh7ZEgbrOM6Y1i4gUvirOZD7HJcGuaAaNOV9q07O68LN5HKapTIcaMfkm1IKzSYML6l5Ph9Ko-=w504-h444-no?authuser=0|300}}\n\n📍 Z.A. Le Pré Chardon Route de Bordeaux 17120 SEMUSSAC\n\n📞 05 46 02 93 61\n\nhttps://tech-innov.fr/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.916103,
+          45.605429
+        ]
+      }
+    }
+  ]
+}
