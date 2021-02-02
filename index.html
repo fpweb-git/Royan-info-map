@@ -99,6 +99,14 @@
         .Lwebsite a{
             color: #16AFD1;
         }
+
+        .LfilterService, .LfilterHebergement, .LfilterRestauration{
+            border: 1px solid rgb(148, 147, 147);
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            margin-right: 1rem;
+            cursor: pointer;
+        }
         @media only screen and (max-width: 1024px) {
             .LsubTxt{
                 font-size: 14px;
@@ -188,8 +196,8 @@
 
 
     let geojson = {
-    type: "FeatureCollection",
-    features: []
+        type: "FeatureCollection",
+        features: []
     }
 
     fetch('https://script.googleusercontent.com/macros/echo?user_content_key=Tvu5ydypmc9FPX_faTChkkTS9UhxK1WQ7ETa2KVwqbPDFwaMBofMOuNuw24yUiBWKTbagYLNz_-0uLQtK0qkGpki1TsG8wQem5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnLqrBgluDekbTIPQZNVHGf7dfDkcJ3TALlZKQbnzqASdeoNp780cEthHw__5aZrAQFFrGqk7FSJR&lib=M1-0sR9glFGJodTTkG848NlT3K2hnuyIu')
@@ -201,6 +209,7 @@
             let newData = {
                 type : item.type,
                 properties : {
+                    category : item.category,
                     name : item.name,
                     image : item.image,
                     adress : item.adress,
@@ -214,22 +223,9 @@
             }
             geojson.features.push(newData)
         })
-        console.log(geojson)
-        L.geoJson(geojson, {
-            style : function(features){
-                return{
-                    color : '#4B65F7',
-                    weight : 0.5,
-                }
-            },
-            pointToLayer : function(geoJsonPoint, latlng){
-                return L.marker(latlng,{
-                    icon : baseIcon,
-                });
-            },
-            onEachFeature : function(feature, layer){      
+
+        const eachFeatureCode = function(feature, layer){      
                     if(feature.geometry.type === 'Point'){
-                        // layer.bindPopup(customPopup, customOptions);
                     layer.on('click', function(e){
                         if(clickedMarker){
                             clickedMarker.setIcon(baseIcon);
@@ -237,9 +233,6 @@
                         e.target.setIcon(activeIcon);
                         clickedMarker = e.target;
                         
-                        // mymap.setView(e.latlng, 17, {animation : true});
-                        // var offset = mymap.getSize().x*0.20;
-                        // mymap.panBy(new L.Point(+offset, 0), {animate: false});
                         L.Map.prototype.setViewOffset = function (latlng, offset, targetZoom) {
                             var targetPoint = this.project(latlng, targetZoom).subtract(offset),
                             targetLatLng = this.unproject(targetPoint, targetZoom);
@@ -296,6 +289,9 @@
                             sidepanel.innerHTML =`
                             <div class="LsidepanelInner">
                                 <div class="Lheader">
+                                    <div class="LfilterService">Service</div>
+                                    <div class="LfilterRestauration">Restauration</div>
+                                    <div class="LfilterHebergement">Hébergement</div>
                                     <svg class="LcloseMenu" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="19.7809" y="0.688812" width="145" height="27" rx="13.5" transform="rotate(45 19.7809 0.688812)" fill="#4D4949"/>
                                     <rect x="1.00012" y="102.53" width="145" height="27" rx="13.5" transform="rotate(-45 1.00012 102.53)" fill="#4D4949"/>
@@ -314,11 +310,56 @@
                             doc.innerHTML = rawDoc;
                             seelAllBlock.append(doc)
                             })
+                            const filterService = document.querySelector('.LfilterService')
+                            const icon = document.querySelectorAll(".leaflet-marker-icon")
+                            const shadow = document.querySelectorAll(".leaflet-pane.leaflet-shadow-pane")
+                            filterService.addEventListener("click", function(){
+                                mymap.addLayer(service)
+                                mymap.removeLayer(other)
+                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11)
+                            })
                         })
                     });
                     }
                 }
-        }).addTo(mymap)
+
+        
+        const service = L.geoJson(geojson, {
+            filter: function(feature, layer) {
+                return feature.properties.category == "service";
+            },
+            style : function(features){
+                return{
+                    color : '#4B65F7',
+                    weight : 0.5,
+                }
+            },
+            pointToLayer : function(geoJsonPoint, latlng){
+                    return L.marker(latlng,{
+                    icon : baseIcon,
+                    });
+            },
+            onEachFeature : eachFeatureCode,
+        })
+        const other = L.geoJson(geojson, {
+            filter: function(feature, layer) {
+                return feature.properties.category != "service";
+            },
+            style : function(features){
+                return{
+                    color : '#4B65F7',
+                    weight : 0.5,
+                }
+            },
+            pointToLayer : function(geoJsonPoint, latlng){
+                    return L.marker(latlng,{
+                    icon : baseIcon,
+                    });
+            },
+            onEachFeature : eachFeatureCode,
+        })
+        service.addTo(mymap)
+        other.addTo(mymap)
     })
     .catch(err => console.log(err))
 
