@@ -64,6 +64,14 @@
             width: 100%;
             display: flex;
             justify-content: flex-end;
+            align-items: center;
+        }
+        .LbtnAll{
+            border: 1px solid rgb(148, 147, 147);
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            margin-right: 2rem;
+            cursor: pointer;
         }
         .LcloseMenu{
             cursor: pointer;
@@ -74,7 +82,7 @@
             font-size: 1.8rem;
             color: #2d353f;
         }
-        .Linformation{
+        .Linformation, .Llist{
             padding: 1rem 0;
         }
         .Ladress, .Lphone, .Lwebsite{
@@ -129,14 +137,8 @@
 
     const sidepanel = document.querySelector('.Lsidepanel')
 
-    // const myIcon = L.icon({
-    // iconUrl: mySvg,
-    // iconSize: [38, 38],
-    // iconAnchor: [22, 94],
-    // popupAnchor: [-3, -76],
-    // });
-
-    let clickedMarker; 
+    let clickedMarker;
+    
     const activeIcon = new L.Icon({
         iconUrl: activeSvg,
         shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
@@ -147,24 +149,18 @@
     });
 
     const baseIcon = new L.Icon({
-        // iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
         iconUrl: baseSvg,
         shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-        // iconSize: [25, 41],
         iconAnchor: [12, 41],
         popupAnchor: [1, -34],
         shadowSize: [41, 41]
     });
 
-    const defaultIcon = L.icon({
-        iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
-    })
-
-    const myPolygon = {
-    "color": "#4B65F7",
-    "weight": 0,
-    "opacity": 0.15
-    };
+    // const myPolygon = {
+    // "color": "#4B65F7",
+    // "weight": 0,
+    // "opacity": 0.15
+    // };
 
     const mymap = L.map('mapid',{
         center : [45.6284600, -1.0281000],
@@ -218,6 +214,7 @@
             }
             geojson.features.push(newData)
         })
+        console.log(geojson)
         L.geoJson(geojson, {
             style : function(features){
                 return{
@@ -255,6 +252,7 @@
                         sidepanel.innerHTML = `
                             <div class="LsidepanelInner">
                                 <div class="Lheader">
+                                    <div class="LbtnAll">Tout voir</div>
                                     <svg class="LcloseMenu" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="19.7809" y="0.688812" width="145" height="27" rx="13.5" transform="rotate(45 19.7809 0.688812)" fill="#4D4949"/>
                                     <rect x="1.00012" y="102.53" width="145" height="27" rx="13.5" transform="rotate(-45 1.00012 102.53)" fill="#4D4949"/>
@@ -282,7 +280,7 @@
                                         <path d="M2.25 13.5H24.75" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M13.5 2.25C16.3139 5.33065 17.9131 9.32854 18 13.5C17.9131 17.6715 16.3139 21.6694 13.5 24.75C10.6861 21.6694 9.0869 17.6715 9 13.5C9.0869 9.32854 10.6861 5.33065 13.5 2.25V2.25Z" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <a class="LsubTxt" href="${feature.properties.website}">Site web</a>
+                                        <a class="LsubTxt" href="${feature.properties.website}">Visiter le site web</a>
                                     </div>
                                 </div>
                             </div>
@@ -293,12 +291,37 @@
                             mymap.setView([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], 16, {animation : true});
                             layer.setIcon(baseIcon)
                         })
+                        const seelAllBtn = document.querySelector('.LbtnAll')
+                        seelAllBtn.addEventListener("click", function(){
+                            sidepanel.innerHTML =`
+                            <div class="LsidepanelInner">
+                                <div class="Lheader">
+                                    <svg class="LcloseMenu" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="19.7809" y="0.688812" width="145" height="27" rx="13.5" transform="rotate(45 19.7809 0.688812)" fill="#4D4949"/>
+                                    <rect x="1.00012" y="102.53" width="145" height="27" rx="13.5" transform="rotate(-45 1.00012 102.53)" fill="#4D4949"/>
+                                    </svg>
+                                </div>
+                                <div class="Llist">
+                                    
+                                </div
+                            </div>
+                            `
+                            const seelAllBlock = document.querySelector('.Llist')
+                            const list = geojson.features.forEach((feature)=>{
+                            // console.log(feature)
+                            let rawDoc = `<div>${feature.properties.name}</div>`
+                            let doc = document.createElement('div');
+                            doc.innerHTML = rawDoc;
+                            seelAllBlock.append(doc)
+                            })
+                        })
                     });
                     }
                 }
         }).addTo(mymap)
     })
     .catch(err => console.log(err))
+
 </script>
 
 </html>
