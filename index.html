@@ -136,6 +136,7 @@
             .Ltitle{
             font-size: 1.4rem;
             margin-top: 0;
+            max-width: 90%;
             }
             /* .Lsidepanel{
                 width: 50%;
@@ -173,6 +174,11 @@
                 max-height: 150px;
                 width: auto;
                 max-width: 80%;
+            }
+            .Ladress, .Lphone, .Lwebsite{
+            display: flex;
+            align-items: center;
+            margin: 0.6rem 0 1rem 0;
             }
         }
     </style>
@@ -303,6 +309,7 @@
                                         <img class="Limage" src="${feature.properties.image}">
                                     </div>
                                     <div class="Linformation">
+                                        <div
                                         <div class="Ladress">
                                             <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M23.625 11.25C23.625 19.125 13.5 25.875 13.5 25.875C13.5 25.875 3.375 19.125 3.375 11.25C3.375 8.56468 4.44174 5.98935 6.34054 4.09054C8.23935 2.19174 10.8147 1.125 13.5 1.125C16.1853 1.125 18.7606 2.19174 20.6595 4.09054C22.5583 5.98935 23.625 8.56468 23.625 11.25Z" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
