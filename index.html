@@ -73,7 +73,7 @@
             margin-right: 2rem;
             cursor: pointer;
         }
-        .LcloseMenu{
+        .LcloseMenu, .LcloseMenuList{
             cursor: pointer;
         }
         .Ltitle{
@@ -288,11 +288,11 @@
                         const seelAllBtn = document.querySelector('.LbtnAll')
                         seelAllBtn.addEventListener("click", function(){
                             layer.setIcon(baseIcon)
-                            mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10)
+                            mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10, {animation : true})
                             sidepanel.innerHTML =`
                             <div class="LsidepanelInner">
                                 <div class="Lheader">
-                                    <svg class="LcloseMenu" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="LcloseMenuList" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="19.7809" y="0.688812" width="145" height="27" rx="13.5" transform="rotate(45 19.7809 0.688812)" fill="#4D4949"/>
                                     <rect x="1.00012" y="102.53" width="145" height="27" rx="13.5" transform="rotate(-45 1.00012 102.53)" fill="#4D4949"/>
                                     </svg>
@@ -322,6 +322,13 @@
                             const listeRestaurationBlock = document.querySelector('.LrestaurationList')
                             const listeHebergementBlock = document.querySelector('.LhebergementList')
                             const listeActiviteBlock = document.querySelector('.LactiviteList')
+                            const closeMenuList = document.querySelector('.LcloseMenuList')
+
+                            closeMenuList.addEventListener("click", function(e){
+                                sidepanel.classList.remove('active');
+                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10, {animation : true})
+                                layer.setIcon(baseIcon)
+                            })
 
                             const listTout = geojson.features.forEach((feature)=>{
                                 if(feature.properties.category == 'service'){
@@ -369,7 +376,7 @@
                                 mymap.addLayer(service)
                                 mymap.addLayer(restauration)
                                 mymap.addLayer(hebergement)
-                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10)
+                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10, {animation : true})
                                 layer.setIcon(baseIcon)
 
                                 listeActiviteBlock.style.display = 'block'
@@ -390,7 +397,7 @@
                                 mymap.removeLayer(restauration)
                                 mymap.removeLayer(hebergement)
                                 mymap.removeLayer(other)
-                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10)
+                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10, {animation : true})
                                 layer.setIcon(baseIcon)
 
                                 listeActiviteBlock.style.display = 'none'
@@ -411,7 +418,7 @@
                                 mymap.removeLayer(other)
                                 mymap.removeLayer(service)
                                 mymap.removeLayer(hebergement)
-                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10)
+                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10, {animation : true})
                                 layer.setIcon(baseIcon)
 
                                 listeActiviteBlock.style.display = 'none'
@@ -433,7 +440,7 @@
                                 mymap.removeLayer(activite)
                                 mymap.removeLayer(service)
                                 mymap.removeLayer(restauration)
-                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10)
+                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10, {animation : true})
                                 layer.setIcon(baseIcon)
 
                                 listeActiviteBlock.style.display = 'none'
@@ -454,7 +461,7 @@
                                 mymap.removeLayer(service)
                                 mymap.removeLayer(restauration)
                                 mymap.removeLayer(hebergement)
-                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10)
+                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10, {animation : true})
                                 layer.setIcon(baseIcon)
 
                                 listeActiviteBlock.style.display = 'none'
