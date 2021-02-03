@@ -100,13 +100,19 @@
             color: #16AFD1;
         }
 
-        .LfilterService, .LfilterHebergement, .LfilterRestauration, .LfilterTout{
-            border: 1px solid rgb(148, 147, 147);
+        .LfilterService, .LfilterHebergement, .LfilterRestauration, .LfilterTout, .LfilterActivite{
+            border: 2px solid rgba(22, 175, 209, 1);
             border-radius: 0.5rem;
             padding: 0.5rem 1rem;
-            margin-right: 1rem;
             cursor: pointer;
-            font-size: 12px;
+            margin: 1rem 0;
+            color: rgba(22, 175, 209, 1);
+        }
+
+        .activeFilter{
+            border: 3px solid #307199;
+            color: #307199;
+            font-weight: 600;
         }
         @media only screen and (max-width: 1024px) {
             .LsubTxt{
@@ -281,104 +287,187 @@
                         })
                         const seelAllBtn = document.querySelector('.LbtnAll')
                         seelAllBtn.addEventListener("click", function(){
+                            layer.setIcon(baseIcon)
+                            mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10)
                             sidepanel.innerHTML =`
                             <div class="LsidepanelInner">
                                 <div class="Lheader">
-                                    <div>
-                                        <div class="LfilterService">Service</div>
-                                        <div class="LfilterRestauration">Restauration</div>
-                                        <div class="LfilterHebergement">Hébergement</div>
-                                        <div class="LfilterTout">Tout</div>
-                                    </div>
                                     <svg class="LcloseMenu" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="19.7809" y="0.688812" width="145" height="27" rx="13.5" transform="rotate(45 19.7809 0.688812)" fill="#4D4949"/>
                                     <rect x="1.00012" y="102.53" width="145" height="27" rx="13.5" transform="rotate(-45 1.00012 102.53)" fill="#4D4949"/>
                                     </svg>
                                 </div>
                                 <div class="Llist">
-                                    
+                                    <div class="LfilterTout">Tout</div>
+                                    <div class="LfilterService">Service</div>
+                                    <div class="LserviceList">
+
+                                    </div>
+                                    <div class="LfilterRestauration">Pause gourmande</div>
+                                    <div class="LrestaurationList">
+
+                                    </div>
+                                    <div class="LfilterHebergement">Hébergement</div>
+                                    <div class="LhebergementList">
+
+                                    </div>
+                                    <div class="LfilterActivite">Visites & activités</div>
+                                    <div class="LactiviteList">
+
+                                    </div>
                                 </div
                             </div>
                             `
-                            const listBlock = document.querySelector('.Llist')
+                            const listeServiceBlock = document.querySelector('.LserviceList')
+                            const listeRestaurationBlock = document.querySelector('.LrestaurationList')
+                            const listeHebergementBlock = document.querySelector('.LhebergementList')
+                            const listeActiviteBlock = document.querySelector('.LactiviteList')
+
                             const listTout = geojson.features.forEach((feature)=>{
-                                let companyName = `<div class="listAllItem">${feature.properties.name}</div>`
-                                let box = document.createElement('div');
-                                box.innerHTML = companyName;
-                                listBlock.append(box)
+                                if(feature.properties.category == 'service'){
+                                    let companyName = `<div>${feature.properties.name}</div>`
+                                    let box = document.createElement('div');
+                                    box.innerHTML = companyName;
+                                    listeServiceBlock.append(box)
+                                }
+                                if(feature.properties.category == 'restauration'){
+                                    let companyName = `<div>${feature.properties.name}</div>`
+                                    let box = document.createElement('div');
+                                    box.innerHTML = companyName;
+                                    listeRestaurationBlock.append(box)
+                                }
+                                if(feature.properties.category == 'hebergement'){
+                                    let companyName = `<div>${feature.properties.name}</div>`
+                                    let box = document.createElement('div');
+                                    box.innerHTML = companyName;
+                                    listeHebergementBlock.append(box)
+                                }
+                                if(feature.properties.category == 'activite'){
+                                    let companyName = `<div>${feature.properties.name}</div>`
+                                    let box = document.createElement('div');
+                                    box.innerHTML = companyName;
+                                    listeActiviteBlock.append(box)
+                                }
+                                listeActiviteBlock.style.display = 'none'
+                                listeServiceBlock.style.display = 'none'
+                                listeHebergementBlock.style.display = 'none'
+                                listeRestaurationBlock.style.display = 'none'
+                                listeActiviteBlock.style.display = 'none'
                             })
                             
                             const filterService = document.querySelector('.LfilterService')
                             const filterRestauration = document.querySelector('.LfilterRestauration')
                             const filterHebergement = document.querySelector('.LfilterHebergement')
+                            const filterActivite = document.querySelector('.LfilterActivite')
                             const filterTout = document.querySelector('.LfilterTout')
                             const icon = document.querySelectorAll(".leaflet-marker-icon")
                             const shadow = document.querySelectorAll(".leaflet-pane.leaflet-shadow-pane")
-                            filterService.addEventListener("click", function(){
-                                mymap.addLayer(service)
-                                mymap.removeLayer(restauration)
-                                mymap.removeLayer(hebergement)
-                                mymap.removeLayer(other)
-                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11)
-                                layer.setIcon(baseIcon)
-                                listBlock.innerHTML = ''
-                                const listService = geojson.features.forEach((feature)=>{
-                                    if(feature.properties.category == 'service'){
-                                        let companyName = `<div>${feature.properties.name}</div>`
-                                        let box = document.createElement('div');
-                                        box.innerHTML = companyName;
-                                        listBlock.append(box)
-                                    }
-                                })
-                            })
-                            filterRestauration.addEventListener("click", function(){
-                                mymap.addLayer(restauration)
-                                mymap.removeLayer(other)
-                                mymap.removeLayer(service)
-                                mymap.removeLayer(hebergement)
-                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11)
-                                layer.setIcon(baseIcon)
-                                listBlock.innerHTML= ''
-                                const listRestauration = geojson.features.forEach((feature)=>{
-                                    if(feature.properties.category == 'restauration'){
-                                        let companyName = `<div>${feature.properties.name}</div>`
-                                        let box = document.createElement('div');
-                                        box.innerHTML = companyName;
-                                        listBlock.append(box)
-                                    }
-                                })
-                            })
-                            filterHebergement.addEventListener("click", function(){
-                                mymap.addLayer(hebergement)
-                                mymap.removeLayer(other)
-                                mymap.removeLayer(service)
-                                mymap.removeLayer(restauration)
-                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11)
-                                layer.setIcon(baseIcon)
-                                listBlock.innerHTML= ''
-                                const listHebergement = geojson.features.forEach((feature)=>{
-                                    if(feature.properties.category == 'hebergement'){
-                                        let companyName = `<div>${feature.properties.name}</div>`
-                                        let box = document.createElement('div');
-                                        box.innerHTML = companyName;
-                                        listBlock.append(box)
-                                    }
-                                })
-                            })
+                            
+
                             filterTout.addEventListener("click", function(){
                                 mymap.addLayer(other)
                                 mymap.addLayer(service)
                                 mymap.addLayer(restauration)
                                 mymap.addLayer(hebergement)
-                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11)
+                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10)
                                 layer.setIcon(baseIcon)
-                                listBlock.innerHTML= ''
-                                const listHebergement = geojson.features.forEach((feature)=>{
-                                    let companyName = `<div>${feature.properties.name}</div>`
-                                    let box = document.createElement('div');
-                                    box.innerHTML = companyName;
-                                    listBlock.append(box)
-                                })
+
+                                listeActiviteBlock.style.display = 'block'
+                                listeRestaurationBlock.style.display = 'block'
+                                listeHebergementBlock.style.display = 'block'
+                                listeServiceBlock.style.display = 'block'
+                                listeActiviteBlock.style.display = 'block'
+
+                                filterActivite.classList.remove('activeFilter')
+                                filterHebergement.classList.remove('activeFilter')
+                                filterRestauration.classList.remove('activeFilter')
+                                filterService.classList.remove('activeFilter')
+                                filterTout.classList.add('activeFilter')
+                            })
+
+                            filterService.addEventListener("click", function(){
+                                mymap.addLayer(service)
+                                mymap.removeLayer(restauration)
+                                mymap.removeLayer(hebergement)
+                                mymap.removeLayer(other)
+                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10)
+                                layer.setIcon(baseIcon)
+
+                                listeActiviteBlock.style.display = 'none'
+                                listeRestaurationBlock.style.display = 'none'
+                                listeHebergementBlock.style.display = 'none'
+                                listeServiceBlock.style.display = 'block'
+                                listeActiviteBlock.style.display = 'none'
+
+                                filterActivite.classList.remove('activeFilter')
+                                filterHebergement.classList.remove('activeFilter')
+                                filterRestauration.classList.remove('activeFilter')
+                                filterService.classList.add('activeFilter')
+                                filterTout.classList.remove('activeFilter')
+                            })
+
+                            filterRestauration.addEventListener("click", function(){
+                                mymap.addLayer(restauration)
+                                mymap.removeLayer(other)
+                                mymap.removeLayer(service)
+                                mymap.removeLayer(hebergement)
+                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10)
+                                layer.setIcon(baseIcon)
+
+                                listeActiviteBlock.style.display = 'none'
+                                listeServiceBlock.style.display = 'none'
+                                listeHebergementBlock.style.display = 'none'
+                                listeRestaurationBlock.style.display = 'block'
+                                listeActiviteBlock.style.display = 'none'
+
+                                filterActivite.classList.remove('activeFilter')
+                                filterHebergement.classList.remove('activeFilter')
+                                filterRestauration.classList.add('activeFilter')
+                                filterService.classList.remove('activeFilter')
+                                filterTout.classList.remove('activeFilter')
+                            })
+
+                            filterHebergement.addEventListener("click", function(){
+                                mymap.addLayer(hebergement)
+                                mymap.removeLayer(other)
+                                mymap.removeLayer(activite)
+                                mymap.removeLayer(service)
+                                mymap.removeLayer(restauration)
+                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10)
+                                layer.setIcon(baseIcon)
+
+                                listeActiviteBlock.style.display = 'none'
+                                listeRestaurationBlock.style.display = 'none'
+                                listeHebergementBlock.style.display = 'block'
+                                listeServiceBlock.style.display = 'none'
+                                listeActiviteBlock.style.display = 'none'
+
+                                filterActivite.classList.remove('activeFilter')
+                                filterHebergement.classList.add('activeFilter')
+                                filterRestauration.classList.remove('activeFilter')
+                                filterService.classList.remove('activeFilter')
+                                filterTout.classList.remove('activeFilter')
+                            })
+                            filterActivite.addEventListener("click", function(){
+                                mymap.addLayer(activite)
+                                mymap.removeLayer(other)
+                                mymap.removeLayer(service)
+                                mymap.removeLayer(restauration)
+                                mymap.removeLayer(hebergement)
+                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10)
+                                layer.setIcon(baseIcon)
+
+                                listeActiviteBlock.style.display = 'none'
+                                listeRestaurationBlock.style.display = 'none'
+                                listeHebergementBlock.style.display = 'none'
+                                listeServiceBlock.style.display = 'none'
+                                listeActiviteBlock.style.display = 'block'
+
+                                filterActivite.classList.add('activeFilter')
+                                filterHebergement.classList.remove('activeFilter')
+                                filterRestauration.classList.remove('activeFilter')
+                                filterService.classList.remove('activeFilter')
+                                filterTout.classList.remove('activeFilter')
                             })
                         })
                     });
@@ -425,6 +514,24 @@
         const hebergement = L.geoJson(geojson, {
             filter: function(feature, layer) {
                 return feature.properties.category == "hebergement";
+            },
+            style : function(features){
+                return{
+                    color : '#4B65F7',
+                    weight : 0.5,
+                }
+            },
+            pointToLayer : function(geoJsonPoint, latlng){
+                    return L.marker(latlng,{
+                    icon : baseIcon,
+                    });
+            },
+            onEachFeature : eachFeatureCode,
+        })
+
+        const activite = L.geoJson(geojson, {
+            filter: function(feature, layer) {
+                return feature.properties.category == "activite";
             },
             style : function(features){
                 return{
