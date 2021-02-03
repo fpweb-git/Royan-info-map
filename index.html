@@ -409,11 +409,11 @@
                             closeMenuList.addEventListener("click", function(e){
                                 sidepanel.classList.remove('active');
                                 layer.setIcon(baseIcon)
-                                // mymap.addLayer(other)
-                                // mymap.addLayer(service)
-                                // mymap.addLayer(restauration)
-                                // mymap.addLayer(hebergement)
-                                // mymap.addLayer(activite)
+                                mymap.addLayer(other)
+                                mymap.addLayer(service)
+                                mymap.addLayer(restauration)
+                                mymap.addLayer(hebergement)
+                                mymap.addLayer(activite)
                                 if(window.innerWidth >= 768){
                                 mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],13, {animation : true})
                                 } else{
