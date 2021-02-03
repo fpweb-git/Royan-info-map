@@ -100,12 +100,13 @@
             color: #16AFD1;
         }
 
-        .LfilterService, .LfilterHebergement, .LfilterRestauration{
+        .LfilterService, .LfilterHebergement, .LfilterRestauration, .LfilterTout{
             border: 1px solid rgb(148, 147, 147);
             border-radius: 0.5rem;
             padding: 0.5rem 1rem;
             margin-right: 1rem;
             cursor: pointer;
+            font-size: 12px;
         }
         @media only screen and (max-width: 1024px) {
             .LsubTxt{
@@ -163,12 +164,6 @@
         popupAnchor: [1, -34],
         shadowSize: [41, 41]
     });
-
-    // const myPolygon = {
-    // "color": "#4B65F7",
-    // "weight": 0,
-    // "opacity": 0.15
-    // };
 
     const mymap = L.map('mapid',{
         center : [45.6284600, -1.0281000],
@@ -281,7 +276,7 @@
                         const closeMenu = document.querySelector('.LcloseMenu')
                         closeMenu.addEventListener("click", function(e){
                             sidepanel.classList.remove('active');
-                            mymap.setView([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], 16, {animation : true});
+                            mymap.setView([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], 14, {animation : true});
                             layer.setIcon(baseIcon)
                         })
                         const seelAllBtn = document.querySelector('.LbtnAll')
@@ -289,9 +284,12 @@
                             sidepanel.innerHTML =`
                             <div class="LsidepanelInner">
                                 <div class="Lheader">
-                                    <div class="LfilterService">Service</div>
-                                    <div class="LfilterRestauration">Restauration</div>
-                                    <div class="LfilterHebergement">Hébergement</div>
+                                    <div>
+                                        <div class="LfilterService">Service</div>
+                                        <div class="LfilterRestauration">Restauration</div>
+                                        <div class="LfilterHebergement">Hébergement</div>
+                                        <div class="LfilterTout">Tout</div>
+                                    </div>
                                     <svg class="LcloseMenu" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="19.7809" y="0.688812" width="145" height="27" rx="13.5" transform="rotate(45 19.7809 0.688812)" fill="#4D4949"/>
                                     <rect x="1.00012" y="102.53" width="145" height="27" rx="13.5" transform="rotate(-45 1.00012 102.53)" fill="#4D4949"/>
@@ -302,21 +300,85 @@
                                 </div
                             </div>
                             `
-                            const seelAllBlock = document.querySelector('.Llist')
-                            const list = geojson.features.forEach((feature)=>{
-                            // console.log(feature)
-                            let rawDoc = `<div>${feature.properties.name}</div>`
-                            let doc = document.createElement('div');
-                            doc.innerHTML = rawDoc;
-                            seelAllBlock.append(doc)
+                            const listBlock = document.querySelector('.Llist')
+                            const listTout = geojson.features.forEach((feature)=>{
+                                let companyName = `<div class="listAllItem">${feature.properties.name}</div>`
+                                let box = document.createElement('div');
+                                box.innerHTML = companyName;
+                                listBlock.append(box)
                             })
+                            
                             const filterService = document.querySelector('.LfilterService')
+                            const filterRestauration = document.querySelector('.LfilterRestauration')
+                            const filterHebergement = document.querySelector('.LfilterHebergement')
+                            const filterTout = document.querySelector('.LfilterTout')
                             const icon = document.querySelectorAll(".leaflet-marker-icon")
                             const shadow = document.querySelectorAll(".leaflet-pane.leaflet-shadow-pane")
                             filterService.addEventListener("click", function(){
                                 mymap.addLayer(service)
+                                mymap.removeLayer(restauration)
+                                mymap.removeLayer(hebergement)
                                 mymap.removeLayer(other)
                                 mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11)
+                                layer.setIcon(baseIcon)
+                                listBlock.innerHTML = ''
+                                const listService = geojson.features.forEach((feature)=>{
+                                    if(feature.properties.category == 'service'){
+                                        let companyName = `<div>${feature.properties.name}</div>`
+                                        let box = document.createElement('div');
+                                        box.innerHTML = companyName;
+                                        listBlock.append(box)
+                                    }
+                                })
+                            })
+                            filterRestauration.addEventListener("click", function(){
+                                mymap.addLayer(restauration)
+                                mymap.removeLayer(other)
+                                mymap.removeLayer(service)
+                                mymap.removeLayer(hebergement)
+                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11)
+                                layer.setIcon(baseIcon)
+                                listBlock.innerHTML= ''
+                                const listRestauration = geojson.features.forEach((feature)=>{
+                                    if(feature.properties.category == 'restauration'){
+                                        let companyName = `<div>${feature.properties.name}</div>`
+                                        let box = document.createElement('div');
+                                        box.innerHTML = companyName;
+                                        listBlock.append(box)
+                                    }
+                                })
+                            })
+                            filterHebergement.addEventListener("click", function(){
+                                mymap.addLayer(hebergement)
+                                mymap.removeLayer(other)
+                                mymap.removeLayer(service)
+                                mymap.removeLayer(restauration)
+                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11)
+                                layer.setIcon(baseIcon)
+                                listBlock.innerHTML= ''
+                                const listHebergement = geojson.features.forEach((feature)=>{
+                                    if(feature.properties.category == 'hebergement'){
+                                        let companyName = `<div>${feature.properties.name}</div>`
+                                        let box = document.createElement('div');
+                                        box.innerHTML = companyName;
+                                        listBlock.append(box)
+                                    }
+                                })
+                            })
+                            filterTout.addEventListener("click", function(){
+                                mymap.addLayer(other)
+                                mymap.addLayer(service)
+                                mymap.addLayer(restauration)
+                                mymap.addLayer(hebergement)
+                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11)
+                                layer.setIcon(baseIcon)
+                                listBlock.innerHTML= ''
+                                const listHebergement = geojson.features.forEach((feature)=>{
+                                    let companyName = `<div>${feature.properties.name}</div>`
+                                    let box = document.createElement('div');
+                                    box.innerHTML = companyName;
+                                    listBlock.append(box)
+                                })
                             })
                         })
                     });
@@ -341,9 +403,46 @@
             },
             onEachFeature : eachFeatureCode,
         })
+
+        const restauration = L.geoJson(geojson, {
+            filter: function(feature, layer) {
+                return feature.properties.category == "restauration";
+            },
+            style : function(features){
+                return{
+                    color : '#4B65F7',
+                    weight : 0.5,
+                }
+            },
+            pointToLayer : function(geoJsonPoint, latlng){
+                    return L.marker(latlng,{
+                    icon : baseIcon,
+                    });
+            },
+            onEachFeature : eachFeatureCode,
+        })
+
+        const hebergement = L.geoJson(geojson, {
+            filter: function(feature, layer) {
+                return feature.properties.category == "hebergement";
+            },
+            style : function(features){
+                return{
+                    color : '#4B65F7',
+                    weight : 0.5,
+                }
+            },
+            pointToLayer : function(geoJsonPoint, latlng){
+                    return L.marker(latlng,{
+                    icon : baseIcon,
+                    });
+            },
+            onEachFeature : eachFeatureCode,
+        })
+
         const other = L.geoJson(geojson, {
             filter: function(feature, layer) {
-                return feature.properties.category != "service";
+                return feature.properties.category == "";
             },
             style : function(features){
                 return{
