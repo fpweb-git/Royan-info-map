@@ -119,6 +119,14 @@
             height: auto;
         }
 
+        .FilterListHidden{
+            display: none;
+        }
+
+        .FilterListVisible{
+            display: block;
+        }
+
         @media only screen and (max-width: 1024px) {
             .LsubTxt{
                 font-size: 14px;
@@ -368,9 +376,12 @@
                                 </div>
                                 <div class="Llist">
                                     <div class="LfilterTout">Tout</div>
+                                    <div class="LtoutList">
+
+                                    </div>                                 
                                     <div class="LfilterService">Commerces & services</div>
                                     <div class="LserviceList">
-
+                                    
                                     </div>
                                     <div class="LfilterRestauration">Pause gourmande</div>
                                     <div class="LrestaurationList">
@@ -391,16 +402,18 @@
                             const listeRestaurationBlock = document.querySelector('.LrestaurationList')
                             const listeHebergementBlock = document.querySelector('.LhebergementList')
                             const listeActiviteBlock = document.querySelector('.LactiviteList')
+                            const listeToutBlock = document.querySelector('.LtoutList')
+
                             const closeMenuList = document.querySelector('.LcloseMenuList')
 
                             closeMenuList.addEventListener("click", function(e){
                                 sidepanel.classList.remove('active');
                                 layer.setIcon(baseIcon)
-                                mymap.addLayer(other)
-                                mymap.addLayer(service)
-                                mymap.addLayer(restauration)
-                                mymap.addLayer(hebergement)
-                                mymap.addLayer(activite)
+                                // mymap.addLayer(other)
+                                // mymap.addLayer(service)
+                                // mymap.addLayer(restauration)
+                                // mymap.addLayer(hebergement)
+                                // mymap.addLayer(activite)
                                 if(window.innerWidth >= 768){
                                 mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],13, {animation : true})
                                 } else{
@@ -409,6 +422,11 @@
                             })
 
                             const listTout = geojson.features.forEach((feature)=>{
+                                    let companyName = `<div>${feature.properties.name}</div>`
+                                    let box = document.createElement('div');
+                                    box.innerHTML = companyName;
+                                    listeToutBlock.append(box)
+
                                 if(feature.properties.category == 'service'){
                                     let companyName = `<div>${feature.properties.name}</div>`
                                     let box = document.createElement('div');
@@ -433,11 +451,13 @@
                                     box.innerHTML = companyName;
                                     listeActiviteBlock.append(box)
                                 }
-                                listeActiviteBlock.style.display = 'none'
-                                listeServiceBlock.style.display = 'none'
-                                listeHebergementBlock.style.display = 'none'
-                                listeRestaurationBlock.style.display = 'none'
-                                listeActiviteBlock.style.display = 'none'
+
+                                listeActiviteBlock.classList.add('FilterListHidden')
+                                listeServiceBlock.classList.add('FilterListHidden')
+                                listeHebergementBlock.classList.add('FilterListHidden')
+                                listeRestaurationBlock.classList.add('FilterListHidden')
+                                listeActiviteBlock.classList.add('FilterListHidden')
+                                listeToutBlock.classList.add('FilterListHidden')
                             })
                             
                             const filterService = document.querySelector('.LfilterService')
@@ -456,17 +476,17 @@
                                 mymap.addLayer(hebergement)
                                 mymap.addLayer(activite)
                                 if(window.innerWidth >= 768){
-                                    mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],13, {animation : true})
+                                    mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11, {animation : true})
                                 } else{
                                     mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
                                 }
                                 layer.setIcon(baseIcon)
 
-                                listeActiviteBlock.style.display = 'block'
-                                listeRestaurationBlock.style.display = 'block'
-                                listeHebergementBlock.style.display = 'block'
-                                listeServiceBlock.style.display = 'block'
-                                listeActiviteBlock.style.display = 'block'
+                                listeToutBlock.classList.toggle('FilterListVisible')
+                                listeServiceBlock.classList.remove('FilterListVisible')
+                                listeActiviteBlock.classList.remove('FilterListVisible')
+                                listeRestaurationBlock.classList.remove('FilterListVisible')
+                                listeHebergementBlock.classList.remove('FilterListVisible')
 
                                 filterActivite.classList.remove('activeFilter')
                                 filterHebergement.classList.remove('activeFilter')
@@ -476,107 +496,143 @@
                             })
 
                             filterService.addEventListener("click", function(){
-                                mymap.addLayer(service)
-                                mymap.removeLayer(restauration)
-                                mymap.removeLayer(hebergement)
-                                mymap.removeLayer(other)
-                                mymap.removeLayer(activite)
                                 if(window.innerWidth >= 768){
-                                    mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],13, {animation : true})
+                                    mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11, {animation : true})
                                 } else{
                                     mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
                                 }
                                 layer.setIcon(baseIcon)
 
-                                listeActiviteBlock.style.display = 'none'
-                                listeRestaurationBlock.style.display = 'none'
-                                listeHebergementBlock.style.display = 'none'
-                                listeServiceBlock.style.display = 'block'
-                                listeActiviteBlock.style.display = 'none'
+                                listeServiceBlock.classList.toggle('FilterListVisible')
+                                listeActiviteBlock.classList.remove('FilterListVisible')
+                                listeRestaurationBlock.classList.remove('FilterListVisible')
+                                listeHebergementBlock.classList.remove('FilterListVisible')
+                                listeToutBlock.classList.remove('FilterListVisible')
 
                                 filterActivite.classList.remove('activeFilter')
                                 filterHebergement.classList.remove('activeFilter')
                                 filterRestauration.classList.remove('activeFilter')
-                                filterService.classList.add('activeFilter')
+                                filterService.classList.toggle('activeFilter')
                                 filterTout.classList.remove('activeFilter')
+
+                                if(listeServiceBlock.classList.contains('FilterListVisible')){
+                                    mymap.addLayer(service)
+                                    mymap.removeLayer(restauration)
+                                    mymap.removeLayer(hebergement)
+                                    mymap.removeLayer(other)
+                                    mymap.removeLayer(activite)
+                                } else {
+                                    mymap.addLayer(service)
+                                    mymap.addLayer(restauration)
+                                    mymap.addLayer(hebergement)
+                                    mymap.addLayer(other)
+                                    mymap.addLayer(activite)
+                                }
                             })
 
                             filterRestauration.addEventListener("click", function(){
-                                mymap.addLayer(restauration)
-                                mymap.removeLayer(other)
-                                mymap.removeLayer(service)
-                                mymap.removeLayer(hebergement)
-                                mymap.removeLayer(activite)
                                 if(window.innerWidth >= 768){
-                                    mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],13, {animation : true})
+                                    mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11, {animation : true})
                                 } else{
                                     mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
                                 }
                                 layer.setIcon(baseIcon)
 
-                                listeActiviteBlock.style.display = 'none'
-                                listeServiceBlock.style.display = 'none'
-                                listeHebergementBlock.style.display = 'none'
-                                listeRestaurationBlock.style.display = 'block'
-                                listeActiviteBlock.style.display = 'none'
+                                listeRestaurationBlock.classList.toggle('FilterListVisible')
+                                listeActiviteBlock.classList.remove('FilterListVisible')
+                                listeHebergementBlock.classList.remove('FilterListVisible')
+                                listeServiceBlock.classList.remove('FilterListVisible')
+                                listeToutBlock.classList.remove('FilterListVisible')
 
                                 filterActivite.classList.remove('activeFilter')
                                 filterHebergement.classList.remove('activeFilter')
-                                filterRestauration.classList.add('activeFilter')
+                                filterRestauration.classList.toggle('activeFilter')
                                 filterService.classList.remove('activeFilter')
                                 filterTout.classList.remove('activeFilter')
+
+                                if(listeRestaurationBlock.classList.contains('FilterListVisible')){
+                                    mymap.addLayer(restauration)
+                                    mymap.removeLayer(other)
+                                    mymap.removeLayer(service)
+                                    mymap.removeLayer(hebergement)
+                                    mymap.removeLayer(activite)
+                                } else {
+                                    mymap.addLayer(service)
+                                    mymap.addLayer(restauration)
+                                    mymap.addLayer(hebergement)
+                                    mymap.addLayer(other)
+                                    mymap.addLayer(activite)
+                                }
                             })
 
                             filterHebergement.addEventListener("click", function(){
-                                mymap.addLayer(hebergement)
-                                mymap.removeLayer(other)
-                                mymap.removeLayer(activite)
-                                mymap.removeLayer(service)
-                                mymap.removeLayer(restauration)
-                                mymap.removeLayer(activite)
                                 if(window.innerWidth >= 768){
-                                    mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],13, {animation : true})
+                                    mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11, {animation : true})
                                 } else{
                                     mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
                                 }
                                 layer.setIcon(baseIcon)
 
-                                listeActiviteBlock.style.display = 'none'
-                                listeRestaurationBlock.style.display = 'none'
-                                listeHebergementBlock.style.display = 'block'
-                                listeServiceBlock.style.display = 'none'
-                                listeActiviteBlock.style.display = 'none'
+                                listeHebergementBlock.classList.toggle('FilterListVisible')
+                                listeServiceBlock.classList.remove('FilterListVisible')
+                                listeActiviteBlock.classList.remove('FilterListVisible')
+                                listeRestaurationBlock.classList.remove('FilterListVisible')
+                                listeToutBlock.classList.remove('FilterListVisible')
 
                                 filterActivite.classList.remove('activeFilter')
                                 filterHebergement.classList.add('activeFilter')
                                 filterRestauration.classList.remove('activeFilter')
                                 filterService.classList.remove('activeFilter')
                                 filterTout.classList.remove('activeFilter')
+
+                                if(listeHebergementBlock.classList.contains('FilterListVisible')){
+                                    mymap.addLayer(hebergement)
+                                    mymap.removeLayer(other)
+                                    mymap.removeLayer(activite)
+                                    mymap.removeLayer(service)
+                                    mymap.removeLayer(restauration)
+                                } else {
+                                    mymap.addLayer(service)
+                                    mymap.addLayer(restauration)
+                                    mymap.addLayer(hebergement)
+                                    mymap.addLayer(other)
+                                    mymap.addLayer(activite)
+                                }
                             })
+
                             filterActivite.addEventListener("click", function(){
-                                mymap.addLayer(activite)
-                                mymap.removeLayer(other)
-                                mymap.removeLayer(service)
-                                mymap.removeLayer(restauration)
-                                mymap.removeLayer(hebergement)
                                 if(window.innerWidth >= 768){
-                                    mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],13, {animation : true})
+                                    mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11, {animation : true})
                                 } else{
                                     mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
                                 }
                                 layer.setIcon(baseIcon)
 
-                                listeActiviteBlock.style.display = 'none'
-                                listeRestaurationBlock.style.display = 'none'
-                                listeHebergementBlock.style.display = 'none'
-                                listeServiceBlock.style.display = 'none'
-                                listeActiviteBlock.style.display = 'block'
+                                listeActiviteBlock.classList.toggle('FilterListVisible')
+                                listeHebergementBlock.classList.remove('FilterListVisible')
+                                listeServiceBlock.classList.remove('FilterListVisible')
+                                listeRestaurationBlock.classList.remove('FilterListVisible')
+                                listeToutBlock.classList.remove('FilterListVisible')
 
                                 filterActivite.classList.add('activeFilter')
                                 filterHebergement.classList.remove('activeFilter')
                                 filterRestauration.classList.remove('activeFilter')
                                 filterService.classList.remove('activeFilter')
                                 filterTout.classList.remove('activeFilter')
+
+                                if(listeActiviteBlock.classList.contains('FilterListVisible')){
+                                    mymap.addLayer(activite)
+                                    mymap.removeLayer(other)
+                                    mymap.removeLayer(service)
+                                    mymap.removeLayer(restauration)
+                                    mymap.removeLayer(hebergement)
+                                } else {
+                                    mymap.addLayer(service)
+                                    mymap.addLayer(restauration)
+                                    mymap.addLayer(hebergement)
+                                    mymap.addLayer(other)
+                                    mymap.addLayer(activite)
+                                }
                             })
                         })
                     });
