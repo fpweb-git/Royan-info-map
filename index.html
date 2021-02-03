@@ -184,6 +184,9 @@
             align-items: center;
             margin: 0.6rem 0 1rem 0;
             }
+            .Llist{
+                padding-top: 0;
+            }
         }
     </style>
 </head>
@@ -352,7 +355,7 @@
                             if(window.innerWidth >= 768){
                             mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11, {animation : true})
                             } else{
-                            mymap.setViewOffset([45.6284600, -1.0281000],[0, -100],10, {animation : true})
+                            mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
                             }
 
                             sidepanel.innerHTML =`
@@ -401,7 +404,7 @@
                                 if(window.innerWidth >= 768){
                                 mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],13, {animation : true})
                                 } else{
-                                mymap.setViewOffset([45.6284600, -1.0281000],[0, -100],11, {animation : true})
+                                mymap.setViewOffset([45.6284600, -1.0281000],[0, 0],9, {animation : true})
                                 }
                             })
 
@@ -453,9 +456,9 @@
                                 mymap.addLayer(hebergement)
                                 mymap.addLayer(activite)
                                 if(window.innerWidth >= 768){
-                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],13, {animation : true})
+                                    mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],13, {animation : true})
                                 } else{
-                                mymap.setViewOffset([45.6284600, -1.0281000],[0, -100],9, {animation : true})
+                                    mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
                                 }
                                 layer.setIcon(baseIcon)
 
@@ -479,9 +482,9 @@
                                 mymap.removeLayer(other)
                                 mymap.removeLayer(activite)
                                 if(window.innerWidth >= 768){
-                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],13, {animation : true})
+                                    mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],13, {animation : true})
                                 } else{
-                                mymap.setViewOffset([45.6284600, -1.0281000],[0, -100],9, {animation : true})
+                                    mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
                                 }
                                 layer.setIcon(baseIcon)
 
@@ -505,9 +508,9 @@
                                 mymap.removeLayer(hebergement)
                                 mymap.removeLayer(activite)
                                 if(window.innerWidth >= 768){
-                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],13, {animation : true})
+                                    mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],13, {animation : true})
                                 } else{
-                                mymap.setViewOffset([45.6284600, -1.0281000],[0, -100],9, {animation : true})
+                                    mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
                                 }
                                 layer.setIcon(baseIcon)
 
@@ -532,9 +535,9 @@
                                 mymap.removeLayer(restauration)
                                 mymap.removeLayer(activite)
                                 if(window.innerWidth >= 768){
-                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],13, {animation : true})
+                                    mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],13, {animation : true})
                                 } else{
-                                mymap.setViewOffset([45.6284600, -1.0281000],[0, -100],9, {animation : true})
+                                    mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
                                 }
                                 layer.setIcon(baseIcon)
 
@@ -557,9 +560,9 @@
                                 mymap.removeLayer(restauration)
                                 mymap.removeLayer(hebergement)
                                 if(window.innerWidth >= 768){
-                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],13, {animation : true})
+                                    mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],13, {animation : true})
                                 } else{
-                                mymap.setViewOffset([45.6284600, -1.0281000],[0, -100],9, {animation : true})
+                                    mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
                                 }
                                 layer.setIcon(baseIcon)
 
