@@ -288,7 +288,7 @@
                         const seelAllBtn = document.querySelector('.LbtnAll')
                         seelAllBtn.addEventListener("click", function(){
                             layer.setIcon(baseIcon)
-                            mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10, {animation : true})
+                            mymap.setViewOffset([45.6284600, -1.0281000],[-140, 50],9, {animation : true})
                             sidepanel.innerHTML =`
                             <div class="LsidepanelInner">
                                 <div class="Lheader">
@@ -326,8 +326,13 @@
 
                             closeMenuList.addEventListener("click", function(e){
                                 sidepanel.classList.remove('active');
-                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10, {animation : true})
+                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 20],12, {animation : true})
                                 layer.setIcon(baseIcon)
+                                mymap.addLayer(other)
+                                mymap.addLayer(service)
+                                mymap.addLayer(restauration)
+                                mymap.addLayer(hebergement)
+                                mymap.addLayer(activite)
                             })
 
                             const listTout = geojson.features.forEach((feature)=>{
@@ -376,6 +381,7 @@
                                 mymap.addLayer(service)
                                 mymap.addLayer(restauration)
                                 mymap.addLayer(hebergement)
+                                mymap.addLayer(activite)
                                 mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10, {animation : true})
                                 layer.setIcon(baseIcon)
 
@@ -397,6 +403,7 @@
                                 mymap.removeLayer(restauration)
                                 mymap.removeLayer(hebergement)
                                 mymap.removeLayer(other)
+                                mymap.removeLayer(activite)
                                 mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10, {animation : true})
                                 layer.setIcon(baseIcon)
 
@@ -418,6 +425,7 @@
                                 mymap.removeLayer(other)
                                 mymap.removeLayer(service)
                                 mymap.removeLayer(hebergement)
+                                mymap.removeLayer(activite)
                                 mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10, {animation : true})
                                 layer.setIcon(baseIcon)
 
@@ -440,6 +448,7 @@
                                 mymap.removeLayer(activite)
                                 mymap.removeLayer(service)
                                 mymap.removeLayer(restauration)
+                                mymap.removeLayer(activite)
                                 mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],10, {animation : true})
                                 layer.setIcon(baseIcon)
 
@@ -572,6 +581,9 @@
             onEachFeature : eachFeatureCode,
         })
         service.addTo(mymap)
+        restauration.addTo(mymap)
+        hebergement.addTo(mymap)
+        activite.addTo(mymap)
         other.addTo(mymap)
     })
     .catch(err => console.log(err))
