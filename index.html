@@ -457,6 +457,7 @@
                         const closeMenu = document.querySelector('.LcloseMenu')
                         closeMenu.addEventListener("click", function(e){
                             sidepanel.classList.remove('active');
+                            sidepanel.classList.remove('filterActive')
                             mymap.setView([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], 13, {animation : true});
                             layer.setIcon(baseIcon)
                         })
@@ -512,6 +513,7 @@
 
                             closeMenuList.addEventListener("click", function(e){
                                 sidepanel.classList.remove('active');
+                                sidepanel.classList.remove('filterActive');
                                 layer.setIcon(baseIcon)
                                 mymap.addLayer(other)
                                 mymap.addLayer(service)
