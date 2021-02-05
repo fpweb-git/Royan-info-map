@@ -828,6 +828,20 @@
                 mymap.addLayer(other)
                 mymap.addLayer(activite)
             }
+
+            // close menu 
+            const closeMenuList = document.querySelector('.LcloseMenuList')
+            closeMenuList.addEventListener("click", function(e){
+                sidepanel.classList.remove('active');
+                sidepanel.classList.remove('filterActive');
+                filterActiviteIcon.classList.remove('active')
+                
+                mymap.addLayer(other)
+                mymap.addLayer(service)
+                mymap.addLayer(restauration)
+                mymap.addLayer(hebergement)
+                mymap.addLayer(activite)
+            })
         })
 
         
@@ -903,6 +917,20 @@
                 mymap.addLayer(other)
                 mymap.addLayer(activite)
             }
+
+            // close menu 
+            const closeMenuList = document.querySelector('.LcloseMenuList')
+            closeMenuList.addEventListener("click", function(e){
+                sidepanel.classList.remove('active');
+                sidepanel.classList.remove('filterActive');
+                filterRestaurationIcon.classList.remove('active')
+                
+                mymap.addLayer(other)
+                mymap.addLayer(service)
+                mymap.addLayer(restauration)
+                mymap.addLayer(hebergement)
+                mymap.addLayer(activite)
+            })
         })
 
         // filter left panel HEBERGEMENT
@@ -977,6 +1005,20 @@
                 mymap.addLayer(other)
                 mymap.addLayer(activite)
             }
+
+            // close menu 
+            const closeMenuList = document.querySelector('.LcloseMenuList')
+            closeMenuList.addEventListener("click", function(e){
+                sidepanel.classList.remove('active');
+                sidepanel.classList.remove('filterActive');
+                filterHebergementIcon.classList.remove('active')
+                
+                mymap.addLayer(other)
+                mymap.addLayer(service)
+                mymap.addLayer(restauration)
+                mymap.addLayer(hebergement)
+                mymap.addLayer(activite)
+            })
         })
 
         // filter left panel Service
@@ -1051,6 +1093,20 @@
                 mymap.addLayer(other)
                 mymap.addLayer(activite)
             }
+
+            // close menu 
+            const closeMenuList = document.querySelector('.LcloseMenuList')
+            closeMenuList.addEventListener("click", function(e){
+                sidepanel.classList.remove('active');
+                sidepanel.classList.remove('filterActive');
+                filterServiceIcon.classList.remove('active')
+                
+                mymap.addLayer(other)
+                mymap.addLayer(service)
+                mymap.addLayer(restauration)
+                mymap.addLayer(hebergement)
+                mymap.addLayer(activite)
+            })
         })
 
         
