@@ -112,7 +112,7 @@
             margin-right: 2rem;
             cursor: pointer;
         }
-        .LcloseMenu, .LcloseMenuList{
+        .LcloseMenu, .LcloseMenuList, .LlistItem{
             cursor: pointer;
         }
         .Ltitle{
@@ -339,7 +339,7 @@
 
     const mymap = L.map('mapid',{
         center : [45.6284600, -1.0281000],
-        zoom : 11,
+        zoom : 12,
         minZoom : 10,
         zoomControl : false,
     })
@@ -397,14 +397,14 @@
             geojson.features.push(newData)
         })
 
-        const eachFeatureCode = function(feature, layer){      
+        const eachFeatureCode = function(feature, layer){     
                     if(feature.geometry.type === 'Point'){
                     layer.on('click', function(e){
                         if(clickedMarker){
                             clickedMarker.setIcon(baseIcon);
                         }
                         e.target.setIcon(activeIcon);
-                        clickedMarker = e.target;                  
+                        clickedMarker = e.target;
 
                         if(window.innerWidth >= 768){
                             mymap.setViewOffset(e.target.getLatLng(),[-100, 0],17)
@@ -563,18 +563,6 @@
                                 listeActiviteBlock.classList.add('FilterListHidden')
                                 listeToutBlock.classList.add('FilterListHidden')
 
-                                listeServiceBlock.addEventListener('click', function(e){
-                                    if(e.target && e.target.nodeName == 'div') {
-		                                console.log(e.target);
-                                    }
-                                })
-                                // const listItem = document.querySelectorAll('.LlistItem')
-
-                                // listItem.forEach((item)=>{
-                                //     listItem.addEventListener('click', function(e){
-                                //         console.log(this)
-                                //     })
-                                // })
                             })
                             
                             const filterService = document.querySelector('.LfilterService')
@@ -784,20 +772,50 @@
                     </div
                 </div>
             `
+
             // populate data inside the panel
             const LactiviteList = document.querySelector('.LactiviteList')
-            const listActivite = geojson.features.forEach((feature)=>{
-                if(feature.properties.category == 'activite'){
-                    let companyName = `<div>${feature.properties.name}</div>`
+            const activiteData = Object.values(activite._layers)
+        
+            const listactivite = activiteData.forEach((layer)=>{
+                if(layer.feature.properties.category == 'activite'){
+                    let companyName = `
+                    <div class="LlistItem" 
+                    id='${layer._leaflet_id}' 
+                    long='${layer.feature.geometry.coordinates[0]}'
+                    lat='${layer.feature.geometry.coordinates[1]}'
+                    
+                    >
+                    ${layer.feature.properties.name}
+                    </div>`
+                    
+                    
                     let box = document.createElement('div');
                     box.innerHTML = companyName;
                     LactiviteList.append(box)
                 }
             })
 
+            //select item on click
+            LactiviteList.addEventListener('click', function(event){
+                event.stopPropagation()
+                const lat = event.target.getAttribute('lat')
+                const long = event.target.getAttribute('long')
+                const id = Number(event.target.getAttribute('id'))
+
+                mymap.setViewOffset([lat, long],[-120, 0],12, {animation : true})                
+
+                if(clickedMarker){
+                    clickedMarker.setIcon(baseIcon);
+                }
+
+                clickedMarker = activite.getLayer(id);
+                clickedMarker.setIcon(activeIcon);
+            })
+
             // set map view
             if(window.innerWidth >= 768){
-                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11, {animation : true})
+                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],12, {animation : true})
             } else{
                 mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
             }
@@ -835,6 +853,10 @@
                 sidepanel.classList.remove('active');
                 sidepanel.classList.remove('filterActive');
                 filterActiviteIcon.classList.remove('active')
+                //reset marker
+                if (clickedMarker){
+                clickedMarker.setIcon(baseIcon)
+                }
                 
                 mymap.addLayer(other)
                 mymap.addLayer(service)
@@ -875,19 +897,47 @@
 
             // populate data inside the panel
             const LrestaurationList = document.querySelector('.LrestaurationList')
+            const restaurationData = Object.values(restauration._layers)
         
-            const listRestaurant = geojson.features.forEach((feature)=>{
-                if(feature.properties.category == 'restauration'){
-                    let companyName = `<div>${feature.properties.name}</div>`
+            const listrestauration = restaurationData.forEach((layer)=>{
+                if(layer.feature.properties.category == 'restauration'){
+                    let companyName = `
+                    <div class="LlistItem" 
+                    id='${layer._leaflet_id}' 
+                    long='${layer.feature.geometry.coordinates[0]}'
+                    lat='${layer.feature.geometry.coordinates[1]}'
+                    
+                    >
+                    ${layer.feature.properties.name}
+                    </div>`
+                    
+                    
                     let box = document.createElement('div');
                     box.innerHTML = companyName;
                     LrestaurationList.append(box)
                 }
             })
 
+            //select item on click
+            LrestaurationList.addEventListener('click', function(event){
+                event.stopPropagation()
+                const lat = event.target.getAttribute('lat')
+                const long = event.target.getAttribute('long')
+                const id = Number(event.target.getAttribute('id'))
+
+                mymap.setViewOffset([lat, long],[-120, 0],12, {animation : true})                
+
+                if(clickedMarker){
+                    clickedMarker.setIcon(baseIcon);
+                }
+
+                clickedMarker = restauration.getLayer(id);
+                clickedMarker.setIcon(activeIcon);
+            })
+
             // set map view
             if(window.innerWidth >= 768){
-                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11, {animation : true})
+                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],12, {animation : true})
             } else{
                 mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
             }
@@ -924,6 +974,10 @@
                 sidepanel.classList.remove('active');
                 sidepanel.classList.remove('filterActive');
                 filterRestaurationIcon.classList.remove('active')
+                //reset marker
+                if (clickedMarker){
+                clickedMarker.setIcon(baseIcon)
+                }
                 
                 mymap.addLayer(other)
                 mymap.addLayer(service)
@@ -963,19 +1017,47 @@
 
             // populate data inside the panel
             const LhebergementList = document.querySelector('.LhebergementList')
+            const hebergementData = Object.values(hebergement._layers)
         
-            const listHebergement = geojson.features.forEach((feature)=>{
-                if(feature.properties.category == 'hebergement'){
-                    let companyName = `<div>${feature.properties.name}</div>`
+            const listHebergement = hebergementData.forEach((layer)=>{
+                if(layer.feature.properties.category == 'hebergement'){
+                    let companyName = `
+                    <div class="LlistItem" 
+                    id='${layer._leaflet_id}' 
+                    long='${layer.feature.geometry.coordinates[0]}'
+                    lat='${layer.feature.geometry.coordinates[1]}'
+                    
+                    >
+                    ${layer.feature.properties.name}
+                    </div>`
+                    
+                    
                     let box = document.createElement('div');
                     box.innerHTML = companyName;
                     LhebergementList.append(box)
                 }
             })
 
+            //select item on click
+            LhebergementList.addEventListener('click', function(event){
+                event.stopPropagation()
+                const lat = event.target.getAttribute('lat')
+                const long = event.target.getAttribute('long')
+                const id = Number(event.target.getAttribute('id'))
+
+                mymap.setViewOffset([lat, long],[-120, 0],12, {animation : true})                
+
+                if(clickedMarker){
+                    clickedMarker.setIcon(baseIcon);
+                }
+
+                clickedMarker = hebergement.getLayer(id);
+                clickedMarker.setIcon(activeIcon);
+            })
+
             // set map view
             if(window.innerWidth >= 768){
-                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11, {animation : true})
+                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],12, {animation : true})
             } else{
                 mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
             }
@@ -1012,6 +1094,10 @@
                 sidepanel.classList.remove('active');
                 sidepanel.classList.remove('filterActive');
                 filterHebergementIcon.classList.remove('active')
+                //reset marker
+                if (clickedMarker){
+                clickedMarker.setIcon(baseIcon)
+                }
                 
                 mymap.addLayer(other)
                 mymap.addLayer(service)
@@ -1051,19 +1137,47 @@
 
             // populate data inside the panel
             const LserviceList = document.querySelector('.LserviceList')
+            const serviceData = Object.values(service._layers)
         
-            const listService = geojson.features.forEach((feature)=>{
-                if(feature.properties.category == 'service'){
-                    let companyName = `<div>${feature.properties.name}</div>`
+            const listService = serviceData.forEach((layer)=>{
+                if(layer.feature.properties.category == 'service'){
+                    let companyName = `
+                    <div class="LlistItem" 
+                    id='${layer._leaflet_id}' 
+                    long='${layer.feature.geometry.coordinates[0]}'
+                    lat='${layer.feature.geometry.coordinates[1]}'
+                    
+                    >
+                    ${layer.feature.properties.name}
+                    </div>`
+                    
+                    
                     let box = document.createElement('div');
                     box.innerHTML = companyName;
                     LserviceList.append(box)
                 }
             })
 
+            //select item on click
+            LserviceList.addEventListener('click', function(event){
+                event.stopPropagation()
+                const lat = event.target.getAttribute('lat')
+                const long = event.target.getAttribute('long')
+                const id = Number(event.target.getAttribute('id'))
+
+                mymap.setViewOffset([lat, long],[-120, 0],12, {animation : true})                
+
+                if(clickedMarker){
+                    clickedMarker.setIcon(baseIcon);
+                }
+
+                clickedMarker = service.getLayer(id);
+                clickedMarker.setIcon(activeIcon);
+            })
+
             // set map view
             if(window.innerWidth >= 768){
-                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11, {animation : true})
+                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],12, {animation : true})
             } else{
                 mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
             }
@@ -1100,6 +1214,10 @@
                 sidepanel.classList.remove('active');
                 sidepanel.classList.remove('filterActive');
                 filterServiceIcon.classList.remove('active')
+                //reset marker
+                if (clickedMarker){
+                clickedMarker.setIcon(baseIcon)
+                }
                 
                 mymap.addLayer(other)
                 mymap.addLayer(service)
