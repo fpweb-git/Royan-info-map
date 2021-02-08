@@ -180,7 +180,7 @@
             .Lsidepanel{
                 width: calc(100% - 80px);
                 max-width: unset;
-                height: 40%;
+                height: 35%;
                 top: unset;
                 bottom: 0;
                 right: 0;
@@ -239,6 +239,7 @@
             .Linformation{
                 min-width: 50%;
                 height: unset;
+                padding: 0;
             }
             .Limage{
                 max-width: 80%;
@@ -512,7 +513,7 @@
                         e.target.setIcon(activeIcon);
                         clickedMarker = e.target;
 
-                        if(window.innerWidth >= 768){
+                        if(window.innerWidth >= 1024){
                             mymap.setViewOffset(e.target.getLatLng(),[-100, 0],17)
                         } else{
                             mymap.setViewOffset(e.target.getLatLng(),[0, -100],17)
@@ -624,7 +625,7 @@
             })
 
             // set map view
-            if(window.innerWidth >= 768){
+            if(window.innerWidth >= 1024){
                 mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],12, {animation : true})
             } else{
                 mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
@@ -766,7 +767,7 @@
             })
 
             // set map view
-            if(window.innerWidth >= 768){
+            if(window.innerWidth >= 1024){
                 mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],12, {animation : true})
             } else{
                 mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
@@ -904,7 +905,7 @@
             })
 
             // set map view
-            if(window.innerWidth >= 768){
+            if(window.innerWidth >= 1024){
                 mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],12, {animation : true})
             } else{
                 mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
@@ -1042,7 +1043,7 @@
             })
 
             // set map view
-            if(window.innerWidth >= 768){
+            if(window.innerWidth >= 1024){
                 mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],12, {animation : true})
             } else{
                 mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
