@@ -96,6 +96,7 @@
         background: #87c0e0;
         color: #234c5e;
         }
+
         .leaflet-popup-tip{
             display: none;
         }
@@ -105,6 +106,7 @@
             justify-content: flex-end;
             align-items: center;
         }
+
         .LlistBtn{
             border: 1px solid rgb(148, 147, 147);
             border-radius: 0.5rem;
@@ -113,30 +115,39 @@
             cursor: pointer;
             display: none;
         }
+
         .LcloseMenu, .LcloseMenuList, .LlistItem{
             cursor: pointer;
         }
+
         .Ltitle{
             margin: 4rem 0 2rem 0;
             font-weight: 800;
             font-size: 1.8rem;
             color: #2d353f;
         }
+
         .Linformation, .Llist{
             padding: 1rem 0;
         }
+
         .Lcontent{
             display: flex;
             align-items: center;
             margin: 2rem 0 1rem 0;
         }
+
+        .Lcontent svg{
+            flex-shrink: 0;
+            width: 20px;
+            height: auto;
+        }
+
         .Ladress, .Lphone, .Lwebsite{
             margin-left: 0.5rem;
         }
-        .Ladress svg, .Lwebsite svg, .Lphone svg{
-            flex-shrink: 0;
-        }
-        .Lwebsite a{
+
+        .Lwebsite{
             color: #16AFD1;
         }
 
@@ -159,83 +170,58 @@
             height: auto;
         }
 
-        .FilterListHidden{
-            display: none;
-        }
-
-        .FilterListVisible{
-            display: block;
-        }
-
-        @media only screen and (max-width: 1024px) {
-            .LsubTxt{
-                font-size: 14px;
-            }
-        }
         @media only screen and (max-width: 768px) {
-            /* .Ladress svg{
-                display: none;
-            } */
-            .Ladress .LsubTxt{
-                /* margin-left: 0; */
-                /* text-align: center; */
-                margin-top: 0;
+            .Lsidepanel, .LsideFilterpanel{
+                width: 30%;
+            }
+            .Lleftpanel{
+                width: 80px;
+                height: 100%;
+                background: #16AFD1;
+                padding: 2rem 1rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 7000;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+                overflow: hidden;
+            }
+            .LleftpanelIconGrp{
+                font-size: 10px;
+                margin-bottom: 1.6rem;
+            }
+
+            .LleftpanelIconGrp svg{
+                width: 36px;
+                height: auto;
+            }
+
+            .LleftpanelIconTxt{
+                margin-top: 0.5rem;
+            }
+
+            .LleftpanelLogo svg{
+                width: 60px;
+                height: auto;
+            }
+            .Lcontent{
+                margin: 1rem 0 0.5rem 0;
+                font-size: 10px;
             }
             .Ltitle{
-            font-size: 1.4rem;
-            margin-top: 0;
-            max-width: 90%;
-            position: absolute;
-            top: -4.2rem;
-            max-width: 50%;
+                font-size: 1rem;
+                margin: 1.5rem 0 1rem 0;
             }
-            /* .Lsidepanel{
-                width: 50%;
-            } */
-            .Lsidepanel{
-            width: 100%;
-            max-width: unset;
-            height: 40%;
-            background: white;
-            position: absolute;
-            top: unset;
-            bottom: 0;
-            left: 0;
-            display: flex;
-            flex-direction: unset;
-            border-left: unset;
-            border-top: 1px solid rgb(167, 167, 167);
-            }
-            .LsidepanelContent{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 70%;
-                position: relative;
-            }
-            .LsidepanelContentLeft{
-                width: 50%;
-            }
-            .Linformation{
-                width: 50%;
-            }
-            .Lheader{
-                margin-bottom: 2rem;
-            }
-            .Limage{
-                max-height: 150px;
-                width: auto;
-                max-width: 80%;
-            }
-            .Ladress, .Lphone, .Lwebsite{
-            display: flex;
-            align-items: center;
-            margin: 0.6rem 0 1rem 0;
-            }
-            .Llist{
-                padding-top: 0;
+            .LcloseMenu{
+                margin: 0.5rem;
+                width: 15px;
+                height: auto;
             }
         }
+
     </style>
 </head>
 <body>
