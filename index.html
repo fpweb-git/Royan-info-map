@@ -27,7 +27,7 @@
             width: 100%;
             position: relative;
         }
-        .Lsidepanel{
+        .Lsidepanel, .LsideFilterpanel{
             width: 40%;
             max-width: 550px;
             height: 100%;
@@ -44,12 +44,12 @@
             overflow: hidden;
             border-left: 1px solid rgb(167, 167, 167);
         }
-        .LsidepanelInner{
+        .LsidepanelInner, .LsideFilterpanelInner{
             width: 100%;
             padding: 6%;
             overflow: auto
         }
-        .Lsidepanel.active, .Lsidepanel.filterActive{
+        .Lsidepanel.active, .LsideFilterpanel.active{
             opacity: 1;
             transform: translateX(0)
         }
@@ -105,12 +105,13 @@
             justify-content: flex-end;
             align-items: center;
         }
-        .LbtnAll{
+        .LlistBtn{
             border: 1px solid rgb(148, 147, 147);
             border-radius: 0.5rem;
             padding: 0.5rem 1rem;
             margin-right: 2rem;
             cursor: pointer;
+            display: none;
         }
         .LcloseMenu, .LcloseMenuList, .LlistItem{
             cursor: pointer;
@@ -124,12 +125,12 @@
         .Linformation, .Llist{
             padding: 1rem 0;
         }
-        .Ladress, .Lphone, .Lwebsite{
+        .Lcontent{
             display: flex;
             align-items: center;
             margin: 2rem 0 1rem 0;
         }
-        .LsubTxt{
+        .Ladress, .Lphone, .Lwebsite{
             margin-left: 0.5rem;
         }
         .Ladress svg, .Lwebsite svg, .Lphone svg{
@@ -240,7 +241,47 @@
 <body>
     <div class="mapcontainer">
         <div id="mapid"></div>
-        <div class="Lsidepanel"></div>
+        <div class="Lsidepanel">
+            <div class="LsidepanelInner">
+                <div class="Lheader">
+                    <div class="LlistBtn">Retour à la liste</div>
+                    <svg class="LcloseMenu" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="19.7809" y="0.688812" width="145" height="27" rx="13.5" transform="rotate(45 19.7809 0.688812)" fill="#4D4949"/>
+                    <rect x="1.00012" y="102.53" width="145" height="27" rx="13.5" transform="rotate(-45 1.00012 102.53)" fill="#4D4949"/>
+                    </svg>
+                </div>
+                <div class="LsidepanelContent">
+                    <div class="LsidepanelContentLeft">
+                        <h2 class="Ltitle"></h2>
+                        <img class="Limage" src="">
+                    </div>
+                    <div class="Linformation">
+                        <div
+                        <div class="Lcontent">
+                            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.625 11.25C23.625 19.125 13.5 25.875 13.5 25.875C13.5 25.875 3.375 19.125 3.375 11.25C3.375 8.56468 4.44174 5.98935 6.34054 4.09054C8.23935 2.19174 10.8147 1.125 13.5 1.125C16.1853 1.125 18.7606 2.19174 20.6595 4.09054C22.5583 5.98935 23.625 8.56468 23.625 11.25Z" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.5 14.625C15.364 14.625 16.875 13.114 16.875 11.25C16.875 9.38604 15.364 7.875 13.5 7.875C11.636 7.875 10.125 9.38604 10.125 11.25C10.125 13.114 11.636 14.625 13.5 14.625Z" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p class="Ladress"></p>
+                        </div>
+                        <div class="Lcontent">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24.8749 19.4154V22.7904C24.8761 23.1037 24.812 23.4138 24.6864 23.7009C24.5609 23.988 24.3768 24.2457 24.146 24.4575C23.9151 24.6693 23.6425 24.8306 23.3457 24.9309C23.0489 25.0313 22.7344 25.0686 22.4224 25.0404C18.9606 24.6642 15.6352 23.4813 12.7136 21.5866C9.99542 19.8594 7.69087 17.5548 5.96361 14.8366C4.06234 11.9017 2.87914 8.56026 2.50986 5.08289C2.48175 4.77179 2.51872 4.45824 2.61843 4.16222C2.71813 3.86619 2.87838 3.59416 3.08898 3.36346C3.29957 3.13276 3.55589 2.94844 3.84163 2.82223C4.12736 2.69602 4.43625 2.63068 4.74861 2.63039H8.12361C8.66958 2.62502 9.19888 2.81835 9.61285 3.17436C10.0268 3.53037 10.2972 4.02477 10.3736 4.56539C10.5161 5.64546 10.7802 6.70596 11.1611 7.72664C11.3125 8.1293 11.3452 8.56692 11.2555 8.98763C11.1658 9.40834 10.9573 9.79451 10.6549 10.1004L9.22611 11.5291C10.8276 14.3456 13.1596 16.6776 15.9761 18.2791L17.4049 16.8504C17.7107 16.5479 18.0969 16.3395 18.5176 16.2497C18.9383 16.16 19.3759 16.1928 19.7786 16.3441C20.7993 16.725 21.8598 16.9892 22.9399 17.1316C23.4864 17.2087 23.9854 17.484 24.3422 17.9051C24.699 18.3261 24.8886 18.8637 24.8749 19.4154Z" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p class="Lphone"></p>
+                        </div>
+                        <div class="Lcontent">
+                            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.5 24.75C19.7132 24.75 24.75 19.7132 24.75 13.5C24.75 7.2868 19.7132 2.25 13.5 2.25C7.2868 2.25 2.25 7.2868 2.25 13.5C2.25 19.7132 7.2868 24.75 13.5 24.75Z" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.25 13.5H24.75" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.5 2.25C16.3139 5.33065 17.9131 9.32854 18 13.5C17.9131 17.6715 16.3139 21.6694 13.5 24.75C10.6861 21.6694 9.0869 17.6715 9 13.5C9.0869 9.32854 10.6861 5.33065 13.5 2.25V2.25Z" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <a class="Lwebsite" target="_blank" rel="noopener noreferrer">Visiter le site web</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="Lleftpanel">
             <div class="LleftpanelIcon">
                 <div class="LleftpanelIconGrp LactiviteIcon">
@@ -302,6 +343,7 @@
                 </svg>
             </div>
         </div>
+        <div class="LsideFilterpanel"></div>
     </div>
 </body>
 <script>
@@ -313,12 +355,28 @@
     const activeSvg = 'data:image/svg+xml;base64,' + btoa(svgDark);
 
     const sidepanel = document.querySelector('.Lsidepanel')
+    const sideFilterpanel = document.querySelector('.LsideFilterpanel')
+
+    const closeMenu = document.querySelector('.LcloseMenu')
+    const LlistBtn = document.querySelector('.LlistBtn')
+
+    const Ltitle = document.querySelector('.Ltitle')
+    const Limage = document.querySelector('.Limage')
+    const Ladress = document.querySelector('.Ladress')
+    const Lphone = document.querySelector('.Lphone')
+    const Lwebsite = document.querySelector('.Lwebsite')
+
     const filterActiviteIcon = document.querySelector('.LactiviteIcon')
     const filterRestaurationIcon = document.querySelector('.LrestaurationIcon')
     const filterHebergementIcon = document.querySelector('.LhebergementIcon')
     const filterServiceIcon = document.querySelector('.LserviceIcon')
 
     let clickedMarker;
+
+    let geojson = {
+        type: "FeatureCollection",
+        features: []
+    }
     
     const activeIcon = new L.Icon({
         iconUrl: activeSvg,
@@ -368,10 +426,30 @@
     }
 
 
-    let geojson = {
-        type: "FeatureCollection",
-        features: []
-    }
+    // Go back to the filterd list 
+    LlistBtn.addEventListener('click', function(){
+        sidepanel.classList.remove('active');
+        if(filterActiviteIcon.classList.contains('active') || filterRestaurationIcon.classList.contains('active') || filterHebergementIcon.classList.contains('active') || filterServiceIcon.classList.contains('active')){
+            sideFilterpanel.classList.add('active');
+        }
+        if(clickedMarker){
+        clickedMarker.setIcon(baseIcon);
+        }
+    })
+
+    // function to close menu
+    closeMenu.addEventListener('click', function(e){
+        sidepanel.classList.remove('active');
+        if(filterActiviteIcon.classList.contains('active') || filterRestaurationIcon.classList.contains('active') || filterHebergementIcon.classList.contains('active') || filterServiceIcon.classList.contains('active')){
+            sideFilterpanel.classList.add('active');
+        }
+        mymap.setView([clickedMarker.feature.geometry.coordinates[1], clickedMarker.feature.geometry.coordinates[0]], 13, {animation : true});
+        clickedMarker.setIcon(baseIcon)
+    })
+
+
+
+    // fetch the data and populate the map
 
     fetch('https://script.googleusercontent.com/macros/echo?user_content_key=Tvu5ydypmc9FPX_faTChkkTS9UhxK1WQ7ETa2KVwqbPDFwaMBofMOuNuw24yUiBWKTbagYLNz_-0uLQtK0qkGpki1TsG8wQem5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnLqrBgluDekbTIPQZNVHGf7dfDkcJ3TALlZKQbnzqASdeoNp780cEthHw__5aZrAQFFrGqk7FSJR&lib=M1-0sR9glFGJodTTkG848NlT3K2hnuyIu')
     .then(response => response.json())
@@ -397,7 +475,9 @@
             geojson.features.push(newData)
         })
 
-        const eachFeatureCode = function(feature, layer){     
+        // variable for each feature of the differents layers
+
+        const eachFeatureCode = function(feature, layer){
                     if(feature.geometry.type === 'Point'){
                     layer.on('click', function(e){
                         if(clickedMarker){
@@ -413,359 +493,43 @@
                         }
 
                         sidepanel.classList.add('active');
-                        sidepanel.innerHTML = `
-                            <div class="LsidepanelInner">
-                                <div class="Lheader">
-                                    <div class="LbtnAll">Tout voir</div>
-                                    <svg class="LcloseMenu" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="19.7809" y="0.688812" width="145" height="27" rx="13.5" transform="rotate(45 19.7809 0.688812)" fill="#4D4949"/>
-                                    <rect x="1.00012" y="102.53" width="145" height="27" rx="13.5" transform="rotate(-45 1.00012 102.53)" fill="#4D4949"/>
-                                    </svg>
-                                </div>
-                                <div class="LsidepanelContent">
-                                    <div class="LsidepanelContentLeft">
-                                        <h2 class="Ltitle">${feature.properties.name}</h2>
-                                        <img class="Limage" src="${feature.properties.image}">
-                                    </div>
-                                    <div class="Linformation">
-                                        <div
-                                        <div class="Ladress">
-                                            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M23.625 11.25C23.625 19.125 13.5 25.875 13.5 25.875C13.5 25.875 3.375 19.125 3.375 11.25C3.375 8.56468 4.44174 5.98935 6.34054 4.09054C8.23935 2.19174 10.8147 1.125 13.5 1.125C16.1853 1.125 18.7606 2.19174 20.6595 4.09054C22.5583 5.98935 23.625 8.56468 23.625 11.25Z" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M13.5 14.625C15.364 14.625 16.875 13.114 16.875 11.25C16.875 9.38604 15.364 7.875 13.5 7.875C11.636 7.875 10.125 9.38604 10.125 11.25C10.125 13.114 11.636 14.625 13.5 14.625Z" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                            <span class="LsubTxt">${feature.properties.adress}</span>
-                                        </div>
-                                        <div class="Lphone">
-                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M24.8749 19.4154V22.7904C24.8761 23.1037 24.812 23.4138 24.6864 23.7009C24.5609 23.988 24.3768 24.2457 24.146 24.4575C23.9151 24.6693 23.6425 24.8306 23.3457 24.9309C23.0489 25.0313 22.7344 25.0686 22.4224 25.0404C18.9606 24.6642 15.6352 23.4813 12.7136 21.5866C9.99542 19.8594 7.69087 17.5548 5.96361 14.8366C4.06234 11.9017 2.87914 8.56026 2.50986 5.08289C2.48175 4.77179 2.51872 4.45824 2.61843 4.16222C2.71813 3.86619 2.87838 3.59416 3.08898 3.36346C3.29957 3.13276 3.55589 2.94844 3.84163 2.82223C4.12736 2.69602 4.43625 2.63068 4.74861 2.63039H8.12361C8.66958 2.62502 9.19888 2.81835 9.61285 3.17436C10.0268 3.53037 10.2972 4.02477 10.3736 4.56539C10.5161 5.64546 10.7802 6.70596 11.1611 7.72664C11.3125 8.1293 11.3452 8.56692 11.2555 8.98763C11.1658 9.40834 10.9573 9.79451 10.6549 10.1004L9.22611 11.5291C10.8276 14.3456 13.1596 16.6776 15.9761 18.2791L17.4049 16.8504C17.7107 16.5479 18.0969 16.3395 18.5176 16.2497C18.9383 16.16 19.3759 16.1928 19.7786 16.3441C20.7993 16.725 21.8598 16.9892 22.9399 17.1316C23.4864 17.2087 23.9854 17.484 24.3422 17.9051C24.699 18.3261 24.8886 18.8637 24.8749 19.4154Z" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                            <span class="LsubTxt">${feature.properties.phone}</span>
-                                        </div>
-                                        <div class="Lwebsite">
-                                            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M13.5 24.75C19.7132 24.75 24.75 19.7132 24.75 13.5C24.75 7.2868 19.7132 2.25 13.5 2.25C7.2868 2.25 2.25 7.2868 2.25 13.5C2.25 19.7132 7.2868 24.75 13.5 24.75Z" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M2.25 13.5H24.75" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M13.5 2.25C16.3139 5.33065 17.9131 9.32854 18 13.5C17.9131 17.6715 16.3139 21.6694 13.5 24.75C10.6861 21.6694 9.0869 17.6715 9 13.5C9.0869 9.32854 10.6861 5.33065 13.5 2.25V2.25Z" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                            <a class="LsubTxt" href="${feature.properties.website}">Visiter le site web</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        `
-                        const closeMenu = document.querySelector('.LcloseMenu')
-                        closeMenu.addEventListener("click", function(e){
-                            sidepanel.classList.remove('active');
-                            sidepanel.classList.remove('filterActive')
-                            filterActiviteIcon.classList.remove('active')
-                            filterRestaurationIcon.classList.remove('active')
-                            filterHebergementIcon.classList.remove('active')
-                            filterServiceIcon.classList.remove('active')
+                        sideFilterpanel.classList.remove('active')
 
-                            mymap.setView([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], 13, {animation : true});
-                            layer.setIcon(baseIcon)
-                        })
-                        const seelAllBtn = document.querySelector('.LbtnAll')
-                        seelAllBtn.addEventListener("click", function(){
-                            layer.setIcon(baseIcon)
+                        Ltitle.innerHTML = `${feature.properties.name}`
+                        Limage.src = `${feature.properties.image}`
+                        Ladress.innerHTML = `${feature.properties.adress}`
+                        Lphone.innerHTML = `${feature.properties.phone}`
+                        Lwebsite.href = `${feature.properties.website}`
 
-                            if(window.innerWidth >= 768){
-                            mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11, {animation : true})
-                            } else{
-                            mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
-                            }
-
-                            sidepanel.innerHTML =`
-                            <div class="LsidepanelInner">
-                                <div class="Lheader">
-                                    <svg class="LcloseMenuList" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="19.7809" y="0.688812" width="145" height="27" rx="13.5" transform="rotate(45 19.7809 0.688812)" fill="#4D4949"/>
-                                    <rect x="1.00012" y="102.53" width="145" height="27" rx="13.5" transform="rotate(-45 1.00012 102.53)" fill="#4D4949"/>
-                                    </svg>
-                                </div>
-                                <div class="Llist">
-                                    <div class="LfilterTout">Tout</div>
-                                    <div class="LtoutList">
-
-                                    </div>                                 
-                                    <div class="LfilterService">Commerces & services</div>
-                                    <div class="LserviceList">
-                                    
-                                    </div>
-                                    <div class="LfilterRestauration">Pause gourmande</div>
-                                    <div class="LrestaurationList">
-
-                                    </div>
-                                    <div class="LfilterHebergement">Hébergement</div>
-                                    <div class="LhebergementList">
-
-                                    </div>
-                                    <div class="LfilterActivite">Visites & activités</div>
-                                    <div class="LactiviteList">
-
-                                    </div>
-                                </div
-                            </div>
-                            `
-                            const listeServiceBlock = document.querySelector('.LserviceList')
-                            const listeRestaurationBlock = document.querySelector('.LrestaurationList')
-                            const listeHebergementBlock = document.querySelector('.LhebergementList')
-                            const listeActiviteBlock = document.querySelector('.LactiviteList')
-                            const listeToutBlock = document.querySelector('.LtoutList')
-
-                            const closeMenuList = document.querySelector('.LcloseMenuList')
-
-                            closeMenuList.addEventListener("click", function(e){
-                                sidepanel.classList.remove('active');
-                                sidepanel.classList.remove('filterActive');
-                                layer.setIcon(baseIcon)
-                                mymap.addLayer(other)
-                                mymap.addLayer(service)
-                                mymap.addLayer(restauration)
-                                mymap.addLayer(hebergement)
-                                mymap.addLayer(activite)
-                                if(window.innerWidth >= 768){
-                                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],13, {animation : true})
-                                } else{
-                                mymap.setViewOffset([45.6284600, -1.0281000],[0, 0],9, {animation : true})
-                                }
-                            })
-
-                            const listTout = geojson.features.forEach((feature)=>{
-                                    let companyName = `<div>${feature.properties.name}</div>`
-                                    let box = document.createElement('div');
-                                    box.innerHTML = companyName;
-                                    listeToutBlock.append(box)
-
-                                if(feature.properties.category == 'service'){
-                                    let companyName = `<div class="LlistItem" data-coord='${feature.geometry.coordinates}'>${feature.properties.name}</div>`
-                                    let box = document.createElement('div');
-                                    box.innerHTML = companyName;
-                                    listeServiceBlock.append(box)
-                                }
-                                if(feature.properties.category == 'restauration'){
-                                    let companyName = `<div>${feature.properties.name}</div>`
-                                    let box = document.createElement('div');
-                                    box.innerHTML = companyName;
-                                    listeRestaurationBlock.append(box)
-                                }
-                                if(feature.properties.category == 'hebergement'){
-                                    let companyName = `<div>${feature.properties.name}</div>`
-                                    let box = document.createElement('div');
-                                    box.innerHTML = companyName;
-                                    listeHebergementBlock.append(box)
-                                }
-                                if(feature.properties.category == 'activite'){
-                                    let companyName = `<div>${feature.properties.name}</div>`
-                                    let box = document.createElement('div');
-                                    box.innerHTML = companyName;
-                                    listeActiviteBlock.append(box)
-                                }
-
-                                listeActiviteBlock.classList.add('FilterListHidden')
-                                listeServiceBlock.classList.add('FilterListHidden')
-                                listeHebergementBlock.classList.add('FilterListHidden')
-                                listeRestaurationBlock.classList.add('FilterListHidden')
-                                listeActiviteBlock.classList.add('FilterListHidden')
-                                listeToutBlock.classList.add('FilterListHidden')
-
-                            })
-                            
-                            const filterService = document.querySelector('.LfilterService')
-                            const filterRestauration = document.querySelector('.LfilterRestauration')
-                            const filterHebergement = document.querySelector('.LfilterHebergement')
-                            const filterActivite = document.querySelector('.LfilterActivite')
-                            const filterTout = document.querySelector('.LfilterTout')
-                            const icon = document.querySelectorAll(".leaflet-marker-icon")
-                            const shadow = document.querySelectorAll(".leaflet-pane.leaflet-shadow-pane")
-                            
-
-                            filterTout.addEventListener("click", function(){
-                                mymap.addLayer(other)
-                                mymap.addLayer(service)
-                                mymap.addLayer(restauration)
-                                mymap.addLayer(hebergement)
-                                mymap.addLayer(activite)
-                                if(window.innerWidth >= 768){
-                                    mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11, {animation : true})
-                                } else{
-                                    mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
-                                }
-                                layer.setIcon(baseIcon)
-
-                                listeToutBlock.classList.toggle('FilterListVisible')
-                                listeServiceBlock.classList.remove('FilterListVisible')
-                                listeActiviteBlock.classList.remove('FilterListVisible')
-                                listeRestaurationBlock.classList.remove('FilterListVisible')
-                                listeHebergementBlock.classList.remove('FilterListVisible')
-
-                                filterActivite.classList.remove('activeFilter')
-                                filterHebergement.classList.remove('activeFilter')
-                                filterRestauration.classList.remove('activeFilter')
-                                filterService.classList.remove('activeFilter')
-                                filterTout.classList.add('activeFilter')
-                            })
-
-                            filterService.addEventListener("click", function(){
-                                if(window.innerWidth >= 768){
-                                    mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11, {animation : true})
-                                } else{
-                                    mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
-                                }
-                                layer.setIcon(baseIcon)
-
-                                listeServiceBlock.classList.toggle('FilterListVisible')
-                                listeActiviteBlock.classList.remove('FilterListVisible')
-                                listeRestaurationBlock.classList.remove('FilterListVisible')
-                                listeHebergementBlock.classList.remove('FilterListVisible')
-                                listeToutBlock.classList.remove('FilterListVisible')
-
-                                filterActivite.classList.remove('activeFilter')
-                                filterHebergement.classList.remove('activeFilter')
-                                filterRestauration.classList.remove('activeFilter')
-                                filterService.classList.toggle('activeFilter')
-                                filterTout.classList.remove('activeFilter')
-
-                                if(listeServiceBlock.classList.contains('FilterListVisible')){
-                                    mymap.addLayer(service)
-                                    mymap.removeLayer(restauration)
-                                    mymap.removeLayer(hebergement)
-                                    mymap.removeLayer(other)
-                                    mymap.removeLayer(activite)
-                                } else {
-                                    mymap.addLayer(service)
-                                    mymap.addLayer(restauration)
-                                    mymap.addLayer(hebergement)
-                                    mymap.addLayer(other)
-                                    mymap.addLayer(activite)
-                                }
-                            })
-
-                            filterRestauration.addEventListener("click", function(){
-                                if(window.innerWidth >= 768){
-                                    mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11, {animation : true})
-                                } else{
-                                    mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
-                                }
-                                layer.setIcon(baseIcon)
-
-                                listeRestaurationBlock.classList.toggle('FilterListVisible')
-                                listeActiviteBlock.classList.remove('FilterListVisible')
-                                listeHebergementBlock.classList.remove('FilterListVisible')
-                                listeServiceBlock.classList.remove('FilterListVisible')
-                                listeToutBlock.classList.remove('FilterListVisible')
-
-                                filterActivite.classList.remove('activeFilter')
-                                filterHebergement.classList.remove('activeFilter')
-                                filterRestauration.classList.toggle('activeFilter')
-                                filterService.classList.remove('activeFilter')
-                                filterTout.classList.remove('activeFilter')
-
-                                if(listeRestaurationBlock.classList.contains('FilterListVisible')){
-                                    mymap.addLayer(restauration)
-                                    mymap.removeLayer(other)
-                                    mymap.removeLayer(service)
-                                    mymap.removeLayer(hebergement)
-                                    mymap.removeLayer(activite)
-                                } else {
-                                    mymap.addLayer(service)
-                                    mymap.addLayer(restauration)
-                                    mymap.addLayer(hebergement)
-                                    mymap.addLayer(other)
-                                    mymap.addLayer(activite)
-                                }
-                            })
-
-                            filterHebergement.addEventListener("click", function(){
-                                if(window.innerWidth >= 768){
-                                    mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11, {animation : true})
-                                } else{
-                                    mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
-                                }
-                                layer.setIcon(baseIcon)
-
-                                listeHebergementBlock.classList.toggle('FilterListVisible')
-                                listeServiceBlock.classList.remove('FilterListVisible')
-                                listeActiviteBlock.classList.remove('FilterListVisible')
-                                listeRestaurationBlock.classList.remove('FilterListVisible')
-                                listeToutBlock.classList.remove('FilterListVisible')
-
-                                filterActivite.classList.remove('activeFilter')
-                                filterHebergement.classList.add('activeFilter')
-                                filterRestauration.classList.remove('activeFilter')
-                                filterService.classList.remove('activeFilter')
-                                filterTout.classList.remove('activeFilter')
-
-                                if(listeHebergementBlock.classList.contains('FilterListVisible')){
-                                    mymap.addLayer(hebergement)
-                                    mymap.removeLayer(other)
-                                    mymap.removeLayer(activite)
-                                    mymap.removeLayer(service)
-                                    mymap.removeLayer(restauration)
-                                } else {
-                                    mymap.addLayer(service)
-                                    mymap.addLayer(restauration)
-                                    mymap.addLayer(hebergement)
-                                    mymap.addLayer(other)
-                                    mymap.addLayer(activite)
-                                }
-                            })
-
-                            filterActivite.addEventListener("click", function(){
-                                if(window.innerWidth >= 768){
-                                    mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],11, {animation : true})
-                                } else{
-                                    mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
-                                }
-                                layer.setIcon(baseIcon)
-
-                                listeActiviteBlock.classList.toggle('FilterListVisible')
-                                listeHebergementBlock.classList.remove('FilterListVisible')
-                                listeServiceBlock.classList.remove('FilterListVisible')
-                                listeRestaurationBlock.classList.remove('FilterListVisible')
-                                listeToutBlock.classList.remove('FilterListVisible')
-
-                                filterActivite.classList.add('activeFilter')
-                                filterHebergement.classList.remove('activeFilter')
-                                filterRestauration.classList.remove('activeFilter')
-                                filterService.classList.remove('activeFilter')
-                                filterTout.classList.remove('activeFilter')
-
-                                if(listeActiviteBlock.classList.contains('FilterListVisible')){
-                                    mymap.addLayer(activite)
-                                    mymap.removeLayer(other)
-                                    mymap.removeLayer(service)
-                                    mymap.removeLayer(restauration)
-                                    mymap.removeLayer(hebergement)
-                                } else {
-                                    mymap.addLayer(service)
-                                    mymap.addLayer(restauration)
-                                    mymap.addLayer(hebergement)
-                                    mymap.addLayer(other)
-                                    mymap.addLayer(activite)
-                                }
-                            })
-                        })
-                    });
-                    }
-                }
+                        if(filterActiviteIcon.classList.contains('active') || filterRestaurationIcon.classList.contains('active') || filterHebergementIcon.classList.contains('active') || filterServiceIcon.classList.contains('active')){
+                            LlistBtn.style.display = 'block'
+                        } else {
+                            LlistBtn.style.display = 'none'
+                        }
+                })
+            }
+        }
 
         // Filter left panel ACTIVITE
 
         filterActiviteIcon.addEventListener("click", function(){
             // list panel open remove other
+            sideFilterpanel.classList.toggle('active')
+
             if(filterHebergementIcon.classList.contains('active') || filterRestaurationIcon.classList.contains('active') || filterServiceIcon.classList.contains('active')){
-                sidepanel.classList.remove('filterActive')
+                sideFilterpanel.classList.remove('active')
+                sideFilterpanel.classList.add('active')
             }
-            sidepanel.classList.toggle('filterActive')
+            if(filterActiviteIcon.classList.contains('active')){
+                sideFilterpanel.classList.remove('active')
+            }
 
             // remove shop info
             sidepanel.classList.remove('active')
 
             // set inner panel html
-            sidepanel.innerHTML =`
-                <div class="LsidepanelInner">
+            sideFilterpanel.innerHTML =`
+                <div class="LsideFilterpanelInner">
                     <div class="Lheader">
                         <svg class="LcloseMenuList" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="19.7809" y="0.688812" width="145" height="27" rx="13.5" transform="rotate(45 19.7809 0.688812)" fill="#4D4949"/>
@@ -818,6 +582,17 @@
 
                 clickedMarker = activite.getLayer(id);
                 clickedMarker.setIcon(activeIcon);
+
+                sidepanel.classList.add('active')
+                sideFilterpanel.classList.remove('active')
+
+                LlistBtn.style.display = 'block'
+
+                Ltitle.innerHTML = `${clickedMarker.feature.properties.name}`
+                Limage.src = `${clickedMarker.feature.properties.image}`
+                Ladress.innerHTML = `${clickedMarker.feature.properties.adress}`
+                Lphone.innerHTML = `${clickedMarker.feature.properties.phone}`
+                Lwebsite.href = `${clickedMarker.feature.properties.website}`
             })
 
             // set map view
@@ -831,7 +606,7 @@
             if (clickedMarker){
                 clickedMarker.setIcon(baseIcon)
             }
-            
+
             // Make icon ative
             filterActiviteIcon.classList.toggle('active')
             // remove active form other panel
@@ -856,9 +631,10 @@
 
             // close menu 
             const closeMenuList = document.querySelector('.LcloseMenuList')
+
             closeMenuList.addEventListener("click", function(e){
                 sidepanel.classList.remove('active');
-                sidepanel.classList.remove('filterActive');
+                sideFilterpanel.classList.remove('active');
                 filterActiviteIcon.classList.remove('active')
                 //reset marker
                 if (clickedMarker){
@@ -878,16 +654,22 @@
 
         filterRestaurationIcon.addEventListener("click", function(){
             // list panel open remove other
+            sideFilterpanel.classList.toggle('active')
+
             if(filterHebergementIcon.classList.contains('active') || filterActiviteIcon.classList.contains('active') || filterServiceIcon.classList.contains('active')){
-                sidepanel.classList.remove('filterActive')
+                sideFilterpanel.classList.remove('active')
+                sideFilterpanel.classList.add('active')
             }
-            sidepanel.classList.toggle('filterActive')
+            if(filterRestaurationIcon.classList.contains('active')){
+                sideFilterpanel.classList.remove('active')
+            }
 
             // remove shop info
             sidepanel.classList.remove('active')
+
             // set inner panel html
-            sidepanel.innerHTML =`
-                <div class="LsidepanelInner">
+            sideFilterpanel.innerHTML =`
+                <div class="LsideFilterpanelInner">
                     <div class="Lheader">
                         <svg class="LcloseMenuList" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="19.7809" y="0.688812" width="145" height="27" rx="13.5" transform="rotate(45 19.7809 0.688812)" fill="#4D4949"/>
@@ -940,6 +722,18 @@
 
                 clickedMarker = restauration.getLayer(id);
                 clickedMarker.setIcon(activeIcon);
+
+                sidepanel.classList.add('active')
+                sideFilterpanel.classList.remove('active')
+
+                LlistBtn.style.display = 'block'
+
+                Ltitle.innerHTML = `${clickedMarker.feature.properties.name}`
+                Limage.src = `${clickedMarker.feature.properties.image}`
+                Ladress.innerHTML = `${clickedMarker.feature.properties.adress}`
+                Lphone.innerHTML = `${clickedMarker.feature.properties.phone}`
+                Lwebsite.href = `${clickedMarker.feature.properties.website}`
+
             })
 
             // set map view
@@ -979,7 +773,7 @@
             const closeMenuList = document.querySelector('.LcloseMenuList')
             closeMenuList.addEventListener("click", function(e){
                 sidepanel.classList.remove('active');
-                sidepanel.classList.remove('filterActive');
+                sideFilterpanel.classList.remove('active');
                 filterRestaurationIcon.classList.remove('active')
                 //reset marker
                 if (clickedMarker){
@@ -997,17 +791,22 @@
         // filter left panel HEBERGEMENT
 
         filterHebergementIcon.addEventListener("click", function(){
-            // list panel open remove other
+           /// list panel open remove other
+            sideFilterpanel.classList.toggle('active')
+
             if(filterRestaurationIcon.classList.contains('active') || filterActiviteIcon.classList.contains('active') || filterServiceIcon.classList.contains('active')){
-                sidepanel.classList.remove('filterActive')
+                sideFilterpanel.classList.remove('active')
+                sideFilterpanel.classList.add('active')
             }
-            sidepanel.classList.toggle('filterActive')
+            if(filterHebergementIcon.classList.contains('active')){
+                sideFilterpanel.classList.remove('active')
+            }
 
             // remove shop info
             sidepanel.classList.remove('active')
             // set inner panel html
-            sidepanel.innerHTML =`
-                <div class="LsidepanelInner">
+            sideFilterpanel.innerHTML =`
+                <div class="LsideFilterpanelInner">
                     <div class="Lheader">
                         <svg class="LcloseMenuList" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="19.7809" y="0.688812" width="145" height="27" rx="13.5" transform="rotate(45 19.7809 0.688812)" fill="#4D4949"/>
@@ -1060,6 +859,18 @@
 
                 clickedMarker = hebergement.getLayer(id);
                 clickedMarker.setIcon(activeIcon);
+
+                sidepanel.classList.add('active')
+                sideFilterpanel.classList.remove('active')
+
+                LlistBtn.style.display = 'block'
+
+                Ltitle.innerHTML = `${clickedMarker.feature.properties.name}`
+                Limage.src = `${clickedMarker.feature.properties.image}`
+                Ladress.innerHTML = `${clickedMarker.feature.properties.adress}`
+                Lphone.innerHTML = `${clickedMarker.feature.properties.phone}`
+                Lwebsite.href = `${clickedMarker.feature.properties.website}`
+
             })
 
             // set map view
@@ -1098,8 +909,8 @@
             // close menu 
             const closeMenuList = document.querySelector('.LcloseMenuList')
             closeMenuList.addEventListener("click", function(e){
-                sidepanel.classList.remove('active');
-                sidepanel.classList.remove('filterActive');
+                sidepanel.classList.remove('active')
+                sideFilterpanel.classList.remove('active')
                 filterHebergementIcon.classList.remove('active')
                 //reset marker
                 if (clickedMarker){
@@ -1118,16 +929,21 @@
 
         filterServiceIcon.addEventListener("click", function(){
             // list panel open remove other
+            sideFilterpanel.classList.toggle('active')
+
             if(filterRestaurationIcon.classList.contains('active') || filterActiviteIcon.classList.contains('active') || filterHebergementIcon.classList.contains('active')){
-                sidepanel.classList.remove('filterActive')
+                sideFilterpanel.classList.remove('active')
+                sideFilterpanel.classList.add('active')
             }
-            sidepanel.classList.toggle('filterActive')
+            if(filterServiceIcon.classList.contains('active')){
+                sideFilterpanel.classList.remove('active')
+            }
 
             // remove shop info
             sidepanel.classList.remove('active')
             // set inner panel html
-            sidepanel.innerHTML =`
-                <div class="LsidepanelInner">
+            sideFilterpanel.innerHTML =`
+                <div class="LsideFilterpanelInner">
                     <div class="Lheader">
                         <svg class="LcloseMenuList" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="19.7809" y="0.688812" width="145" height="27" rx="13.5" transform="rotate(45 19.7809 0.688812)" fill="#4D4949"/>
@@ -1180,6 +996,18 @@
 
                 clickedMarker = service.getLayer(id);
                 clickedMarker.setIcon(activeIcon);
+
+                sidepanel.classList.add('active')
+                sideFilterpanel.classList.remove('active')
+
+                LlistBtn.style.display = 'block'
+
+                Ltitle.innerHTML = `${clickedMarker.feature.properties.name}`
+                Limage.src = `${clickedMarker.feature.properties.image}`
+                Ladress.innerHTML = `${clickedMarker.feature.properties.adress}`
+                Lphone.innerHTML = `${clickedMarker.feature.properties.phone}`
+                Lwebsite.href = `${clickedMarker.feature.properties.website}`
+
             })
 
             // set map view
@@ -1218,8 +1046,8 @@
             // close menu 
             const closeMenuList = document.querySelector('.LcloseMenuList')
             closeMenuList.addEventListener("click", function(e){
-                sidepanel.classList.remove('active');
-                sidepanel.classList.remove('filterActive');
+                sidepanel.classList.remove('active')
+                sideFilterpanel.classList.remove('active')
                 filterServiceIcon.classList.remove('active')
                 //reset marker
                 if (clickedMarker){
