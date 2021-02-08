@@ -126,6 +126,12 @@
             font-size: 1.8rem;
             color: #2d353f;
         }
+        .LtitleRsp{
+            font-weight: 800;
+            font-size: 12px;
+            color: #2d353f;
+            display: none;
+        }
 
         .Linformation, .Llist{
             padding: 1rem 0;
@@ -170,16 +176,19 @@
             height: auto;
         }
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 1024px) {
             .Lsidepanel{
                 width: calc(100% - 80px);
-                height: 240px;
+                max-width: unset;
+                height: 40%;
                 top: unset;
                 bottom: 0;
                 right: 0;
                 overflow: hidden;
                 border-left: unset;
-                border-top: 1px solid rgb(177, 177, 177);
+            }
+            .LsidepanelInner{
+                padding: 1rem;
             }
             .Lleftpanel{
                 width: 80px;
@@ -207,11 +216,11 @@
                 font-size: 10px;
             }
             .Ltitle{
-                font-size: 1rem;
-                margin: 1.5rem 0 1rem 0;
+                font-weight: 800;
+                font-size: 14px;
+                margin: 0;
                 position: absolute;
-                top: -50px;
-                max-width: 80%;
+                top: -20px;
             }
             .LcloseMenu{
                 margin: 0.5rem;
@@ -221,12 +230,32 @@
             .LsidepanelContent{
                 display: flex;
                 position: relative;
+                justify-content: center;
+                align-items: center;
+            }
+            .LsidepanelContentLeft{
+                max-width: 50%;
+            }
+            .Linformation{
+                min-width: 50%;
+                height: unset;
             }
             .Limage{
                 max-width: 80%;
-                max-height: 180px;
-                margin-top: 0.5rem;
+                max-height: 200px;
                 width: auto;
+                margin-top: 1rem;
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            .Limage{
+                display: none;
+            }
+            .LtitleRsp{
+                display: block;
+            }
+            .Ltitle{
+                display: none;
             }
         }
 
@@ -250,7 +279,9 @@
                         <img class="Limage" src="">
                     </div>
                     <div class="Linformation">
-                        <div
+                        <div class="Lcontent">
+                            <h2 class="LtitleRsp"></h2>
+                        </div>
                         <div class="Lcontent">
                             <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M23.625 11.25C23.625 19.125 13.5 25.875 13.5 25.875C13.5 25.875 3.375 19.125 3.375 11.25C3.375 8.56468 4.44174 5.98935 6.34054 4.09054C8.23935 2.19174 10.8147 1.125 13.5 1.125C16.1853 1.125 18.7606 2.19174 20.6595 4.09054C22.5583 5.98935 23.625 8.56468 23.625 11.25Z" stroke="#307199" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -355,6 +386,7 @@
     const LlistBtn = document.querySelector('.LlistBtn')
 
     const Ltitle = document.querySelector('.Ltitle')
+    const LtitleRsp = document.querySelector('.LtitleRsp')
     const Limage = document.querySelector('.Limage')
     const Ladress = document.querySelector('.Ladress')
     const Lphone = document.querySelector('.Lphone')
@@ -490,6 +522,7 @@
                         sideFilterpanel.classList.remove('active')
 
                         Ltitle.innerHTML = `${feature.properties.name}`
+                        LtitleRsp.innerHTML = `${feature.properties.name}`
                         Limage.src = `${feature.properties.image}`
                         Ladress.innerHTML = `${feature.properties.adress}`
                         Lphone.innerHTML = `${feature.properties.phone}`
@@ -583,6 +616,7 @@
                 LlistBtn.style.display = 'block'
 
                 Ltitle.innerHTML = `${clickedMarker.feature.properties.name}`
+                LtitleRsp.innerHTML = `${feature.properties.name}`
                 Limage.src = `${clickedMarker.feature.properties.image}`
                 Ladress.innerHTML = `${clickedMarker.feature.properties.adress}`
                 Lphone.innerHTML = `${clickedMarker.feature.properties.phone}`
@@ -723,6 +757,7 @@
                 LlistBtn.style.display = 'block'
 
                 Ltitle.innerHTML = `${clickedMarker.feature.properties.name}`
+                LtitleRsp.innerHTML = `${feature.properties.name}`
                 Limage.src = `${clickedMarker.feature.properties.image}`
                 Ladress.innerHTML = `${clickedMarker.feature.properties.adress}`
                 Lphone.innerHTML = `${clickedMarker.feature.properties.phone}`
@@ -860,6 +895,7 @@
                 LlistBtn.style.display = 'block'
 
                 Ltitle.innerHTML = `${clickedMarker.feature.properties.name}`
+                LtitleRsp.innerHTML = `${feature.properties.name}`
                 Limage.src = `${clickedMarker.feature.properties.image}`
                 Ladress.innerHTML = `${clickedMarker.feature.properties.adress}`
                 Lphone.innerHTML = `${clickedMarker.feature.properties.phone}`
@@ -997,6 +1033,7 @@
                 LlistBtn.style.display = 'block'
 
                 Ltitle.innerHTML = `${clickedMarker.feature.properties.name}`
+                LtitleRsp.innerHTML = `${feature.properties.name}`
                 Limage.src = `${clickedMarker.feature.properties.image}`
                 Ladress.innerHTML = `${clickedMarker.feature.properties.adress}`
                 Lphone.innerHTML = `${clickedMarker.feature.properties.phone}`
