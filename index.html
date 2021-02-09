@@ -29,7 +29,7 @@
         }
         .Lsidepanel, .LsideFilterpanel{
             width: 40%;
-            max-width: 550px;
+            max-width: 450px;
             height: 100%;
             background: white;
             position: absolute;
@@ -55,7 +55,7 @@
         }
 
         .Lleftpanel{
-            width: 150px;
+            width: 130px;
             height: 100%;
             background: #16AFD1;
             padding: 2rem 1rem;
@@ -74,22 +74,26 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-bottom: 3.5rem;
+            margin-bottom: 2rem;
             color: white;
             cursor: pointer;
             transition: 0.4s ease;
         }
         .LleftpanelIconTxt{
-            margin-top: 1rem;
+            margin-top: 0.5rem;
         }
 
         .LleftpanelIconGrp.active{
             transform: scale(1.1);
             color: #005182;
-            font-weight: 700;
         }
         .LleftpanelIconGrp.active path{
             fill: #005182;
+        }
+
+        .LleftpanelIconGrp svg{
+            width: 50px;
+            height: auto;
         }
 
         .popupCustom .leaflet-popup-content-wrapper {
@@ -134,7 +138,7 @@
         }
 
         .Linformation, .Llist{
-            padding: 1rem 0;
+            padding-bottom:  1rem;
         }
 
         .Lcontent{
@@ -158,29 +162,96 @@
         }
 
         .LfilterService, .LfilterHebergement, .LfilterRestauration, .LfilterTout, .LfilterActivite{
-            border: 2px solid rgba(22, 175, 209, 1);
-            border-radius: 0.5rem;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            margin: 1rem 0;
-            color: rgba(22, 175, 209, 1);
-        }
-
-        .activeFilter{
-            border: 3px solid #307199;
+            margin: 1.5rem 0 1.2rem 0;
             color: #307199;
-            font-weight: 600;
-        }
-        .Limage{
-            width: 100%;
-            height: auto;
+            font-weight: bold;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #307199;
+            width: fit-content;
+            font-size: 0.9rem;
         }
 
-        @media only screen and (max-width: 1024px) {
+        .LlistItem{
+            font-size: 0.7rem;
+            padding: 0.5rem 0.5rem;
+            background-color: #f7feff;
+            list-style: none;
+            border: 1px solid rgb(238, 238, 238);
+            margin: 0.5rem 0;
+        }
+        .LlistItem:nth-child(odd) {
+            background-color: #f8fdff;
+        }
+
+        .Limage{
+            max-width: 100%;
+            max-height: 400px;
+        }
+
+        @media only screen and (max-height: 740px) {
+            .LleftpanelIconGrp{
+                font-size: 10px;
+                margin-bottom: 1.6rem;
+                font-weight: 500;
+            }
+            .LleftpanelIconGrp svg{
+                width: 36px;
+                height: auto;
+            }
+            .Lleftpanel{
+                width: 90px;
+            }
+            .LleftpanelLogo svg{
+                width: 60px;
+                height: auto;
+            }
+        }
+        @media only screen and (max-width: 1440px) {
+            .Lsidepanel, .LsideFilterpanel{
+                max-width: 250px;
+            }
+            .Lcontent{
+                margin: 1rem 0 0.5rem 0;
+                font-size: 11px;
+                max-width: 90%;
+            }
+            .Lcontent svg{
+                width: 15px;
+                height: auto;
+            }
+            .LlistBtn{
+            border-radius: 0.25rem;
+            padding: 0.25rem 0.6rem;
+            margin-right: 1rem;
+            font-size: 14px;
+            }
+            .Ltitle{
+                font-weight: 800;
+                font-size: 18px;
+                margin: 0.8rem 0 1.5rem 0;
+            }
+            .LcloseMenu{
+                margin: 0.5rem;
+                width: 15px;
+                height: auto;
+            }
+            .Linformation{
+                height: unset;
+            }
+            .Limage{
+                max-height: 230px;
+                max-width: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 1023px) {
+            .LsideFilterpanel{
+                width: 200px;
+            }
             .Lsidepanel{
                 width: calc(100% - 80px);
                 max-width: unset;
-                height: 250px;
+                height: 220px;
                 top: unset;
                 bottom: 0;
                 right: 0;
@@ -215,12 +286,12 @@
                 margin: 1rem 0 0.5rem 0;
                 font-size: 10px;
             }
+            .LtitleRsp{
+                display: block;
+                font-size: 18px;
+            }
             .Ltitle{
-                font-weight: 800;
-                font-size: 14px;
-                margin: 0;
-                position: absolute;
-                top: -20px;
+                display: none;
             }
             .LcloseMenu{
                 margin: 0.5rem;
@@ -257,6 +328,9 @@
             }
             .Ltitle{
                 display: none;
+            }
+            .LsideFilterpanel{
+                width: 150px;
             }
         }
 
@@ -578,19 +652,12 @@
         
             const listactivite = activiteData.forEach((layer)=>{
                 if(layer.feature.properties.category == 'activite'){
-                    let companyName = `
-                    <div class="LlistItem" 
-                    id='${layer._leaflet_id}' 
-                    long='${layer.feature.geometry.coordinates[0]}'
-                    lat='${layer.feature.geometry.coordinates[1]}'
-                    
-                    >
-                    ${layer.feature.properties.name}
-                    </div>`
-                    
-                    
-                    let box = document.createElement('div');
-                    box.innerHTML = companyName;
+                    let box = document.createElement('li');
+                    box.innerHTML = `${layer.feature.properties.name}`;
+                    box.setAttribute('id',`${layer._leaflet_id}`)
+                    box.setAttribute('long',`${layer.feature.geometry.coordinates[0]}`)
+                    box.setAttribute('lat',`${layer.feature.geometry.coordinates[1]}`)
+                    box.classList.add('LlistItem')
                     LactiviteList.append(box)
                 }
             })
@@ -617,7 +684,7 @@
                 LlistBtn.style.display = 'block'
 
                 Ltitle.innerHTML = `${clickedMarker.feature.properties.name}`
-                LtitleRsp.innerHTML = `${feature.properties.name}`
+                LtitleRsp.innerHTML = `${clickedMarker.feature.properties.name}`
                 Limage.src = `${clickedMarker.feature.properties.image}`
                 Ladress.innerHTML = `${clickedMarker.feature.properties.adress}`
                 Lphone.innerHTML = `${clickedMarker.feature.properties.phone}`
@@ -719,19 +786,12 @@
         
             const listrestauration = restaurationData.forEach((layer)=>{
                 if(layer.feature.properties.category == 'restauration'){
-                    let companyName = `
-                    <div class="LlistItem" 
-                    id='${layer._leaflet_id}' 
-                    long='${layer.feature.geometry.coordinates[0]}'
-                    lat='${layer.feature.geometry.coordinates[1]}'
-                    
-                    >
-                    ${layer.feature.properties.name}
-                    </div>`
-                    
-                    
-                    let box = document.createElement('div');
-                    box.innerHTML = companyName;
+                    let box = document.createElement('li');
+                    box.innerHTML = `${layer.feature.properties.name}`;
+                    box.setAttribute('id',`${layer._leaflet_id}`)
+                    box.setAttribute('long',`${layer.feature.geometry.coordinates[0]}`)
+                    box.setAttribute('lat',`${layer.feature.geometry.coordinates[1]}`)
+                    box.classList.add('LlistItem')
                     LrestaurationList.append(box)
                 }
             })
@@ -758,7 +818,7 @@
                 LlistBtn.style.display = 'block'
 
                 Ltitle.innerHTML = `${clickedMarker.feature.properties.name}`
-                LtitleRsp.innerHTML = `${feature.properties.name}`
+                LtitleRsp.innerHTML = `${clickMarker.feature.properties.name}`
                 Limage.src = `${clickedMarker.feature.properties.image}`
                 Ladress.innerHTML = `${clickedMarker.feature.properties.adress}`
                 Lphone.innerHTML = `${clickedMarker.feature.properties.phone}`
@@ -857,19 +917,12 @@
         
             const listHebergement = hebergementData.forEach((layer)=>{
                 if(layer.feature.properties.category == 'hebergement'){
-                    let companyName = `
-                    <div class="LlistItem" 
-                    id='${layer._leaflet_id}' 
-                    long='${layer.feature.geometry.coordinates[0]}'
-                    lat='${layer.feature.geometry.coordinates[1]}'
-                    
-                    >
-                    ${layer.feature.properties.name}
-                    </div>`
-                    
-                    
-                    let box = document.createElement('div');
-                    box.innerHTML = companyName;
+                    let box = document.createElement('li');
+                    box.innerHTML = `${layer.feature.properties.name}`;
+                    box.setAttribute('id',`${layer._leaflet_id}`)
+                    box.setAttribute('long',`${layer.feature.geometry.coordinates[0]}`)
+                    box.setAttribute('lat',`${layer.feature.geometry.coordinates[1]}`)
+                    box.classList.add('LlistItem')
                     LhebergementList.append(box)
                 }
             })
@@ -896,7 +949,7 @@
                 LlistBtn.style.display = 'block'
 
                 Ltitle.innerHTML = `${clickedMarker.feature.properties.name}`
-                LtitleRsp.innerHTML = `${feature.properties.name}`
+                LtitleRsp.innerHTML = `${clickedMarker.feature.properties.name}`
                 Limage.src = `${clickedMarker.feature.properties.image}`
                 Ladress.innerHTML = `${clickedMarker.feature.properties.adress}`
                 Lphone.innerHTML = `${clickedMarker.feature.properties.phone}`
@@ -983,8 +1036,8 @@
                     </div>
                     <div class="Llist">
                         <div class="LfilterService">Les commerces et services</div>
-                        <div class="LserviceList">
-                        </div>
+                        <ul class="LserviceList">
+                        </ul>
                     </div
                 </div>
             `
@@ -994,20 +1047,13 @@
             const serviceData = Object.values(service._layers)
         
             const listService = serviceData.forEach((layer)=>{
-                if(layer.feature.properties.category == 'service'){
-                    let companyName = `
-                    <div class="LlistItem" 
-                    id='${layer._leaflet_id}' 
-                    long='${layer.feature.geometry.coordinates[0]}'
-                    lat='${layer.feature.geometry.coordinates[1]}'
-                    
-                    >
-                    ${layer.feature.properties.name}
-                    </div>`
-                    
-                    
-                    let box = document.createElement('div');
-                    box.innerHTML = companyName;
+                if(layer.feature.properties.category == 'service'){                    
+                    let box = document.createElement('li');
+                    box.innerHTML = `${layer.feature.properties.name}`;
+                    box.setAttribute('id',`${layer._leaflet_id}`)
+                    box.setAttribute('long',`${layer.feature.geometry.coordinates[0]}`)
+                    box.setAttribute('lat',`${layer.feature.geometry.coordinates[1]}`)
+                    box.classList.add('LlistItem')
                     LserviceList.append(box)
                 }
             })
@@ -1034,7 +1080,7 @@
                 LlistBtn.style.display = 'block'
 
                 Ltitle.innerHTML = `${clickedMarker.feature.properties.name}`
-                LtitleRsp.innerHTML = `${feature.properties.name}`
+                LtitleRsp.innerHTML = `${clickedMarker.feature.properties.name}`
                 Limage.src = `${clickedMarker.feature.properties.image}`
                 Ladress.innerHTML = `${clickedMarker.feature.properties.adress}`
                 Lphone.innerHTML = `${clickedMarker.feature.properties.phone}`
