@@ -361,9 +361,6 @@
             .LlistBtn{
             font-size: 10px;
             }
-            .Linformation{
-                margin-top: -0.5rem;
-            }
         }
 
     </style>
@@ -577,10 +574,11 @@
         if(filterActiviteIcon.classList.contains('active') || filterRestaurationIcon.classList.contains('active') || filterHebergementIcon.classList.contains('active') || filterServiceIcon.classList.contains('active')){
             sideFilterpanel.classList.add('active');
         }
-        mymap.setView([clickedMarker.feature.geometry.coordinates[1], clickedMarker.feature.geometry.coordinates[0]], 13, {animation : true});
+        mymap.setView([clickedMarker.feature.geometry.coordinates[1], clickedMarker.feature.geometry.coordinates[0]], 12, {animation : true});
         clickedMarker.setIcon(baseIcon)
     })
 
+    // get screen width
     function screenWidth (){
         const chrome = window.navigator.userAgent.includes('Chrome')
         if(chrome){
@@ -629,11 +627,21 @@
                         e.target.setIcon(activeIcon);
                         clickedMarker = e.target;
 
-                        if(screenWidth >= 1024){
-                            mymap.setViewOffset(e.target.getLatLng(),[-100, 0],17)
-                        } else{
-                            mymap.setViewOffset(e.target.getLatLng(),[40, -110],14)
+                        // if(screenWidth >= 1024){
+                        //     mymap.setViewOffset(e.target.getLatLng(),[-100, 0],17)
+                        // } else{
+                        //     mymap.setViewOffset(e.target.getLatLng(),[40, -110],14)
+                        // }
+
+                        if(screenWidth() < 1024){
+                            mymap.setViewOffset(e.target.getLatLng(),[20, -80],14, {animation : true}) 
                         }
+                        if(screenWidth() >= 1024){
+                            mymap.setViewOffset(e.target.getLatLng(),[-100, 0],14, {animation : true}) 
+                        }
+                        if(screenWidth() >= 1440){
+                            mymap.setViewOffset(e.target.getLatLng(),[-150, 0],14, {animation : true}) 
+                        } 
 
                         sidepanel.classList.add('active');
                         sideFilterpanel.classList.remove('active')
