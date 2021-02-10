@@ -16,7 +16,7 @@
             font-family: 'Fira sans', sans-serif;
         }
         .mapcontainer{
-            height: 90vh;
+            height: 88vh;
             margin: auto;
             position: relative;
             width: 100%;
@@ -515,20 +515,21 @@
     });
 
     const mymap = L.map('mapid',{
-        center : [45.6284600, -1.0281000],
-        zoom : 12,
-        minZoom : 10,
+        // center : [45.6284600, -1.0281000],
+        // zoom : 12,
+        minZoom : 8,
         zoomControl : false,
     })
 
-    const popup = L.popup()
+    // const popup = L.popup()
 
-    const customOptions =
-        {
-        'maxWidth': '100%',
-        'width': '100%',
-        'className' : 'popupCustom'
-        }
+    // const customOptions =
+    //     {
+    //     'maxWidth': '100%',
+    //     'width': '100%',
+    //     'className' : 'popupCustom'
+    //     }
+
 
     const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 
@@ -719,10 +720,32 @@
             })
 
             // set map view
-            if(window.innerWidth >= 1024){
-                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],12, {animation : true})
-            } else{
-                mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
+            if(window.innerWidth < 1000){
+                if(!filterActiviteIcon.classList.contains('active')){
+                    mymap.fitBounds(activite.getBounds(),{
+                    paddingTopleft : [100, 100],
+                    paddingBottomRight : [120, -80],
+                    maxZoom: 9
+                })
+                } else {
+                    mymap.fitBounds(other.getBounds(),{
+                        paddingBottomRight : [0, 100],
+                        paddingTopLeft : [100, 100],
+                        maxZoom : 9
+                    })
+                }
+            }else{
+                if(!filterActiviteIcon.classList.contains('active')){
+                    mymap.fitBounds(activite.getBounds(),{
+                    paddingTopleft : [100, 100],
+                    paddingBottomRight : [100, -200],
+                    maxZoom: 13
+                })
+                } else {
+                    mymap.fitBounds(other.getBounds(),{
+                        paddingBottomRight : [-200, 0]
+                    })
+                }
             }
 
             // reset if active marker
@@ -863,10 +886,32 @@
             })
 
             // set map view
-            if(window.innerWidth >= 1024){
-                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],12, {animation : true})
-            } else{
-                mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
+            if(window.innerWidth < 1000){
+                if(!filterRestaurationIcon.classList.contains('active')){
+                    mymap.fitBounds(restauration.getBounds(),{
+                    paddingTopleft : [100, 100],
+                    paddingBottomRight : [120, -80],
+                    maxZoom: 9
+                })
+                } else {
+                    mymap.fitBounds(other.getBounds(),{
+                        paddingBottomRight : [0, 100],
+                        paddingTopLeft : [100, 100],
+                        maxZoom : 9
+                    })
+                }
+            }else{
+                if(!filterRestaurationIcon.classList.contains('active')){
+                    mymap.fitBounds(restauration.getBounds(),{
+                    paddingTopleft : [100, 100],
+                    paddingBottomRight : [100, -200],
+                    maxZoom: 13
+                })
+                } else {
+                    mymap.fitBounds(other.getBounds(),{
+                        paddingBottomRight : [-200, 0]
+                    })
+                }
             }
 
             // reset if active marker
@@ -1003,10 +1048,32 @@
             })
 
             // set map view
-            if(window.innerWidth >= 1024){
-                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],12, {animation : true})
-            } else{
-                mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
+            if(window.innerWidth < 1000){
+                if(!filterHebergementIcon.classList.contains('active')){
+                    mymap.fitBounds(hebergement.getBounds(),{
+                    paddingTopleft : [100, 100],
+                    paddingBottomRight : [120, -80],
+                    maxZoom: 9
+                })
+                } else {
+                    mymap.fitBounds(other.getBounds(),{
+                        paddingBottomRight : [0, 100],
+                        paddingTopLeft : [100, 100],
+                        maxZoom : 9
+                    })
+                }
+            }else{
+                if(!filterHebergementIcon.classList.contains('active')){
+                    mymap.fitBounds(hebergement.getBounds(),{
+                    paddingTopleft : [100, 100],
+                    paddingBottomRight : [100, -200],
+                    maxZoom: 13
+                })
+                } else {
+                    mymap.fitBounds(other.getBounds(),{
+                        paddingBottomRight : [-200, 0]
+                    })
+                }
             }
 
             // reset if active marker
@@ -1143,10 +1210,32 @@
             })
 
             // set map view
-            if(window.innerWidth >= 1024){
-                mymap.setViewOffset([45.6284600, -1.0281000],[-100, 0],12, {animation : true})
-            } else{
-                mymap.setViewOffset([45.6284600, -1.0281000],[0, -70],10, {animation : true})
+            if(window.innerWidth < 1000){
+                if(!filterServiceIcon.classList.contains('active')){
+                    mymap.fitBounds(service.getBounds(),{
+                    paddingTopleft : [100, 100],
+                    paddingBottomRight : [120, -80],
+                    maxZoom: 9
+                })
+                } else {
+                    mymap.fitBounds(other.getBounds(),{
+                        paddingBottomRight : [0, 100],
+                        paddingTopLeft : [100, 100],
+                        maxZoom : 9
+                    })
+                }
+            }else{
+                if(!filterServiceIcon.classList.contains('active')){
+                    mymap.fitBounds(service.getBounds(),{
+                    paddingTopleft : [100, 100],
+                    paddingBottomRight : [100, -200],
+                    maxZoom: 13
+                })
+                } else {
+                    mymap.fitBounds(other.getBounds(),{
+                        paddingBottomRight : [-200, 0]
+                    })
+                }
             }
 
             // reset if active marker
@@ -1289,6 +1378,18 @@
         hebergement.addTo(mymap)
         activite.addTo(mymap)
         other.addTo(mymap)
+
+        if (window.innerWidth < 630){
+            mymap.fitBounds(other.getBounds(),{
+                paddingBottomRight : [0, 100],
+                paddingTopLeft : [100, 100],
+                maxZoom : 9
+            })
+        }else {
+            mymap.fitBounds(other.getBounds(),{
+                paddingBottomRight : [-200, 0]
+            })
+        }
     })
     .catch(err => console.log(err))
 
