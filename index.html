@@ -169,7 +169,7 @@
             color: #16AFD1;
         }
 
-        .LfilterService, .LfilterHebergement, .LfilterRestauration, .LfilterTout, .LfilterActivite{
+        .Lfilter{
             margin: 1.5rem 0 1.8rem 0;
             color: #307199;
             font-weight: bold;
@@ -333,7 +333,7 @@
                 width: auto;
                 margin-top: 1rem;
             }
-            .LfilterService, .LfilterHebergement, .LfilterRestauration, .LfilterTout, .LfilterActivite{
+            .Lfilter{
                 margin: 1.5rem 0 1.2rem 0;
                 padding-bottom: 0.5rem;
                 font-size: 0.9rem;
@@ -541,7 +541,8 @@
     //     'className' : 'popupCustom'
     //     }
 
-
+    
+    // define the tile
     const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 
     L.tileLayer(tileUrl, { 
@@ -550,6 +551,7 @@
         zoomOffest: -1,
         }).addTo(mymap)
 
+    // set view with offset
     L.Map.prototype.setViewOffset = function (latlng, offset, targetZoom) {
         var targetPoint = this.project(latlng, targetZoom).subtract(offset),
         targetLatLng = this.unproject(targetPoint, targetZoom);
@@ -662,17 +664,15 @@
             }
         }
 
-        // Filter left panel ACTIVITE
-
-        filterActiviteIcon.addEventListener("click", function(){
+        function FilterPanel(mainIcon, secondIcon, thirdIcon, fourthIcon, title, layerName, mainLayer, secondLayer, thirdLayer, fourthLayer){
             // list panel open remove other
             sideFilterpanel.classList.toggle('active')
 
-            if(filterHebergementIcon.classList.contains('active') || filterRestaurationIcon.classList.contains('active') || filterServiceIcon.classList.contains('active')){
+            if(secondIcon.classList.contains('active') || thirdIcon.classList.contains('active') || fourthIcon.classList.contains('active')){
                 sideFilterpanel.classList.remove('active')
                 sideFilterpanel.classList.add('active')
             }
-            if(filterActiviteIcon.classList.contains('active')){
+            if(mainIcon.classList.contains('active')){
                 sideFilterpanel.classList.remove('active')
             }
 
@@ -689,19 +689,19 @@
                         </svg>
                     </div>
                     <div class="Llist">
-                        <div class="LfilterActivite">Visites & activités</div>
-                        <div class="LactiviteList">
+                        <div class="Lfilter">${title}</div>
+                        <div class="LList">
                         </div>
                     </div
                 </div>
             `
 
             // populate data inside the panel
-            const LactiviteList = document.querySelector('.LactiviteList')
-            const activiteData = Object.values(activite._layers)
+            const LList = document.querySelector('.LList')
+            const layerData = Object.values(mainLayer._layers)
         
-            const listactivite = activiteData.forEach((layer)=>{
-                if(layer.feature.properties.category == 'activite'){
+            const list = layerData.forEach((layer)=>{
+                if(layer.feature.properties.category == layerName){
                     let box = document.createElement('li');
                     box.innerHTML = `
                     <svg class="LlocationIcon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -717,12 +717,12 @@
                     box.setAttribute('long',`${layer.feature.geometry.coordinates[0]}`)
                     box.setAttribute('lat',`${layer.feature.geometry.coordinates[1]}`)
                     box.classList.add('LlistItem')
-                    LactiviteList.append(box)
+                    LList.append(box)
                 }
             })
 
             //select item on click
-            LactiviteList.addEventListener('click', function(event){
+            LList.addEventListener('click', function(event){
                 event.stopPropagation()
                 const lat = event.target.getAttribute('lat')
                 const long = event.target.getAttribute('long')
@@ -742,7 +742,7 @@
                     clickedMarker.setIcon(baseIcon);
                 }
 
-                clickedMarker = activite.getLayer(id);
+                clickedMarker = mainLayer.getLayer(id);
                 clickedMarker.setIcon(activeIcon);
 
                 sidepanel.classList.add('active')
@@ -760,7 +760,7 @@
 
             // set map view
             if(screenWidth() < 1000){
-                if(!filterActiviteIcon.classList.contains('active')){
+                if(!mainIcon.classList.contains('active')){
                     mymap.fitBounds(activite.getBounds(),{
                         paddingTopleft : [100, 100],
                         paddingBottomRight : [50, -80],
@@ -774,7 +774,7 @@
                     })
                 }
             }else{
-                if(!filterActiviteIcon.classList.contains('active')){
+                if(!mainIcon.classList.contains('active')){
                     mymap.fitBounds(activite.getBounds(),{
                         paddingTopleft : [100, 100],
                         paddingBottomRight : [100, -200],
@@ -793,25 +793,25 @@
             }
 
             // Make icon ative
-            filterActiviteIcon.classList.toggle('active')
+            mainIcon.classList.toggle('active')
             // remove active form other panel
-            filterRestaurationIcon.classList.remove('active')
-            filterHebergementIcon.classList.remove('active')
-            filterServiceIcon.classList.remove('active')
+            secondIcon.classList.remove('active')
+            thirdIcon.classList.remove('active')
+            fourthIcon.classList.remove('active')
 
             // filter layer on the map
-            if(filterActiviteIcon.classList.contains('active')){
-                mymap.addLayer(activite)
-                mymap.removeLayer(service)
-                mymap.removeLayer(restauration)
-                mymap.removeLayer(hebergement)
+            if(mainIcon.classList.contains('active')){
+                mymap.addLayer(mainLayer)
+                mymap.removeLayer(secondLayer)
+                mymap.removeLayer(thirdLayer)
+                mymap.removeLayer(fourthLayer)
                 mymap.removeLayer(other)
             } else {
-                mymap.addLayer(service)
-                mymap.addLayer(restauration)
-                mymap.addLayer(hebergement)
+                mymap.addLayer(mainLayer)
+                mymap.addLayer(secondLayer)
+                mymap.addLayer(thirdLayer)
+                mymap.addLayer(fourthLayer)
                 mymap.addLayer(other)
-                mymap.addLayer(activite)
             }
 
             // close menu 
@@ -820,530 +820,34 @@
             closeMenuList.addEventListener("click", function(e){
                 sidepanel.classList.remove('active');
                 sideFilterpanel.classList.remove('active');
-                filterActiviteIcon.classList.remove('active')
+                mainIcon.classList.remove('active')
                 //reset marker
                 if (clickedMarker){
                 clickedMarker.setIcon(baseIcon)
                 }
                 
                 mymap.addLayer(other)
-                mymap.addLayer(service)
-                mymap.addLayer(restauration)
-                mymap.addLayer(hebergement)
-                mymap.addLayer(activite)
+                mymap.addLayer(mainLayer)
+                mymap.addLayer(secondLayer)
+                mymap.addLayer(thirdLayer)
+                mymap.addLayer(fourthLayer)
             })
+        }
+
+        filterActiviteIcon.addEventListener('click', function(){
+            FilterPanel(filterActiviteIcon, filterHebergementIcon, filterRestaurationIcon, filterServiceIcon, 'Visites et activités', 'activite', activite, hebergement, restauration, service)
         })
 
-        
-        //Filter left pannel RESTAURATION
-
-        filterRestaurationIcon.addEventListener("click", function(){
-            // list panel open remove other
-            sideFilterpanel.classList.toggle('active')
-
-            if(filterHebergementIcon.classList.contains('active') || filterActiviteIcon.classList.contains('active') || filterServiceIcon.classList.contains('active')){
-                sideFilterpanel.classList.remove('active')
-                sideFilterpanel.classList.add('active')
-            }
-            if(filterRestaurationIcon.classList.contains('active')){
-                sideFilterpanel.classList.remove('active')
-            }
-
-            // remove shop info
-            sidepanel.classList.remove('active')
-
-            // set inner panel html
-            sideFilterpanel.innerHTML =`
-                <div class="LsideFilterpanelInner">
-                    <div class="Lheader">
-                        <svg class="LcloseMenuList" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="19.7809" y="0.688812" width="145" height="27" rx="13.5" transform="rotate(45 19.7809 0.688812)" fill="#4D4949"/>
-                        <rect x="1.00012" y="102.53" width="145" height="27" rx="13.5" transform="rotate(-45 1.00012 102.53)" fill="#4D4949"/>
-                        </svg>
-                    </div>
-                    <div class="Llist">
-                        <div class="LfilterRestauration">Pause gourmande</div>
-                        <div class="LrestaurationList">
-                        </div>
-                    </div
-                </div>
-            `
-
-            // populate data inside the panel
-            const LrestaurationList = document.querySelector('.LrestaurationList')
-            const restaurationData = Object.values(restauration._layers)
-        
-            const listrestauration = restaurationData.forEach((layer)=>{
-                if(layer.feature.properties.category == 'restauration'){
-                    let box = document.createElement('li');
-                    box.innerHTML = `
-                    <svg class="LlocationIcon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 11C8.76142 11 11 8.76142 11 6C11 3.23858 8.76142 1 6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M11 6H9" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3 6H1" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6 3V1" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6 11V9" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    ${layer.feature.properties.name}
-                    `;
-                    box.setAttribute('id',`${layer._leaflet_id}`)
-                    box.setAttribute('long',`${layer.feature.geometry.coordinates[0]}`)
-                    box.setAttribute('lat',`${layer.feature.geometry.coordinates[1]}`)
-                    box.classList.add('LlistItem')
-                    LrestaurationList.append(box)
-                }
-            })
-
-            //select item on click
-            LrestaurationList.addEventListener('click', function(event){
-                event.stopPropagation()
-                const lat = event.target.getAttribute('lat')
-                const long = event.target.getAttribute('long')
-                const id = Number(event.target.getAttribute('id'))
-
-                if(screenWidth() < 1024){
-                    mymap.setViewOffset([lat, long],[20, -80],12, {animation : true}) 
-                }
-                if(screenWidth() >= 1024){
-                    mymap.setViewOffset([lat, long],[-100, 0],12, {animation : true}) 
-                }
-                if(screenWidth() >= 1440){
-                    mymap.setViewOffset([lat, long],[-150, 0],12, {animation : true}) 
-                }                 
-
-                if(clickedMarker){
-                    clickedMarker.setIcon(baseIcon);
-                }
-
-                clickedMarker = restauration.getLayer(id);
-                clickedMarker.setIcon(activeIcon);
-
-                sidepanel.classList.add('active')
-                sideFilterpanel.classList.remove('active')
-
-                LlistBtn.style.display = 'block'
-
-                Ltitle.innerHTML = `${clickedMarker.feature.properties.name}`
-                LtitleRsp.innerHTML = `${clickedMarker.feature.properties.name}`
-                Limage.src = `${clickedMarker.feature.properties.image}`
-                Ladress.innerHTML = `${clickedMarker.feature.properties.adress}`
-                Lphone.innerHTML = `${clickedMarker.feature.properties.phone}`
-                Lwebsite.href = `${clickedMarker.feature.properties.website}`
-
-            })
-
-            // set map view
-            if(screenWidth() < 1000){
-                if(!filterRestaurationIcon.classList.contains('active')){
-                    mymap.fitBounds(restauration.getBounds(),{
-                        paddingTopleft : [100, 100],
-                        paddingBottomRight : [50, -80],
-                        maxZoom: 9
-                    })
-                } else {
-                    mymap.fitBounds(other.getBounds(),{
-                        paddingBottomRight : [0, 100],
-                        paddingTopLeft : [100, 100],
-                        maxZoom : 9
-                    })
-                }
-            }else{
-                if(!filterRestaurationIcon.classList.contains('active')){
-                    mymap.fitBounds(restauration.getBounds(),{
-                        paddingTopleft : [100, 100],
-                        paddingBottomRight : [100, -200],
-                        maxZoom: 13
-                    })
-                } else {
-                    mymap.fitBounds(other.getBounds(),{
-                        paddingBottomRight : [-200, 0]
-                    })
-                }
-            }
-
-            // reset if active marker
-            if (clickedMarker){
-                clickedMarker.setIcon(baseIcon)
-            }
-
-            // layer.setIcon(baseIcon)
-            filterRestaurationIcon.classList.toggle('active')
-            // remove active form other panel
-            filterActiviteIcon.classList.remove('active')
-            filterHebergementIcon.classList.remove('active')
-            filterServiceIcon.classList.remove('active')
-
-            if(filterRestaurationIcon.classList.contains('active')){
-                mymap.addLayer(restauration)
-                mymap.removeLayer(service)
-                mymap.removeLayer(activite)
-                mymap.removeLayer(hebergement)
-                mymap.removeLayer(other)
-            } else {
-                mymap.addLayer(service)
-                mymap.addLayer(restauration)
-                mymap.addLayer(hebergement)
-                mymap.addLayer(other)
-                mymap.addLayer(activite)
-            }
-
-            // close menu 
-            const closeMenuList = document.querySelector('.LcloseMenuList')
-            closeMenuList.addEventListener("click", function(e){
-                sidepanel.classList.remove('active');
-                sideFilterpanel.classList.remove('active');
-                filterRestaurationIcon.classList.remove('active')
-                //reset marker
-                if (clickedMarker){
-                clickedMarker.setIcon(baseIcon)
-                }
-                
-                mymap.addLayer(other)
-                mymap.addLayer(service)
-                mymap.addLayer(restauration)
-                mymap.addLayer(hebergement)
-                mymap.addLayer(activite)
-            })
+        filterRestaurationIcon.addEventListener('click', function(){
+            FilterPanel(filterRestaurationIcon, filterHebergementIcon, filterActiviteIcon, filterServiceIcon, 'Pause gourmande', 'restauration', restauration, hebergement, activite, service)
         })
 
-        // filter left panel HEBERGEMENT
-
-        filterHebergementIcon.addEventListener("click", function(){
-           /// list panel open remove other
-            sideFilterpanel.classList.toggle('active')
-
-            if(filterRestaurationIcon.classList.contains('active') || filterActiviteIcon.classList.contains('active') || filterServiceIcon.classList.contains('active')){
-                sideFilterpanel.classList.remove('active')
-                sideFilterpanel.classList.add('active')
-            }
-            if(filterHebergementIcon.classList.contains('active')){
-                sideFilterpanel.classList.remove('active')
-            }
-
-            // remove shop info
-            sidepanel.classList.remove('active')
-            // set inner panel html
-            sideFilterpanel.innerHTML =`
-                <div class="LsideFilterpanelInner">
-                    <div class="Lheader">
-                        <svg class="LcloseMenuList" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="19.7809" y="0.688812" width="145" height="27" rx="13.5" transform="rotate(45 19.7809 0.688812)" fill="#4D4949"/>
-                        <rect x="1.00012" y="102.53" width="145" height="27" rx="13.5" transform="rotate(-45 1.00012 102.53)" fill="#4D4949"/>
-                        </svg>
-                    </div>
-                    <div class="Llist">
-                        <div class="LfilterHebergement">Les hébergement</div>
-                        <div class="LhebergementList">
-                        </div>
-                    </div
-                </div>
-            `
-
-            // populate data inside the panel
-            const LhebergementList = document.querySelector('.LhebergementList')
-            const hebergementData = Object.values(hebergement._layers)
-        
-            const listHebergement = hebergementData.forEach((layer)=>{
-                if(layer.feature.properties.category == 'hebergement'){
-                    let box = document.createElement('li');
-                    box.innerHTML = `
-                    <svg class="LlocationIcon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 11C8.76142 11 11 8.76142 11 6C11 3.23858 8.76142 1 6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M11 6H9" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3 6H1" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6 3V1" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6 11V9" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    ${layer.feature.properties.name}
-                    `;
-                    box.setAttribute('id',`${layer._leaflet_id}`)
-                    box.setAttribute('long',`${layer.feature.geometry.coordinates[0]}`)
-                    box.setAttribute('lat',`${layer.feature.geometry.coordinates[1]}`)
-                    box.classList.add('LlistItem')
-                    LhebergementList.append(box)
-                }
-            })
-
-            //select item on click
-            LhebergementList.addEventListener('click', function(event){
-                event.stopPropagation()
-                const lat = event.target.getAttribute('lat')
-                const long = event.target.getAttribute('long')
-                const id = Number(event.target.getAttribute('id'))
-
-                if(screenWidth() < 1024){
-                    mymap.setViewOffset([lat, long],[20, -80],12, {animation : true}) 
-                }
-                if(screenWidth() >= 1024){
-                    mymap.setViewOffset([lat, long],[-100, 0],12, {animation : true}) 
-                }
-                if(screenWidth() >= 1440){
-                    mymap.setViewOffset([lat, long],[-150, 0],12, {animation : true}) 
-                }               
-
-                if(clickedMarker){
-                    clickedMarker.setIcon(baseIcon);
-                }
-
-                clickedMarker = hebergement.getLayer(id);
-                clickedMarker.setIcon(activeIcon);
-
-                sidepanel.classList.add('active')
-                sideFilterpanel.classList.remove('active')
-
-                LlistBtn.style.display = 'block'
-
-                Ltitle.innerHTML = `${clickedMarker.feature.properties.name}`
-                LtitleRsp.innerHTML = `${clickedMarker.feature.properties.name}`
-                Limage.src = `${clickedMarker.feature.properties.image}`
-                Ladress.innerHTML = `${clickedMarker.feature.properties.adress}`
-                Lphone.innerHTML = `${clickedMarker.feature.properties.phone}`
-                Lwebsite.href = `${clickedMarker.feature.properties.website}`
-
-            })
-
-            // set map view
-            if(screenWidth() < 1000){
-                if(!filterHebergementIcon.classList.contains('active')){
-                    mymap.fitBounds(hebergement.getBounds(),{
-                        paddingTopleft : [100, 100],
-                        paddingBottomRight : [50, -80],
-                        maxZoom: 9
-                    })
-                } else {
-                    mymap.fitBounds(other.getBounds(),{
-                        paddingBottomRight : [0, 100],
-                        paddingTopLeft : [100, 100],
-                        maxZoom : 9
-                    })
-                }
-            }else{
-                if(!filterHebergementIcon.classList.contains('active')){
-                    mymap.fitBounds(hebergement.getBounds(),{
-                        paddingTopleft : [100, 100],
-                        paddingBottomRight : [100, -200],
-                        maxZoom: 13
-                    })
-                } else {
-                    mymap.fitBounds(other.getBounds(),{
-                        paddingBottomRight : [-200, 0]
-                    })
-                }
-            }
-
-            // reset if active marker
-            if (clickedMarker){
-                clickedMarker.setIcon(baseIcon)
-            }
-
-            // layer.setIcon(baseIcon)
-            filterHebergementIcon.classList.toggle('active')
-            // remove active form other panel
-            filterActiviteIcon.classList.remove('active')
-            filterRestaurationIcon.classList.remove('active')
-            filterServiceIcon.classList.remove('active')
-
-            if(filterHebergementIcon.classList.contains('active')){
-                mymap.addLayer(hebergement)
-                mymap.removeLayer(service)
-                mymap.removeLayer(activite)
-                mymap.removeLayer(restauration)
-                mymap.removeLayer(other)
-            } else {
-                mymap.addLayer(service)
-                mymap.addLayer(restauration)
-                mymap.addLayer(hebergement)
-                mymap.addLayer(other)
-                mymap.addLayer(activite)
-            }
-
-            // close menu 
-            const closeMenuList = document.querySelector('.LcloseMenuList')
-            closeMenuList.addEventListener("click", function(e){
-                sidepanel.classList.remove('active')
-                sideFilterpanel.classList.remove('active')
-                filterHebergementIcon.classList.remove('active')
-                //reset marker
-                if (clickedMarker){
-                clickedMarker.setIcon(baseIcon)
-                }
-                
-                mymap.addLayer(other)
-                mymap.addLayer(service)
-                mymap.addLayer(restauration)
-                mymap.addLayer(hebergement)
-                mymap.addLayer(activite)
-            })
+        filterHebergementIcon.addEventListener('click', function(){
+            FilterPanel(filterHebergementIcon, filterRestaurationIcon, filterActiviteIcon, filterServiceIcon, 'Les hébergement', 'hebergement', hebergement, restauration, activite, service)
         })
 
-        // filter left panel Service
-
-        filterServiceIcon.addEventListener("click", function(){
-            // list panel open remove other
-            sideFilterpanel.classList.toggle('active')
-
-            if(filterRestaurationIcon.classList.contains('active') || filterActiviteIcon.classList.contains('active') || filterHebergementIcon.classList.contains('active')){
-                sideFilterpanel.classList.remove('active')
-                sideFilterpanel.classList.add('active')
-            }
-            if(filterServiceIcon.classList.contains('active')){
-                sideFilterpanel.classList.remove('active')
-            }
-
-            // remove shop info
-            sidepanel.classList.remove('active')
-            // set inner panel html
-            sideFilterpanel.innerHTML =`
-                <div class="LsideFilterpanelInner">
-                    <div class="Lheader">
-                        <svg class="LcloseMenuList" width="20" height="20" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="19.7809" y="0.688812" width="145" height="27" rx="13.5" transform="rotate(45 19.7809 0.688812)" fill="#4D4949"/>
-                        <rect x="1.00012" y="102.53" width="145" height="27" rx="13.5" transform="rotate(-45 1.00012 102.53)" fill="#4D4949"/>
-                        </svg>
-                    </div>
-                    <div class="Llist">
-                        <div class="LfilterService">Les commerces et services</div>
-                        <ul class="LserviceList">
-                        </ul>
-                    </div
-                </div>
-            `
-
-            // populate data inside the panel
-            const LserviceList = document.querySelector('.LserviceList')
-            const serviceData = Object.values(service._layers)
-        
-            const listService = serviceData.forEach((layer)=>{
-                if(layer.feature.properties.category == 'service'){                    
-                    let box = document.createElement('li');
-                    box.innerHTML = `
-                    <svg class="LlocationIcon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 11C8.76142 11 11 8.76142 11 6C11 3.23858 8.76142 1 6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M11 6H9" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3 6H1" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6 3V1" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6 11V9" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    ${layer.feature.properties.name}
-                    `;
-                    box.setAttribute('id',`${layer._leaflet_id}`)
-                    box.setAttribute('long',`${layer.feature.geometry.coordinates[0]}`)
-                    box.setAttribute('lat',`${layer.feature.geometry.coordinates[1]}`)
-                    box.classList.add('LlistItem')
-                    LserviceList.append(box)
-                }
-            })
-
-            //select item on click
-            LserviceList.addEventListener('click', function(event){
-                event.stopPropagation()
-                const lat = event.target.getAttribute('lat')
-                const long = event.target.getAttribute('long')
-                const id = Number(event.target.getAttribute('id'))
-                
-                if(screenWidth() < 1024){
-                    mymap.setViewOffset([lat, long],[20, -80],12, {animation : true}) 
-                }
-                if(screenWidth() >= 1024){
-                    mymap.setViewOffset([lat, long],[-100, 0],12, {animation : true}) 
-                }
-                if(screenWidth() >= 1440){
-                    mymap.setViewOffset([lat, long],[-150, 0],12, {animation : true}) 
-                }
-
-                if(clickedMarker){
-                    clickedMarker.setIcon(baseIcon);
-                }
-
-                clickedMarker = service.getLayer(id);
-                clickedMarker.setIcon(activeIcon);
-
-                sidepanel.classList.add('active')
-                sideFilterpanel.classList.remove('active')
-
-                LlistBtn.style.display = 'block'
-
-                Ltitle.innerHTML = `${clickedMarker.feature.properties.name}`
-                LtitleRsp.innerHTML = `${clickedMarker.feature.properties.name}`
-                Limage.src = `${clickedMarker.feature.properties.image}`
-                Ladress.innerHTML = `${clickedMarker.feature.properties.adress}`
-                Lphone.innerHTML = `${clickedMarker.feature.properties.phone}`
-                Lwebsite.href = `${clickedMarker.feature.properties.website}`
-
-            })
-
-            // set map view
-            if(screenWidth() < 1000){
-                if(!filterServiceIcon.classList.contains('active')){
-                    mymap.fitBounds(service.getBounds(),{
-                        paddingTopleft : [100, 100],
-                        paddingBottomRight : [50, -80],
-                        maxZoom: 9
-                    })
-                } else {
-                    mymap.fitBounds(other.getBounds(),{
-                        paddingBottomRight : [0, 100],
-                        paddingTopLeft : [100, 100],
-                        maxZoom : 9
-                    })
-                }
-            }else{
-                if(!filterServiceIcon.classList.contains('active')){
-                    mymap.fitBounds(service.getBounds(),{
-                        paddingTopleft : [100, 100],
-                        paddingBottomRight : [100, -200],
-                        maxZoom: 13
-                    })
-                } else {
-                    mymap.fitBounds(other.getBounds(),{
-                        paddingBottomRight : [-200, 0]
-                    })
-                }
-            }
-
-            // reset if active marker
-            if (clickedMarker){
-                clickedMarker.setIcon(baseIcon)
-            }
-
-            // layer.setIcon(baseIcon)
-            filterServiceIcon.classList.toggle('active')
-            // remove active form other panel
-            filterActiviteIcon.classList.remove('active')
-            filterRestaurationIcon.classList.remove('active')
-            filterHebergementIcon.classList.remove('active')
-
-            if(filterServiceIcon.classList.contains('active')){
-                mymap.addLayer(service)
-                mymap.removeLayer(hebergement)
-                mymap.removeLayer(activite)
-                mymap.removeLayer(restauration)
-                mymap.removeLayer(other)
-            } else {
-                mymap.addLayer(service)
-                mymap.addLayer(restauration)
-                mymap.addLayer(hebergement)
-                mymap.addLayer(other)
-                mymap.addLayer(activite)
-            }
-
-            // close menu 
-            const closeMenuList = document.querySelector('.LcloseMenuList')
-            closeMenuList.addEventListener("click", function(e){
-                sidepanel.classList.remove('active')
-                sideFilterpanel.classList.remove('active')
-                filterServiceIcon.classList.remove('active')
-                //reset marker
-                if (clickedMarker){
-                clickedMarker.setIcon(baseIcon)
-                }
-                
-                mymap.addLayer(other)
-                mymap.addLayer(service)
-                mymap.addLayer(restauration)
-                mymap.addLayer(hebergement)
-                mymap.addLayer(activite)
-            })
+        filterServiceIcon.addEventListener('click', function(){
+            FilterPanel(filterServiceIcon, filterRestaurationIcon, filterActiviteIcon, filterHebergementIcon, 'Les commerces et services', 'service', service, restauration, activite, hebergement)
         })
 
         
