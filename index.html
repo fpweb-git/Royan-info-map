@@ -31,10 +31,10 @@
         #Lloader{
             position: absolute;
             top: 0;
-            left: 0;
+            right: 0;
             height: 100%;
-            width: 100%;
-            background-color: rgb(241, 249, 255);
+            width: calc(100% - 130px);
+            background-color: rgb(255, 255, 255);
             z-index: 1000;
             display: flex;
             justify-content: center;
@@ -270,6 +270,9 @@
                 width: 60px;
                 height: auto;
             }
+            #Lloader{
+                width: calc(100% - 90px);
+            }
         }
         @media only screen and (max-width: 1440px) {
             .Lsidepanel, .LsideFilterpanel{
@@ -312,6 +315,9 @@
         @media only screen and (max-width: 1023px) {
             .LsideFilterpanel{
                 width: 200px;
+            }
+            #Lloader{
+                width: calc(100% - 80px);
             }
             .Lsidepanel{
                 width: calc(100% - 80px);
