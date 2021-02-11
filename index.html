@@ -824,14 +824,15 @@
                 }
             }else{
                 if(!mainIcon.classList.contains('active')){
-                    mymap.fitBounds(activite.getBounds(),{
+                    mymap.fitBounds(mainLayer.getBounds(),{
                         paddingTopleft : [100, 100],
                         paddingBottomRight : [100, -200],
-                        maxZoom: 13
+                        maxZoom: 10
                     })
                 } else {
                     mymap.fitBounds(other.getBounds(),{
-                        paddingBottomRight : [-200, 0]
+                        paddingBottomRight : [-200, 0],
+                        maxZoom: 10
                     })
                 }
             }
