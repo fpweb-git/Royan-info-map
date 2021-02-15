@@ -186,7 +186,9 @@ fetch('https://script.googleusercontent.com/macros/echo?user_content_key=Tvu5ydy
                 Limage.src = ""
                 Limage.src = `${feature.properties.image}`
                 Ladress.innerHTML = `${feature.properties.adress}`
+                Ladress.href = `geo:${feature.geometry.coordinates[1]},${feature.geometry.coordinates[0]}`
                 Lphone.innerHTML = `${feature.properties.phone}`
+                Lphone.href = `tel:${feature.properties.phone}`
                 Lwebsite.href = `${feature.properties.website}`
 
                 if(feature.properties.website == ""){
@@ -297,7 +299,9 @@ fetch('https://script.googleusercontent.com/macros/echo?user_content_key=Tvu5ydy
             LtitleRsp.innerHTML = `${clickedMarker.feature.properties.name}`
             Limage.src = `${clickedMarker.feature.properties.image}`
             Ladress.innerHTML = `${clickedMarker.feature.properties.adress}`
+            Ladress.href = `geo:${clickedMarker.feature.geometry.coordinates[1]},${clickedMarker.feature.geometry.coordinates[0]}`
             Lphone.innerHTML = `${clickedMarker.feature.properties.phone}`
+            Lphone.href = `tel:${clickedMarker.feature.properties.phone}`
             Lwebsite.href = `${clickedMarker.feature.properties.website}`
 
             if(clickedMarker.feature.properties.website == ""){

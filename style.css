@@ -4,6 +4,12 @@
     box-sizing: border-box;
     font-family: 'Fira sans', sans-serif;
 }
+
+a{
+    color: unset;
+    text-decoration: none;
+}
+
 .mapcontainer{
     height: 100vh;
     margin: auto;
@@ -45,6 +51,7 @@
 .LmodalClose{
     align-self: flex-end;
     cursor: pointer;
+    margin-bottom: 0.2rem;
 }
 
 .LmodalContainer img{
@@ -245,6 +252,7 @@ color: #234c5e;
 
 .Lwebsite{
     color: #16AFD1;
+    text-decoration: underline;
 }
 
 .Lfilter{
