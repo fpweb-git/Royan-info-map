@@ -479,9 +479,9 @@ fetch('https://script.googleusercontent.com/macros/echo?user_content_key=Tvu5ydy
     })
 
     const other = L.geoJson(geojson, {
-        filter: function(feature, layer) {
-            return feature.properties.category == "";
-        },
+        // filter: function(feature, layer) {
+        //     return feature.properties.category == "";
+        // },
         style : function(features){
             return{
                 color : '#4B65F7',
