@@ -1,0 +1,449 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira sans', sans-serif;
+}
+.mapcontainer{
+    height: 100vh;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+#mapid{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.Lmodal{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #00000080;
+    z-index: 20000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    cursor: pointer;
+}
+
+.LmodalContainer{
+    max-width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999999;
+}
+
+.LmodalClose{
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.LmodalContainer img{
+    margin: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 450px;
+    cursor: pointer;
+}
+
+
+#Lloader{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: calc(100% - 130px);
+    background-color: rgb(255, 255, 255);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #307199;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #307199 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.Lsidepanel, .LsideFilterpanel{
+    width: 40%;
+    max-width: 450px;
+    height: 100%;
+    background: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 7000;
+    opacity: 0.5;
+    transition: 0.6s ease;
+    transform: translateX(200%);
+    display: none;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-left: 1px solid rgb(167, 167, 167);
+}
+.LsidepanelInner, .LsideFilterpanelInner{
+    width: 100%;
+    padding: 6%;
+    overflow: auto
+}
+.Lsidepanel.active, .LsideFilterpanel.active{
+    opacity: 1;
+    transform: translateX(0);
+    display: flex
+}
+
+.Lleftpanel{
+    width: 130px;
+    height: 100%;
+    background: #16AFD1;
+    padding: 2rem 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 7000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.LleftpanelIconGrp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.LleftpanelIconTxt{
+    margin-top: 0.5rem;
+}
+
+.LleftpanelIconGrp.active{
+    transform: scale(1.1);
+    color: #005182;
+}
+.LleftpanelIconGrp.active path{
+    fill: #005182;
+}
+
+.LleftpanelIconGrp svg{
+    width: 50px;
+    height: auto;
+}
+
+.popupCustom .leaflet-popup-content-wrapper {
+background: #87c0e0;
+color: #234c5e;
+}
+
+.leaflet-popup-tip{
+    display: none;
+}
+.Lheader{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.LlistBtn{
+    border: 1px solid rgb(148, 147, 147);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin-right: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.LcloseMenu, .LcloseMenuList, .LlistItem{
+    cursor: pointer;
+}
+
+.LcloseMenuList, .LcloseMenu{
+    margin: 0.5rem;
+    width: 15px;
+    height: auto;
+}
+
+.Ltitle{
+    margin: 4rem 0 2rem 0;
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: #2d353f;
+}
+.LtitleRsp{
+    font-weight: 800;
+    font-size: 12px;
+    color: #2d353f;
+    display: none;
+}
+
+.Linformation, .Llist{
+    padding-bottom:  1rem;
+}
+
+.Lcontent{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0 1rem 0;
+}
+
+.Lcontent svg{
+    flex-shrink: 0;
+    width: 20px;
+    height: auto;
+}
+
+.Ladress, .Lphone, .Lwebsite{
+    margin-left: 0.5rem;
+}
+
+.Lwebsite{
+    color: #16AFD1;
+}
+
+.Lfilter{
+    margin: 1.5rem 0 1.8rem 0;
+    color: #307199;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #307199;
+    width: fit-content;
+    font-size: 1.2rem;
+}
+
+.LlistItem{
+    font-size: 0.9rem;
+    padding:  0.5rem;
+    list-style: none;
+    border: 1px solid rgb(238, 238, 238);
+    margin: 0.8rem 0;
+    display: flex;
+    align-items: center;
+}
+.LlistItem:nth-child(odd) {
+    background-color: #f8fdff;
+}
+
+.LlocationIcon{
+    margin-right: 0.5rem;
+    pointer-events: none;
+    flex-shrink: 0;
+}
+
+.Limage{
+    max-width: 100%;
+    max-height: 400px;
+    cursor: pointer;
+}
+
+@media only screen and (max-height: 740px) {
+    .LleftpanelIconGrp{
+        font-size: 10px;
+        margin-bottom: 1.6rem;
+        font-weight: 500;
+    }
+    .LleftpanelIconGrp svg{
+        width: 36px;
+        height: auto;
+    }
+    .Lleftpanel{
+        width: 90px;
+    }
+    .LleftpanelLogo svg{
+        width: 60px;
+        height: auto;
+    }
+    #Lloader{
+        width: calc(100% - 90px);
+    }
+}
+@media only screen and (max-width: 1440px) {
+    .Lsidepanel, .LsideFilterpanel{
+        max-width: 250px;
+    }
+    .Lcontent{
+        margin: 1rem 0 0.5rem 0;
+        font-size: 11px;
+        max-width: 90%;
+    }
+    .Lcontent svg{
+        width: 15px;
+        height: auto;
+    }
+    .LlistBtn{
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.6rem;
+    margin-right: 1rem;
+    font-size: 14px;
+    }
+    .Ltitle{
+        font-weight: 800;
+        font-size: 18px;
+        margin: 0.8rem 0 1.5rem 0;
+    }
+    .LcloseMenu{
+        margin: 0.5rem;
+        width: 15px;
+        height: auto;
+    }
+    .Linformation{
+        height: unset;
+    }
+    .Limage{
+        max-height: 230px;
+        max-width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .LsideFilterpanel{
+        width: 200px;
+    }
+    #Lloader{
+        width: calc(100% - 80px);
+    }
+    .Lsidepanel{
+        width: calc(100% - 80px);
+        max-width: unset;
+        height: 38%;
+        top: unset;
+        bottom: 0;
+        right: 0;
+        overflow: hidden;
+        border-left: unset;
+    }
+    .LsidepanelInner{
+        padding: 1rem;
+    }
+    .Lleftpanel{
+        width: 80px;
+    }
+    .LleftpanelIconGrp{
+        font-size: 10px;
+        margin-bottom: 1.6rem;
+    }
+
+    .LleftpanelIconGrp svg{
+        width: 36px;
+        height: auto;
+    }
+
+    .LleftpanelIconTxt{
+        margin-top: 0.5rem;
+    }
+
+    .LleftpanelLogo svg{
+        width: 60px;
+        height: auto;
+    }
+    .Lcontent{
+        margin: 1rem 0 0.5rem 0;
+        font-size: 10px;
+    }
+    .LtitleRsp{
+        display: block;
+        font-size: 18px;
+    }
+    .Ltitle{
+        display: none;
+    }
+    .LcloseMenu{
+        margin: 0.5rem;
+        width: 15px;
+        height: auto;
+    }
+    .LsidepanelContent{
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+    .LsidepanelContentLeft{
+        max-width: 50%;
+    }
+    .Linformation{
+        min-width: 50%;
+        height: unset;
+        padding: 0;
+    }
+    .Limage{
+        max-width: 80%;
+        max-height: 200px;
+        width: auto;
+        margin-top: 1rem;
+    }
+    .Lfilter{
+        margin: 1.5rem 0 1.2rem 0;
+        padding-bottom: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .LlistItem{
+        font-size: 0.7rem;
+        padding: 0.5rem 0.5rem;
+        margin: 0.5rem 0;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .Limage{
+        display: none;
+    }
+    .LtitleRsp{
+        display: block;
+    }
+    .Ltitle{
+        display: none;
+    }
+    .LsideFilterpanel{
+        width: 150px;
+    }
+    .LlistBtn{
+    font-size: 10px;
+    }
+}
