@@ -133,7 +133,7 @@ Limage.addEventListener('click', function (e) {
 
 // fetch the data and populate the map
 
-fetch('./data.json')
+fetch('https://fpweb-git.github.io/Royan-info-map/data.json')
     .then(response => response.json())
     .then(data => {
         data.forEach(item => {
