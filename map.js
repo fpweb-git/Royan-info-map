@@ -134,7 +134,7 @@ Limage.addEventListener('click', function (e) {
 // fetch the data and populate the map
 
 fetch('/data.json')
-    .then(response => response.json())
+    // .then(response => response.json())
     .then(data => {
         data.forEach(item => {
             const coord = item.coordinates.split(',')
